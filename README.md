@@ -2,7 +2,7 @@
 
 I am a self-studying Data Analyst with a short-term goal of becoming a Data Analyst and a long-term goal of becoming a Data Scientist. 
 
-I began learning Python on May 20, 2023 (which is not really long until the point of writing this introduction). During this time, I've found out that I am a passionate learner on a journey to master the art of data analysis. I have a natural curiosity for data and enjoy the process of analyzing it. 
+I began learning Python on May 20, 2023 (which is not really long until the point of writing this introduction Nov 10, 2023). During this time, I've found out that I am a passionate learner on a journey to master the art of data analysis. I have a natural curiosity for data and enjoy the process of analyzing it. 
 
 I have come a long way since I started my journey. In just six months, I have completed several projects that have given me a sense of optimism about my future in the field of Data Science.
 
