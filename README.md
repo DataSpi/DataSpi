@@ -12,7 +12,7 @@ The projects I have worked on over the past six months include:
 - [Creating labor market reports using data scraped from job listing sites](https://github.com/DataSpi/scraping-jobs)
 - [Building an internal AI assistant using LLMs like ChatGPT](https://github.com/DataSpi/itl-inno-award-2023)
 
-If you are interested, please check out the links I have attached. I am currently looking for people to learn and collaborate with on my open-source projects. Feel free to contact me via email at spino.kiem@itlvn.com.
+If you are interested, please check out the links I have attached. I am currently looking for people to learn and collaborate with on my open-source projects. Feel free to contact me via email at 📧 spino.kiem@itlvn.com.
 
 <!---
 DataSpi/DataSpi is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
