@@ -8,11 +8,11 @@ I have come a long way since I started my journey. In just six months, I have co
 
 The projects I have worked on over the past six months include:
 
-- Conducting a survey on stress and mental health status among employees of a company
-- Creating labor market reports using data scraped from job listing sites
-- Building an internal AI assistant using LLMs like ChatGPT
+- [Conducting a survey on stress and mental health status among employees of a company](https://www.notion.so/homeofkiemidea/Survey-about-Mental-Health-Stress-status-of-ITL-Employees-Aug2023-a4e3286b13f34e5a933361d19f796e76?pvs=4)
+- [Creating labor market reports using data scraped from job listing sites](https://github.com/DataSpi/scraping-jobs)
+- [Building an internal AI assistant using LLMs like ChatGPT](https://github.com/DataSpi/itl-inno-award-2023)
 
-If you are interested, please check out the link I have attached. I am currently looking for people to learn and collaborate with on my open-source projects. Feel free to contact me via email at spino.kiem@itlvn.com.
+If you are interested, please check out the links I have attached. I am currently looking for people to learn and collaborate with on my open-source projects. Feel free to contact me via email at spino.kiem@itlvn.com.
 
 <!---
 DataSpi/DataSpi is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
