@@ -1,0 +1,9 @@
+title: Kiem Pham
+description: Data Engineer and writer
+theme: minima
+markdown: kramdown
+show_excerpts: false
+header_pages:
+  - about.md
+  - projects.md
+  - resume.md

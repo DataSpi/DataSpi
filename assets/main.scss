@@ -1,0 +1,81 @@
+---
+---
+
+@import "minima";
+
+:root {
+  --paper-bg: #f3efe6;
+  --paper-sheet: #fffdf8;
+  --ink: #1d1d1b;
+  --muted: #555;
+  --line: #d8d1c4;
+  --link: #0f4d4a;
+}
+
+body {
+  background: var(--paper-bg);
+  color: var(--ink);
+  font-family: "Georgia", "Times New Roman", serif;
+  line-height: 1.7;
+}
+
+.site-header,
+.site-footer,
+.page-content {
+  background: transparent;
+}
+
+.wrapper {
+  max-width: 780px;
+}
+
+.page-content {
+  padding-top: 24px;
+}
+
+.post,
+.page-content .wrapper,
+.home {
+  background: var(--paper-sheet);
+  border: 1px solid var(--line);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  padding: 28px;
+}
+
+.site-title,
+.site-nav .page-link {
+  color: var(--ink);
+}
+
+a {
+  color: var(--link);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--ink);
+  letter-spacing: 0;
+}
+
+p,
+li {
+  color: var(--ink);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 640px) {
+  .post,
+  .page-content .wrapper,
+  .home {
+    padding: 18px;
+  }
+}
