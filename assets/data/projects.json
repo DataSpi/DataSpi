@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Internal AI Assistant for Company Knowledge",
+    "summary": "Built a domain-aware AI assistant to answer internal policy and business knowledge questions using LLM workflows.",
+    "tags": ["Python", "LangChain", "NLP", "Prompt Engineering"],
+    "link": "https://github.com/DataSpi/itl-inno-award-2023"
+  },
+  {
+    "title": "Labor Market Analysis from Job Listings",
+    "summary": "Collected and analyzed hiring data from major job sites to track data job demand and publish market insights.",
+    "tags": ["Python", "Selenium", "BeautifulSoup", "Pandas"],
+    "link": "https://github.com/DataSpi/scraping-jobs"
+  },
+  {
+    "title": "Mental Health and Stress Survey Analytics",
+    "summary": "Designed and analyzed a company-wide survey to compare employee self-assessment and manager evaluations.",
+    "tags": ["Survey Design", "Python", "Matplotlib", "Reporting"],
+    "link": "https://www.notion.so/homeofkiemidea/Survey-about-Mental-Health-Stress-status-of-ITL-Employees-Aug2023-a4e3286b13f34e5a933361d19f796e76?pvs=4"
+  }
+]
