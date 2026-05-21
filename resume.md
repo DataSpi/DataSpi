@@ -9,34 +9,68 @@ download_pdf: resume.pdf
 
 ---
 
-**Data Analyst**
+**Data Engineer**
 
 ---
 
 *At*
 
-**Indo-Trans Logistics Corporation**
+**VNG Corporation**
 
-*Feb 2022 - Now*
+*Nov 2025 - Now*
 
 📧 phamkiem.ns@gmail.com
 
 ☎️ 0941840068
 
-🏠 Tan Binh, Ho Chi Minh 
+🏠 Ho Chi Minh City 
 
 🔗 [Facebook](https://www.facebook.com/phamthokiem/), [LinkedIn](https://linkedin.com/in/spyno-kiem), [Github](https://github.com/DataSpi)
 
 ---
 
-> A Data Analyst skilled in ***Python, SQL, PowerBI, and Excel***, with ***3 years of experience*** in the HR industry. I’ve used my passion and expertise to analyze HRMS data and create impactful reports. My work has leveraged data to drive strategic decisions and solve real-world business problems.
-> 
+> A 3+years of experience Data Analyst skilled in Python, SQL, Power BI, Power Platform and Excel, with experience building HR and workforce analytics solutions at scale. I have designed reporting systems, automated data workflows, and delivered executive-level insights that support daily operations and strategic decision-making. My work emphasizes turning complex data into actionable insights that contribute directly to business performance.
 
 # 💻 Work experience
 
-## Human Resources Analyst
+## VNG Corporation - Data Engineer
 
-ITL Corporation - *Aug 2023 - Present (1 yr 1 mo)*
+*Nov 2025- Now (0.5 yr)*
+
+**Technical Core:** Python, PostgreSQL, AWS Glue, Airflow, BigQuery, dbt.
+
+**Key Projects & Impact:**
+
+- **Financial Data Infrastructure & Aggregation:**
+    - Designed and implemented complex recursive SQL logic to aggregate financial performance data across organizational hierarchies.
+    - Unified scheduled and actual transaction data to provide accurate, real-time insights into fiscal health.
+- **Pipeline Orchestration & Automation:**
+    - Architected and managed robust data pipelines using **Apache Airflow**, ensuring high availability and reliability of data flows.
+    - Optimized database maintenance and task scheduling by implementing and troubleshooting **pg_cron** for materialized view refreshes and table partitioning.
+- **Scalable Data Modeling:**
+    - Developed an end-to-end data ingestion framework to scrape and process large-scale logistics and real estate data.
+    - Engineered a multi-layered architecture in **BigQuery**, moving data from raw "bronze" layers to analytics-ready models using **dbt**.
+- **Process Innovation:**
+    - Pioneered the use of semantic modeling tools like **Malloy** and **DuckDB** to accelerate analytical workflows and bridge the gap between raw data and business intelligence.
+    - Integrated AI-native development environments (Cursor/VS Code) and agentic workflows to automate technical documentation and code generation, increasing team velocity.
+
+## LEGO Manufacturing Vietnam - Data Analyst
+
+ *Nov 2024 - Nov 2025 (1 yr)*
+
+- Developed comprehensive reporting solutions for the PPC department, covering headcount and workforce planning, turnover by category, diversity & inclusion KPIs, learning & development, overtime, absenteeism, and retention policy analysis to support strategic decision-making.
+- Prepared monthly executive summaries and presentations for senior leadership, distilling insights from Power BI dashboards into clear, actionable reports
+- Collaborated with the BI Manufacturing team on initiatives such as Factory Huddle and Visual Factory, delivering reporting solutions used in daily operations and leadership team meetings.
+- Designed an end-to-end reporting solution for LEGO Vietnam’s 3-month Active Summer program by integrating Google Forms data via API into Python workflows, analyzing participation metrics, and delivering insights through a Power BI dashboard.
+- Supported the development of a Power App for gym room access consent forms and reservations, improving process efficiency and user experience.
+
+
+
+## ITL Corporation 
+
+### HR Data Analyst
+
+*Aug 2023 - Nov 2024 (1 yr 3 mo)*
 
 - Analyzing & crafting reports from data of HRMS Database:
     - Develope a full data pipeline from Database -> Data Warehouse -> Reporting (using MSSQL, PostgreSQL)
@@ -49,9 +83,9 @@ ITL Corporation - *Aug 2023 - Present (1 yr 1 mo)*
 > 💡 **More information:**
 > [🧗🏻‍♂️ Projects](#projects-section)
 
-## Human Resources Management Trainee
+### Human Resources Management Trainee
 
-ITL Corporation - *Feb 2022 - Aug 2023 (1 yr 7 mo)*
+*Feb 2022 - Aug 2023 (1 yr 7 mo)*
 
 - Doing monthly salary add-on calculation for the container fleet monthly.
 - Support answering question related to company policies
