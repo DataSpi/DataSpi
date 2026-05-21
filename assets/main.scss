@@ -54,11 +54,11 @@ body {
 
 .site-title {
   display: inline-flex;
-  align-items: center;
+  align-items: center; /* Ensure vertical alignment */
   gap: 10px;
   padding: 0;
   margin-right: 16px;
-  line-height: 1;
+  line-height: 1.65; /* Match navigation bar line height */
   font-weight: 600;
   color: var(--title);
 }
