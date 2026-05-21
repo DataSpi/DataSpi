@@ -91,6 +91,13 @@ body {
 .site-nav {
   display: flex;
   align-items: center;
+  margin-left: auto;
+}
+
+.site-nav .trigger {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .post-title-row {

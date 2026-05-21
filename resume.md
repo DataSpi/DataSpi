@@ -2,7 +2,7 @@
 layout: page
 title: Resume
 permalink: /resume/
-download_pdf: /assets/resume/Kiem-Pham.pdf
+download_pdf: resume.pdf
 ---
 
 # 👋🏻 Kiem Pham
@@ -32,7 +32,7 @@ download_pdf: /assets/resume/Kiem-Pham.pdf
 > A Data Analyst skilled in ***Python, SQL, PowerBI, and Excel***, with ***3 years of experience*** in the HR industry. I’ve used my passion and expertise to analyze HRMS data and create impactful reports. My work has leveraged data to drive strategic decisions and solve real-world business problems.
 > 
 
-# 👨🏻‍💻 Work experience
+# 💻 Work experience
 
 ## Human Resources Analyst
 
@@ -98,7 +98,7 @@ ITL Corporation - *Feb 2022 - Aug 2023 (1 yr 7 mo)*
 
 <a id="projects-section"></a>
 
-# 🧗🏻‍♂️ Projects
+# 🏗️ Projects
 
 ### 1. Building an internal AI Assistant
 
@@ -130,7 +130,7 @@ In this project, I've used 2 Python libraries: Selenium & BeautifulSoup to surf 
 
 *Aug 2023 - Sep 2023*
 
-[ITL Me](https://www.notion.so/Survey-about-Mental-Health-Stress-status-of-ITL-Employees-Aug2023-a4e3286b13f34e5a933361d19f796e76?pvs=21)
+[ITL Mental Health & Stress Survey](https://www.notion.so/Survey-about-Mental-Health-Stress-status-of-ITL-Employees-Aug2023-a4e3286b13f34e5a933361d19f796e76?pvs=21)
 
 The survey was conducted for measuring the status of Mental Health and Stress of ITL employees in August 2023.The survey was conducted on both employees and managers using two different versions:
 
