@@ -100,7 +100,7 @@ ITL Corporation - *Feb 2022 - Aug 2023 (1 yr 7 mo)*
 
 *Sep 2023 - Present*
 
-[Repo trên GitHub: Internal AI Assistant](https://github.com/DataSpi/itl-inno-award-2023)
+[GitHub: Internal AI Assistant](https://github.com/DataSpi/itl-inno-award-2023)
 
 The project aims to leverage the natural language processing capabilities of Large Language Models (LLM) by providing them with additional information about the specific domains we want to exploit.
 
@@ -112,7 +112,7 @@ In this case, the project is specifically focused on building a Company Internal
 
 *Aug 2023 - Present*
 
-[Repo trên GitHub: Job Market Analysis](https://github.com/DataSpi/scraping-jobs)
+[GitHub: Job Market Analysis](https://github.com/DataSpi/scraping-jobs)
 
 In this project, I've used 2 Python libraries: Selenium & BeautifulSoup to surf the web & collect data from job-listing-sites (I’ve succeed with CareerBuilder & will continue with others like Vietnamworks, Indeed, Google Jobs,…).
 
@@ -126,7 +126,7 @@ In this project, I've used 2 Python libraries: Selenium & BeautifulSoup to surf 
 
 *Aug 2023 - Sep 2023*
 
-[Chi tiết khảo sát trên Notion](https://www.notion.so/Survey-about-Mental-Health-Stress-status-of-ITL-Employees-Aug2023-a4e3286b13f34e5a933361d19f796e76?pvs=21)
+[ITL Mental Health & Stress Survey](https://www.notion.so/Survey-about-Mental-Health-Stress-status-of-ITL-Employees-Aug2023-a4e3286b13f34e5a933361d19f796e76?pvs=21)
 
 The survey was conducted for measuring the status of Mental Health and Stress of ITL employees in August 2023.The survey was conducted on both employees and managers using two different versions:
 
