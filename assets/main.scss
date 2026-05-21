@@ -42,6 +42,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-left: 28px;
+  padding-right: 28px;
 }
 
 .post,
@@ -89,6 +91,61 @@ body {
 .site-nav {
   display: flex;
   align-items: center;
+}
+
+.post-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-title-row .post-title {
+  margin: 0;
+}
+
+.page-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35em 0.9em;
+  border: 1px solid var(--link);
+  border-radius: 6px;
+  color: var(--link);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.page-download-btn:hover,
+.page-download-btn:focus-visible {
+  background: var(--link);
+  color: #0e1116;
+  text-decoration: none;
+}
+
+/* Dark mode mobile nav dropdown */
+@media screen and (max-width: 600px) {
+  .site-nav {
+    background-color: var(--paper-sheet);
+    border-color: var(--line);
+  }
+
+  .site-nav .trigger {
+    background-color: var(--paper-sheet);
+  }
+
+  .site-nav .page-link {
+    color: var(--title);
+  }
+
+  .site-nav .menu-icon svg path {
+    fill: var(--ink);
+  }
 }
 
 a {

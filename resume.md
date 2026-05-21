@@ -2,9 +2,10 @@
 layout: page
 title: Resume
 permalink: /resume/
+download_pdf: /assets/resume/Kiem-Pham.pdf
 ---
 
-# 👋🏻 Personal information
+# 👋🏻 Kiem Pham
 
 ---
 
@@ -15,6 +16,7 @@ permalink: /resume/
 *At*
 
 **Indo-Trans Logistics Corporation**
+
 *Feb 2022 - Now*
 
 📧 phamkiem.ns@gmail.com
@@ -23,7 +25,7 @@ permalink: /resume/
 
 🏠 Tan Binh, Ho Chi Minh 
 
-🔗 [Facebook](https://www.facebook.com/phamthokiem/), [LinkedIn](https://www.linkedin.com/in/phamkiemhr/), [Github](https://github.com/DataSpi)
+🔗 [Facebook](https://www.facebook.com/phamthokiem/), [LinkedIn](https://linkedin.com/in/spyno-kiem), [Github](https://github.com/DataSpi)
 
 ---
 
