@@ -63,7 +63,11 @@ body {
 }
 
 .site-title,
-.site-nav .page-link {
+.site-title:visited,
+.site-title:hover,
+.site-title:focus,
+.site-nav .page-link,
+.site-nav .page-link:visited {
   color: var(--title);
 }
 
