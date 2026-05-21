@@ -10,7 +10,10 @@
   --muted: #9aa7b5;
   --line: #2b3440;
   --link: #7ed0ff;
+  --link-hover: #b8e6ff;
   --title: #f3f6fb;
+  --code-bg: #1d2631;
+  --code-ink: #d6f0ff;
 }
 
 body {
@@ -49,12 +52,37 @@ body {
   color: var(--title);
 }
 
+.site-title {
+  width: 44px;
+  height: 44px;
+  display: block;
+  margin-right: 14px;
+  padding: 0;
+  background-image: url("../spyno_logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-indent: -9999px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .site-nav .page-link:hover {
   text-decoration: underline;
 }
 
 a {
   color: var(--link);
+  text-decoration-color: rgba(126, 208, 255, 0.45);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--link-hover);
+  text-decoration-color: var(--link-hover);
+  text-decoration-thickness: 2px;
 }
 
 h1,
@@ -67,6 +95,37 @@ h3 {
 p,
 li {
   color: var(--ink);
+}
+
+li {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+code {
+  background: var(--code-bg);
+  color: var(--code-ink);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.1em 0.35em;
+  font-family: "Cascadia Code", "Consolas", "Courier New", monospace;
+}
+
+pre {
+  background: #111822;
+  border: 1px solid var(--line);
+}
+
+pre code {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.post-content table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
 }
 
 hr {

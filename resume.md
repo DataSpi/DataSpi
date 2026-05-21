@@ -1,4 +1,4 @@
-# Pham Tho Kiem
+# Resume
 
 # 👋🏻 Personal information
 
@@ -116,20 +116,16 @@ In this project, I've used 2 Python libraries: Selenium & BeautifulSoup to surf 
 
 - **Skills:** pandas · Selenium · Beautiful Soup · Python (Programming Language)
 - **Publications:**
-    1. [Thị trường tuyển dụng - các jobs về data - 11/2023 (substack.com)](https://spyno.substack.com/p/thi-truong-tuyen-dung-cac-jobs-ve)
-    2. [Group hỏi đáp Python, Data Science, Machine Learning, Deep Learning | # **Báo cáo tình hình tuyển dụng các Jobs Data tháng 11/2023** | Facebook](https://www.facebook.com/groups/dsmlvietnam/posts/331092943004167/)
-    3. [Vietnam Data Analyst Forum - #1 Informative Group | ## **Báo cáo tình hình tuyển dụng các Jobs Data tháng 11/2023** | Facebook](https://www.facebook.com/groups/vietnamdataanalyst/posts/3463328530601474/)
+    1. [Báo cáo tuyển dụng Data 11/2023 - Substack](https://spyno.substack.com/p/thi-truong-tuyen-dung-cac-jobs-ve)
+    2. [Chia sẻ lại trên cộng đồng DS/ML Vietnam - Facebook](https://www.facebook.com/groups/dsmlvietnam/posts/331092943004167/)
+    3. [Chia sẻ lại trên Vietnam Data Analyst Forum - Facebook](https://www.facebook.com/groups/vietnamdataanalyst/posts/3463328530601474/)
 
 ### 3. Survey about Mental Health & Stress status of ITL Employees
 
 *Aug 2023 - Sep 2023*
+[Survey about Mental Health & Stress status of ITL Employees - Aug2023](https://www.notion.so/Survey-about-Mental-Health-Stress-status-of-ITL-Employees-Aug2023-a4e3286b13f34e5a933361d19f796e76?pvs=21)
 
-<aside>
-📌 Detailed information:
 
-[**Survey about Mental Health & Stress status of ITL Employees - Aug2023**](https://www.notion.so/Survey-about-Mental-Health-Stress-status-of-ITL-Employees-Aug2023-a4e3286b13f34e5a933361d19f796e76?pvs=21)
-
-</aside>
 
 The survey was conducted for measuring the status of Mental Health and Stress of ITL employees in August 2023.The survey was conducted on both employees and managers using two different versions:
 
