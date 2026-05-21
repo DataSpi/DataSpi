@@ -45,7 +45,7 @@ ITL Corporation - *Aug 2023 - Present (1 yr 1 mo)*
 - Teaming up with IT to build an Internal AI Assistant using OpenAI API & Langchain
 
 > 💡 **More information:**
-> [🧗🏻‍♂️ Projects](https://www.notion.so/Pham-Tho-Kiem-67d6bd77d33a453fb56e2a9e12e24188?pvs=21)
+> [🧗🏻‍♂️ Projects](#projects-section)
 
 ## Human Resources Management Trainee
 
@@ -94,7 +94,9 @@ ITL Corporation - *Feb 2022 - Aug 2023 (1 yr 7 mo)*
 
 ---
 
-# 🧗🏻‍♂️ Projects
+<a id="projects-section"></a>
+
+# 🧗🏻‍♂️ Projects
 
 ### 1. Building an internal AI Assistant
 
@@ -126,7 +128,7 @@ In this project, I've used 2 Python libraries: Selenium & BeautifulSoup to surf 
 
 *Aug 2023 - Sep 2023*
 
-[ITL Mental Health & Stress Survey](https://www.notion.so/Survey-about-Mental-Health-Stress-status-of-ITL-Employees-Aug2023-a4e3286b13f34e5a933361d19f796e76?pvs=21)
+[ITL Me](https://www.notion.so/Survey-about-Mental-Health-Stress-status-of-ITL-Employees-Aug2023-a4e3286b13f34e5a933361d19f796e76?pvs=21)
 
 The survey was conducted for measuring the status of Mental Health and Stress of ITL employees in August 2023.The survey was conducted on both employees and managers using two different versions:
 
