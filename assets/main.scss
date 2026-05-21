@@ -4,19 +4,21 @@
 @import "minima";
 
 :root {
-  --paper-bg: #f3efe6;
-  --paper-sheet: #fffdf8;
-  --ink: #1d1d1b;
-  --muted: #555;
-  --line: #d8d1c4;
-  --link: #0f4d4a;
+  --paper-bg: #0e1116;
+  --paper-sheet: #151a21;
+  --ink: #e8edf3;
+  --muted: #9aa7b5;
+  --line: #2b3440;
+  --link: #7ed0ff;
+  --title: #f3f6fb;
 }
 
 body {
   background: var(--paper-bg);
   color: var(--ink);
-  font-family: "Georgia", "Times New Roman", serif;
-  line-height: 1.7;
+  font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
 }
 
 .site-header,
@@ -44,7 +46,11 @@ body {
 
 .site-title,
 .site-nav .page-link {
-  color: var(--ink);
+  color: var(--title);
+}
+
+.site-nav .page-link:hover {
+  text-decoration: underline;
 }
 
 a {
@@ -54,7 +60,7 @@ a {
 h1,
 h2,
 h3 {
-  color: var(--ink);
+  color: var(--title);
   letter-spacing: 0;
 }
 
