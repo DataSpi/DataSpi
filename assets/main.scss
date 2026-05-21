@@ -38,6 +38,12 @@ body {
   padding-top: 24px;
 }
 
+.site-header .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .post,
 .page-content .wrapper,
 .home {
@@ -54,11 +60,11 @@ body {
 
 .site-title {
   display: inline-flex;
-  align-items: center; /* Ensure vertical alignment */
+  align-items: center;
   gap: 10px;
   padding: 0;
-  margin-right: 16px;
-  line-height: 1.65; /* Match navigation bar line height */
+  margin: 0 16px 0 0;
+  line-height: 1;
   font-weight: 600;
   color: var(--title);
 }
@@ -78,6 +84,11 @@ body {
 
 .site-nav .page-link:hover {
   text-decoration: underline;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
 }
 
 a {

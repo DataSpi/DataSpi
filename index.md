@@ -1,9 +1,7 @@
 ---
 layout: home
-
 ---
 
-<!-- title: Home -->
 {% capture readme_content %}
 {% include_relative README.md %}
 {% endcapture %}
