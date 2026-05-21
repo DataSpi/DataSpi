@@ -13,4 +13,4 @@ permalink: /projects/
 
 ## Other Projects
 
-- [Personal portfolio notes](https://homeofkiemidea.notion.site/Portfolio-Pham-Kiem-ce3ef5cd94414cc29421a80521d1a7d2?pvs=4)
+- [Portfolio notes](https://homeofkiemidea.notion.site/Portfolio-Pham-Kiem-ce3ef5cd94414cc29421a80521d1a7d2?pvs=4)

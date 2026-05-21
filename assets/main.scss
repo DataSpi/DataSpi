@@ -38,12 +38,19 @@ body {
   padding-top: 24px;
 }
 
+.site-header {
+  display: flex;
+  align-items: center;
+  min-height: 56px;
+}
+
 .site-header .wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-left: 28px;
   padding-right: 28px;
+  width: 100%;
 }
 
 .post,
