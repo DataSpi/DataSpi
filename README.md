@@ -25,7 +25,7 @@ Driven by an analytical mindset and a love for automation, I treat data infrastr
 
 ## Note
 
-Feel free to contact me via email at 📧 ptk23122000@gmail.com.
+Feel free to contact me via email at 📧 phamkiem.ns@gmail.com.
 
 - 👨‍💻 Visit [here](https://homeofkiemidea.notion.site/Portfolio-Pham-Kiem-ce3ef5cd94414cc29421a80521d1a7d2?pvs=4) to see my other projects outside the data field 
 

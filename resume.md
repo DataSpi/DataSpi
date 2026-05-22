@@ -9,15 +9,9 @@ download_pdf: resume.pdf
 
 ---
 
-**Data Engineer**
-
+**Data Engineer - VNG Corporation**
 ---
 
-*At*
-
-**VNG Corporation**
-
-*Nov 2025 - Now*
 
 📧 phamkiem.ns@gmail.com
 
@@ -28,6 +22,7 @@ download_pdf: resume.pdf
 🔗 [Facebook](https://www.facebook.com/phamthokiem/), [LinkedIn](https://linkedin.com/in/spyno-kiem), [Github](https://github.com/DataSpi)
 
 ---
+<br />
 
 > Data Engineer with 3+ years of experience building analytics and data platforms using `Python`, `SQL`, `PostgreSQL`, `BigQuery`, `Airflow`, `AWS Glue`, `dbt`, and `Power BI`. Delivered end-to-end pipelines, automated reporting workflows, and executive-ready insights for HR, manufacturing, and financial operations.
 
@@ -106,9 +101,9 @@ download_pdf: resume.pdf
 - Delivered production-grade `Python` pipelines with API integration, scraping, scheduling, data quality checks, and reusable components.
 - Proficient with `pandas`, `matplotlib`, `seaborn`, `plotly`, `Selenium`, `BeautifulSoup`, and orchestration-based workflows.
 
-### SQL
+### SQL & Malloy
 
-- Advanced `SQL` for analytics: complex joins, aggregations, recursive logic, and query optimization (`PostgreSQL`, `BigQuery`, `MSSQL`).
+- Advanced `SQL` for analytics: complex joins, aggregations, recursive logic, query optimization, and semantic modeling/querying with `Malloy` (`PostgreSQL`, `BigQuery`, `MSSQL`).
 - Built and maintained reporting-ready models/datasets for executive and operational decisions.
 
 ### Data Engineering & Analytics Delivery
