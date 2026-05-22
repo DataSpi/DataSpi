@@ -5,7 +5,7 @@
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=dataspi" alt="dataspi" /></a> </p>
 
-### About Me
+## About Me
 
 I am a Data Engineer with a background in Business Administration. After completing my degree and working a year in the field, I chose a different trajectory and transitioned into data.
  
@@ -15,7 +15,7 @@ As someone who bridged the gap from business to deep tech, I know my true value 
  
 Driven by an analytical mindset and a love for automation, I treat data infrastructure as a craft. Outside of engineering, I write regularly about technology, data frameworks, and philosophy.
 
-### Project
+## Project
 
 - [Real estate reports - data scraping](https://dataspi.github.io/scrape-batdongsan-data/)
 - [Job market reports - data scraping](https://github.com/DataSpi/scraping-jobs)
@@ -23,7 +23,7 @@ Driven by an analytical mindset and a love for automation, I treat data infrastr
 - [ITL mental health & stress survey](https://www.notion.so/homeofkiemidea/Survey-about-Mental-Health-Stress-status-of-ITL-Employees-Aug2023-a4e3286b13f34e5a933361d19f796e76?pvs=4)
 - [View all projects](https://homeofkiemidea.notion.site/Portfolio-Pham-Kiem-ce3ef5cd94414cc29421a80521d1a7d2?pvs=4)
 
-### Note
+## Note
 
 Feel free to contact me via email at 📧 ptk23122000@gmail.com.
 
@@ -33,7 +33,7 @@ Feel free to contact me via email at 📧 ptk23122000@gmail.com.
 
 - ⚡ Fun fact **My english name have a `python` in it.**
 
-### Tech Stack
+## Tech Stack
 
 <div style="max-width:100%;overflow:hidden;">
 	<div style="display:flex;flex-wrap:nowrap;justify-content:space-between;gap:6px;">
@@ -58,8 +58,6 @@ Feel free to contact me via email at 📧 ptk23122000@gmail.com.
 </div>
 
 
-
-<br />
 <br />
 
 <p align="center">
