@@ -41,15 +41,15 @@ download_pdf: resume.pdf
 
 **Key Projects & Impact:**
 
-Data Migration: Engineered an `Odoo-to-ATS` migration pipeline; implemented data reconciliation layers to eliminate data mismatches and ensure zero loss during the product launch.
+- Data Migration: Engineered an `Odoo-to-ATS` migration pipeline; implemented data reconciliation layers to eliminate data mismatches and ensure zero loss during the product launch.
 
-Cloud Automation: Programmed `Python`/`Boto3` scripts to fully automate `AWS Glue` operations, eliminating manual intervention and optimizing compute resource allocation.
+- Cloud Automation: Programmed `Python`/`Boto3` scripts to fully automate `AWS Glue` operations, eliminating manual intervention and optimizing compute resource allocation.
 
-DB Engineering: Managed `PostgreSQL`/`Hasura` ecosystems; built automated monthly partitioning frameworks, custom functions, and cron jobs to sustain query performance under scaling data volumes.
+- DB Engineering: Managed `PostgreSQL`/`Hasura` ecosystems; built automated monthly partitioning frameworks, custom functions, and cron jobs to sustain query performance under scaling data volumes.
 
-GenAI & Semantic Modeling: R&D’d and integrated `Malloy` into the `IPay` system, deploying a `Text-to-Malloy` feature that enables accurate natural language data querying by defining explicit semantic layers.
+- GenAI & Semantic Modeling: R&D’d and integrated `Malloy` into the `IPay` system, deploying a `Text-to-Malloy` feature that enables accurate natural language data querying by defining explicit semantic layers.
 
-Operations & Docs: Standardized system architecture documentation; partnered with operations to deploy monitoring and alerting workflows, ensuring high pipeline availability.
+- Operations & Docs: Standardized system architecture documentation; partnered with operations to deploy monitoring and alerting workflows, ensuring high pipeline availability.
 
 ## LEGO Manufacturing Vietnam - Data Analyst
 
