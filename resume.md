@@ -41,7 +41,7 @@ download_pdf: resume.pdf
 
 **Key Projects & Impact:**
 
-Data Migration: Engineered an Odoo-to-ATS migration pipeline; implemented data reconciliation layers to eliminate data mismatches and ensure zero loss during the product launch.
+Data Migration: Engineered an `Odoo-to-ATS` migration pipeline; implemented data reconciliation layers to eliminate data mismatches and ensure zero loss during the product launch.
 
 Cloud Automation: Programmed `Python`/`Boto3` scripts to fully automate `AWS Glue` operations, eliminating manual intervention and optimizing compute resource allocation.
 
@@ -144,7 +144,7 @@ Operations & Docs: Standardized system architecture documentation; partnered wit
 
 ### Bachelor Degree
 
-- Human Resources Management - University of Economics Ho Chi Minh City *(Sep 2018 - Dec 2021)*
+- Human Resources Management - University of Economics HCMC - *(Sep 2018 - Dec 2021)*
 
 ---
 
@@ -152,7 +152,7 @@ Operations & Docs: Standardized system architecture documentation; partnered wit
 
 # 🏗️ Highlighted Projects
 
-> More details on my project, visit [Projects](/projects/)
+> More details on my project, visit [Projects](https://dataspi.github.io/DataSpi/projects/)
 
 ### 1. Building an Internal AI Assistant
 

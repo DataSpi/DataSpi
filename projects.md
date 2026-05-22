@@ -12,9 +12,9 @@ permalink: /projects/
 
 [GitHub: Real Estate Data](https://github.com/DataSpi/scrape-batdongsan-data)
 
-End-to-end data pipeline for collecting, normalizing, and analyzing the Vietnamese real estate market using data from [batdongsan.com.vn](https://batdongsan.com.vn). Data is stored in Supabase, modeled with Malloy, and visualized via Looker Studio and static HTML reports.
+End-to-end data pipeline for collecting, normalizing, and analyzing the Vietnamese real estate market using data from [batdongsan.com.vn](https://batdongsan.com.vn). Data is stored in `Supabase`, modeled with `Malloy`, and visualized via `Google Looker Studio` and static `HTML` reports.
 
-- **Tech stack:** Python, Selenium, BeautifulSoup, Supabase, Malloy, DuckDB, APScheduler, Google Looker Studio
+- **Tech stack:** `Python`, `Selenium`, `BeautifulSoup`, `Supabase`, `Malloy`, `DuckDB`, `APScheduler`, `Google Looker Studio`
 - **Reports** *(Updated: 2026-05-20):*
   - [Báo cáo giá BĐS theo quận tại HN & TPHCM](reports/output/HCM-HN_districts.html)
   - [Báo cáo giá BĐS theo dự án tại HN & TPHCM](reports/output/HCM-HN_prj.html)
@@ -28,9 +28,9 @@ End-to-end data pipeline for collecting, normalizing, and analyzing the Vietname
 
 [GitHub: Internal AI Assistant](https://github.com/DataSpi/itl-inno-award-2023)
 
-Prompt tuning LLMs to be come an internal AI Asistant for ITL Corporation. The Assistant would be able to answer questions about company policies, business knowledge, and help employees easily research internal textual information using natural language.
+Prompt tuning `LLMs` to become an internal AI Assistant for ITL Corporation. The assistant answers questions about company policies and business knowledge, helping employees search internal information with natural language.
 
-- **Tech stack:** OpenAI API, Langchain, Pinecone, PyDocX, Python (Programming Language)
+- **Tech stack:** `OpenAI API`, `LangChain`, `Pinecone`, `PyDocX`, `Python`
 
 ### 3. Labor Market Analysis (Data Collected from Job-Listing-Sites)
 
@@ -38,9 +38,9 @@ Prompt tuning LLMs to be come an internal AI Asistant for ITL Corporation. The A
 
 [GitHub: Job Market Analysis](https://github.com/DataSpi/scraping-jobs)
 
-Automating data collection from job-listing-sites to analyze the job market in Vietnam.
+Automating data collection from job-listing sites to analyze the job market in Vietnam.
 
-- **Tech stack:** Python, Selenium, BeautifulSoup, Pandas, Matplotlib
+- **Tech stack:** `Python`, `Selenium`, `BeautifulSoup`, `Pandas`, `Matplotlib`
 - **Publications:**
     1. [Báo cáo tuyển dụng Data 11/2023 - Substack](https://spyno.substack.com/p/thi-truong-tuyen-dung-cac-jobs-ve)
     2. [Chia sẻ lại trên cộng đồng DS/ML Vietnam - Facebook](https://www.facebook.com/groups/dsmlvietnam/posts/331092943004167/)
@@ -52,9 +52,9 @@ Automating data collection from job-listing-sites to analyze the job market in V
 
 [ITL Mental Health & Stress Survey](https://www.notion.so/Survey-about-Mental-Health-Stress-status-of-ITL-Employees-Aug2023-a4e3286b13f34e5a933361d19f796e76?pvs=21)
 
-The survey was conducted for measuring the status of Mental Health and Stress of ITL employees in August 2023. Doing a thorough analysis on the 2 cohorts of employees and managers. 
+The survey measured the mental health and stress status of ITL employees in August 2023, including comparative analysis between employee and manager cohorts.
 
-- **Tech stack:** pandas · Matplotlib · Google Forms · Python (Programming Language)
+- **Tech stack:** `Pandas` · `Matplotlib` · `Google Forms` · `Python`
 
 
 ## Other Projects
