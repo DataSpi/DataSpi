@@ -29,63 +29,58 @@ download_pdf: resume.pdf
 
 ---
 
-> A 3+years of experience Data Analyst skilled in Python, SQL, Power BI, Power Platform and Excel, with experience building HR and workforce analytics solutions at scale. I have designed reporting systems, automated data workflows, and delivered executive-level insights that support daily operations and strategic decision-making. My work emphasizes turning complex data into actionable insights that contribute directly to business performance.
+> Data Engineer with 3+ years of experience building analytics and data platforms using `Python`, `SQL`, `PostgreSQL`, `BigQuery`, `Airflow`, `AWS Glue`, `dbt`, and `Power BI`. Delivered end-to-end pipelines, automated reporting workflows, and executive-ready insights for HR, manufacturing, and financial operations.
 
 # 💻 Work experience
 
 ## VNG Corporation - Data Engineer
 
-*Nov 2025- Now (0.5 yr)*
+*Nov 2025- Now (6m)*
 
-**Technical Core:** Python, PostgreSQL, AWS Glue, Airflow, BigQuery, dbt.
+**Technical Core:** `Python`, `PostgreSQL`, `AWS Glue`, `Airflow`, `Hasura`.
 
 **Key Projects & Impact:**
 
-- **Financial Data Infrastructure & Aggregation:**
-    - Designed and implemented complex recursive SQL logic to aggregate financial performance data across organizational hierarchies.
-    - Unified scheduled and actual transaction data to provide accurate, real-time insights into fiscal health.
-- **Pipeline Orchestration & Automation:**
-    - Architected and managed robust data pipelines using **Apache Airflow**, ensuring high availability and reliability of data flows.
-    - Optimized database maintenance and task scheduling by implementing and troubleshooting **pg_cron** for materialized view refreshes and table partitioning.
-- **Scalable Data Modeling:**
-    - Developed an end-to-end data ingestion framework to scrape and process large-scale logistics and real estate data.
-    - Engineered a multi-layered architecture in **BigQuery**, moving data from raw "bronze" layers to analytics-ready models using **dbt**.
-- **Process Innovation:**
-    - Pioneered the use of semantic modeling tools like **Malloy** and **DuckDB** to accelerate analytical workflows and bridge the gap between raw data and business intelligence.
-    - Integrated AI-native development environments (Cursor/VS Code) and agentic workflows to automate technical documentation and code generation, increasing team velocity.
+Data Migration: Engineered an Odoo-to-ATS migration pipeline; implemented data reconciliation layers to eliminate data mismatches and ensure zero loss during the product launch.
+
+Cloud Automation: Programmed `Python`/`Boto3` scripts to fully automate `AWS Glue` operations, eliminating manual intervention and optimizing compute resource allocation.
+
+DB Engineering: Managed `PostgreSQL`/`Hasura` ecosystems; built automated monthly partitioning frameworks, custom functions, and cron jobs to sustain query performance under scaling data volumes.
+
+GenAI & Semantic Modeling: R&D’d and integrated `Malloy` into the `IPay` system, deploying a `Text-to-Malloy` feature that enables accurate natural language data querying by defining explicit semantic layers.
+
+Operations & Docs: Standardized system architecture documentation; partnered with operations to deploy monitoring and alerting workflows, ensuring high pipeline availability.
 
 ## LEGO Manufacturing Vietnam - Data Analyst
 
- *Nov 2024 - Nov 2025 (1 yr)*
+ *Nov 2024 - Nov 2025 (1yr)*
 
-- Developed comprehensive reporting solutions for the PPC department, covering headcount and workforce planning, turnover by category, diversity & inclusion KPIs, learning & development, overtime, absenteeism, and retention policy analysis to support strategic decision-making.
-- Prepared monthly executive summaries and presentations for senior leadership, distilling insights from Power BI dashboards into clear, actionable reports
-- Collaborated with the BI Manufacturing team on initiatives such as Factory Huddle and Visual Factory, delivering reporting solutions used in daily operations and leadership team meetings.
-- Designed an end-to-end reporting solution for LEGO Vietnam’s 3-month Active Summer program by integrating Google Forms data via API into Python workflows, analyzing participation metrics, and delivering insights through a Power BI dashboard.
-- Supported the development of a Power App for gym room access consent forms and reservations, improving process efficiency and user experience.
-
+- Developed comprehensive reporting solutions for the PPC department, covering headcount and workforce planning, turnover by category, D&I KPIs, L&D, overtime, absenteeism, and retention policy analysis to support strategic decision-making.
+- Built PPC reporting across headcount/workforce planning, turnover, D&I, L&D, overtime, absenteeism, and retention to support strategic decisions.
+- Produced monthly executive summaries from `Power BI` dashboards for senior leadership.
+- Partnered with BI Manufacturing on Factory Huddle and Visual Factory reports used in daily operations and leadership meetings.
+- Delivered an end-to-end reporting solution for LEGO Vietnam's 3-month Active Summer program via `Google Forms API` + `Python` + `Power BI`.
+- Supported development of a `Power App` for gym consent and reservations, improving process efficiency and user experience.
 
 
 ## ITL Corporation 
 
 ### HR Data Analyst
 
-*Aug 2023 - Nov 2024 (1 yr 3 mo)*
+*Aug 2023 - Nov 2024 (1yr 3m)*
 
 - Analyzing & crafting reports from data of HRMS Database:
-    - Develope a full data pipeline from Database -> Data Warehouse -> Reporting (using MSSQL, PostgreSQL)
-    - Streamline data using SQL & Python.
-    - Visualize & create report on PowerBI.
-- Scraping jobs from job-listing-sites using BeautifulSoup, Selenium, Pandas to report about the recruiting market.
+-    - Develope a full data pipeline from Database -> Data Warehouse -> Reporting (using `MSSQL`, `PostgreSQL`)
+    - Streamline data using `SQL` & `Python`.
+    - Visualize & create report on `Power BI`.
+- Scraping jobs from job-listing-sites using `BeautifulSoup`, `Selenium`, `Pandas` to report about the recruiting market.
 - Conducting internal survey to measure HR metrics: stress level, employee satisfaction, employees attachments,...
-- Teaming up with IT to build an Internal AI Assistant using OpenAI API & Langchain
+- Teaming up with IT to build an Internal AI Assistant using `OpenAI API` & `Langchain`
 
-> 💡 **More information:**
-> [🧗🏻‍♂️ Projects](#projects-section)
 
 ### Human Resources Management Trainee
 
-*Feb 2022 - Aug 2023 (1 yr 7 mo)*
+*Feb 2022 - Aug 2023 (1yr 7m)*
 
 - Doing monthly salary add-on calculation for the container fleet monthly.
 - Support answering question related to company policies
@@ -96,20 +91,43 @@ download_pdf: resume.pdf
 
 # 🛠 Skills
 
+> 💡 **More information:**
+> [🏗️ Projects](#projects-section)
+
+
+### Learning Agility & AI-Accelerated Development
+
+- Fast learner with strong fundamentals; quickly adopts new tools/languages and applies them in production.
+- Recently adopted `Malloy` and `DuckDB` using AI-assisted workflows (`Cursor`/`VS Code`) to accelerate delivery.
+
 ### Python
 
-- Full proficient in key data science libraries: `pandas`, `matplotlib`, and `seaborn`, `plotly`,…
-- Proficient in web scraping using tools such as `Selenium` and `BeautifulSoup`.
-- `Langchain`, `Pinecone`, `PyDocX`: Being able to create & run an informational pipe line for prompt-tuning LLMs like GPT to become a personal assistant.
+- Advanced `Python` for end-to-end analytics and data engineering: ingestion, transformation, and reporting automation.
+- Delivered production-grade `Python` pipelines with API integration, scraping, scheduling, data quality checks, and reusable components.
+- Proficient with `pandas`, `matplotlib`, `seaborn`, `plotly`, `Selenium`, `BeautifulSoup`, and orchestration-based workflows.
 
 ### SQL
 
-- Proficient in basic SQL: being able to retrieve data from database, doing some GROUPBY for data summarization, JOIN tables,…
+- Advanced `SQL` for analytics: complex joins, aggregations, recursive logic, and query optimization (`PostgreSQL`, `BigQuery`, `MSSQL`).
+- Built and maintained reporting-ready models/datasets for executive and operational decisions.
+
+### Data Engineering & Analytics Delivery
+
+- Built and operated pipelines for HR, business, and financial analytics.
+- Hands-on with `Airflow`, `dbt`, `AWS Glue`, `BigQuery`, and `pg_cron` for orchestration, transformation, and scheduled maintenance.
+- Delivered analytics products end-to-end: data collection, modeling, dashboards, and stakeholder-facing insights.
+
+### BI & Business Applications
+
+- Advanced `Power BI`: data modeling, `DAX`, dashboard design, and executive storytelling.
+- Hands-on `Power Platform` (`Power Apps`) for internal process solutions.
 
 ### MS Office
 
-- Full professional proficiency in all applications of MS Office
-- Especially Excel & PowerPoint (Advanced level)
+- Full professional proficiency across MS Office.
+- Advanced `Excel` and `PowerPoint`.
+
+
 
 ---
 
@@ -132,47 +150,32 @@ download_pdf: resume.pdf
 
 <a id="projects-section"></a>
 
-# 🏗️ Projects
+# 🏗️ Highlighted Projects
 
-### 1. Building an internal AI Assistant
+> More details on my project, visit [Projects](/projects/)
+
+### 1. Building an Internal AI Assistant
 
 *Sep 2023 - Present*
 
-[GitHub: Internal AI Assistant](https://github.com/DataSpi/itl-inno-award-2023)
+Built an internal assistant for policy and knowledge lookup to help employees retrieve company information in natural language.
+[GitHub](https://github.com/DataSpi/itl-inno-award-2023)  
+**Tech stack:** `OpenAI API`, `Langchain`, `Pinecone`, `PyDocX`, `Python`
 
-The project aims to leverage the natural language processing capabilities of Large Language Models (LLM) by providing them with additional information about the specific domains we want to exploit.
-
-In this case, the project is specifically focused on building a Company Internal AI Assistant that possesses the ability to answer questions about the company's policies and business knowledge. The Assistant would be able to help employees easily research internal textual information using natural language.
-
-- **Skills:** pandas · langchain · Natural Language Processing (NLP) · Prompt Engineering · huggingface · Python (Programming Language)
-
-### 2. Labor Market Analysis (Data Collected from Job-Listing-Sites)
+### 2. Labor Market Analysis from Job Listing Sites
 
 *Aug 2023 - Present*
 
-[GitHub: Job Market Analysis](https://github.com/DataSpi/scraping-jobs)
+Automated job posting collection and analysis to track hiring trends in Vietnam's data job market.
+[GitHub](https://github.com/DataSpi/scraping-jobs) | [Publication](https://spyno.substack.com/p/thi-truong-tuyen-dung-cac-jobs-ve)  
+**Tech stack:** `Python`, `Selenium`, `BeautifulSoup`, `Pandas`, `Matplotlib`
 
-In this project, I've used 2 Python libraries: Selenium & BeautifulSoup to surf the web & collect data from job-listing-sites (I’ve succeed with CareerBuilder & will continue with others like Vietnamworks, Indeed, Google Jobs,…).
-
-- **Skills:** pandas · Selenium · Beautiful Soup · Python (Programming Language)
-- **Publications:**
-    1. [Báo cáo tuyển dụng Data 11/2023 - Substack](https://spyno.substack.com/p/thi-truong-tuyen-dung-cac-jobs-ve)
-    2. [Chia sẻ lại trên cộng đồng DS/ML Vietnam - Facebook](https://www.facebook.com/groups/dsmlvietnam/posts/331092943004167/)
-    3. [Chia sẻ lại trên Vietnam Data Analyst Forum - Facebook](https://www.facebook.com/groups/vietnamdataanalyst/posts/3463328530601474/)
-
-### 3. Survey about Mental Health & Stress status of ITL Employees
+### 3. Employee Mental Health & Stress Survey Analytics
 
 *Aug 2023 - Sep 2023*
 
-[ITL Mental Health & Stress Survey](https://www.notion.so/Survey-about-Mental-Health-Stress-status-of-ITL-Employees-Aug2023-a4e3286b13f34e5a933361d19f796e76?pvs=21)
-
-The survey was conducted for measuring the status of Mental Health and Stress of ITL employees in August 2023.The survey was conducted on both employees and managers using two different versions:
-
-1. Version for JG5 and below: Employees rating their status.
-2. Version for JG6 and above: Managers evaluate the status of their employees.
-
-The data collected from this 2 versions were used to compare with each other to see the differences between employees' status & the evaluation of managers.
-
-- **Skills:** pandas · Matplotlib · Google Forms · Python (Programming Language)
+Analyzed employee and manager survey data to compare stress and mental health perceptions across cohorts.
+[Project Link](https://www.notion.so/Survey-about-Mental-Health-Stress-status-of-ITL-Employees-Aug2023-a4e3286b13f34e5a933361d19f796e76?pvs=21)  
+**Tech stack:** `Pandas`, `Matplotlib`, `Google Forms`, `Python`
 
 ---
