@@ -146,6 +146,41 @@ body {
   text-decoration: none;
 }
 
+.blog-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.blog-list-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.blog-list-item:first-child {
+  padding-top: 0.25rem;
+}
+
+.blog-list-item:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.blog-list-title {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.blog-list-meta {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.blog-list-excerpt {
+  margin: 0.55rem 0 0;
+}
+
 /* Dark mode mobile nav dropdown */
 @media screen and (max-width: 600px) {
   .site-nav {

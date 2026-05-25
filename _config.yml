@@ -3,7 +3,12 @@ description: A learning animal and number cruncher.
 theme: minima
 markdown: kramdown
 show_excerpts: false
+collections:
+  blogs:
+    output: true
+    permalink: /blog/:name/
 header_pages:
   - about.md
+  - blog.md
   - projects.md
   - resume.md

@@ -63,3 +63,37 @@ Feel free to contact me via email at 📧 phamkiem.ns@gmail.com.
 <p align="center">
 	<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=DataSpi&theme=github_dark" alt="DataSpi GitHub profile stats" height="165" />
 </p>
+
+## Blog Workflow
+
+- Blog index page: `/blog/`
+- Each post is a Markdown file in `_blogs/`
+- Posts are sorted from newest to oldest using the `date` field in front matter.
+
+### New Post Template
+
+```markdown
+---
+layout: page
+title: "Your Post Title"
+date: 2026-05-25 09:00:00 +0700
+excerpt: "Short summary shown on the blog list page."
+---
+
+Write your content in Markdown.
+```
+
+### Obsidian Sync (Recommended)
+
+Use one source of truth by linking your Obsidian vault folder to this repository's `_blogs` folder.
+
+1. Open Command Prompt as Administrator.
+2. Run this command (replace paths with yours):
+
+```bat
+mklink /J "D:\Obsidian\MyVault\Blog" "D:\DataSpi\_blogs"
+```
+
+After that, notes created in `Blog` inside your vault are the same files as `_blogs` in this repo.
+
+Alternative: use two separate folders and sync with FreeFileSync or Syncthing if needed.
