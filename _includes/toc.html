@@ -2,7 +2,10 @@
   <div class="toc-inner">
     <div class="toc-header">
       <span class="toc-title">On this page</span>
-      <button class="toc-close" id="toc-close" aria-label="Close">&#x2715;</button>
+      <div class="toc-actions">
+        <button class="toc-toggle" id="toc-toggle" aria-label="Collapse table of contents" aria-expanded="true">&#9660;</button>
+        <button class="toc-close" id="toc-close" aria-label="Close">&#x2715;</button>
+      </div>
     </div>
     <ol class="toc-list" id="toc-list"></ol>
   </div>
@@ -22,6 +25,7 @@
   var panel = document.getElementById('toc-panel');
   var list = document.getElementById('toc-list');
   var fab = document.getElementById('toc-fab');
+  var toggleBtn = document.getElementById('toc-toggle');
   var closeBtn = document.getElementById('toc-close');
   var overlay = document.getElementById('toc-overlay');
   if (!panel || !list) return;
@@ -58,7 +62,16 @@
     if (fab) fab.setAttribute('aria-expanded', 'false');
   }
 
+  function toggleCollapse() {
+    var isCollapsed = panel.classList.toggle('toc-collapsed');
+    if (!toggleBtn) return;
+    toggleBtn.innerHTML = isCollapsed ? '&#9654;' : '&#9660;';
+    toggleBtn.setAttribute('aria-expanded', isCollapsed ? 'false' : 'true');
+    toggleBtn.setAttribute('aria-label', isCollapsed ? 'Expand table of contents' : 'Collapse table of contents');
+  }
+
   if (fab) fab.addEventListener('click', openToc);
+  if (toggleBtn) toggleBtn.addEventListener('click', toggleCollapse);
   if (closeBtn) closeBtn.addEventListener('click', closeToc);
   overlay.addEventListener('click', closeToc);
 

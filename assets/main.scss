@@ -440,11 +440,16 @@ hr {
   position: fixed;
   top: 80px;
   /* Align with page canvas right edge (wrapper max-width 780px), not viewport edge */
-  right: max(1rem, calc((100vw - 780px) / 2 - 220px - 1.5rem));
+  right: max(1rem, calc((100vw - 780px) / 2 - 220px - 2.75rem));
   width: 220px;
-  max-height: calc(100vh - 100px);
+  max-height: calc((100vh - 100px) * 0.7);
   overflow-y: auto;
   z-index: 100;
+}
+
+.toc-panel.toc-collapsed {
+  max-height: none;
+  overflow-y: visible;
 }
 
 .toc-inner {
@@ -459,6 +464,12 @@ hr {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 0.6rem;
+}
+
+.toc-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
 }
 
 .toc-title {
@@ -480,6 +491,26 @@ hr {
   line-height: 1;
 
   &:hover { color: var(--ink); }
+}
+
+.toc-toggle {
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0;
+  font-size: 0.95rem;
+  line-height: 1;
+
+  &:hover { color: var(--ink); }
+}
+
+.toc-panel.toc-collapsed .toc-list {
+  display: none;
+}
+
+.toc-panel.toc-collapsed .toc-header {
+  margin-bottom: 0;
 }
 
 .toc-list {
@@ -570,6 +601,8 @@ hr {
     overflow-y: auto;
     padding-top: 1.25rem;
   }
+
+  .toc-toggle { display: none; }
 
   .toc-close { display: block; }
 
