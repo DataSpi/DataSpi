@@ -6,7 +6,7 @@ excerpt: "Hành trình từ một dự án nghiên cứu đến công cụ xử 
 ---
 
 This is the testing post. Real content comming soon!
-
+<!-- 
 ```python
 import pandas as pd 
 import datetime
@@ -90,4 +90,4 @@ May 25, 2026
 <Note>
     What is note syntax, can I use it here?
 </Note>
-
+ -->
