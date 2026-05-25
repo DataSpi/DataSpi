@@ -16,8 +16,8 @@ End-to-end data pipeline for collecting, normalizing, and analyzing the Vietname
 
 - **Tech stack:** `Python`, `Selenium`, `BeautifulSoup`, `Supabase`, `Malloy`, `DuckDB`, `APScheduler`, `Google Looker Studio`
 - **Reports** *(Updated: 2026-05-20):*
-  - [Báo cáo giá BĐS theo quận tại HN & TPHCM](reports/output/HCM-HN_districts.html)
-  - [Báo cáo giá BĐS theo dự án tại HN & TPHCM](reports/output/HCM-HN_prj.html)
+  - [Báo cáo giá BĐS theo quận tại HN & TPHCM](https://dataspi.github.io/scrape-batdongsan-data/reports/output/HCM-HN_districts.html)
+  - [Báo cáo giá BĐS theo dự án tại HN & TPHCM](https://dataspi.github.io/scrape-batdongsan-data/reports/output/HCM-HN_prj.html)
 - **Dashboard:** [Google Looker Studio](https://lookerstudio.google.com/reporting/9e21618f-97dc-4480-b101-cbda26b9b2a5)
 - **Publications:**
   - [Đi xem nhà cùng Data Analyst - P1 (Substack)](https://spyno.substack.com/p/i-xem-nha-cung-data-analyst-p1)
