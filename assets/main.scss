@@ -330,6 +330,12 @@ pre code {
 .highlight .ge { font-style: italic; }
 .highlight .gs { font-weight: bold; }
 
+/* mermaid diagrams */
+.mermaid {
+  display: flex;
+  justify-content: center;
+}
+
 .post-content table {
   display: block;
   width: 100%;
