@@ -18,7 +18,7 @@ Một vài lời giới thiệu ngắn thế thôi, mọi người hãy đón đ
 
 *Hello everyone, I’m Spyno. Welcome to my little corner, a place where I share interesting insights and ideas with you all.*
 
-*I’ve actually been writing for years across various platforms. Lately, I’ve been focusing on my Spyno Substack, where I will continue to publish content on life, personal reflections, and my perspectives on different topics. This channel will run alongside my Substack, but with a specific focus on deep dives into data, technology, and my professional career journey.*
+*I’ve actually been writing for years across various platforms. Lately, I’ve been focusing on my [Spyno Substack](https://spyno.substack.com/), where I will continue to publish content on life, personal reflections, and my perspectives on different topics. This channel will run alongside my Substack, but with a specific focus on deep dives into data, technology, and my professional career journey.*
 
 *Some posts will be cross-posted on both platforms, while others will be exclusive to this blog. I hope you find value in the content I share here, and I look forward to engaging with you all through comments and discussions.*
 
