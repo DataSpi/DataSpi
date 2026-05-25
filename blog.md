@@ -8,7 +8,7 @@ Chào mọi người đến với góc nhỏ chia sẻ của Spyno về Data Eng
 
 Thực ra mình là một người viết đã lâu năm, mình có vài trang blog cá nhân về nhiều chủ đề khác nhau trong cuộc sống. Hiện tại thì mình chủ yếu chỉ còn viết trên Substack, các bạn có thể theo dõi mình tại đây: [Spyno Substack](https://spyno.substack.com/). Blog này sẽ là nơi mình tập trung chia sẻ về Data Engineering, và mình sẽ cố gắng cập nhật thường xuyên những bài viết mới nhất về chủ đề này. Mình cũng rất mong nhận được sự ủng hộ và góp ý từ các bạn để blog ngày càng hoàn thiện hơn.
 
-
+---
 
 {% assign sorted_blogs = site.blogs | sort: 'date' | reverse %}
 
