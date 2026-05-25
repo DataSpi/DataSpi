@@ -257,6 +257,79 @@ pre code {
   padding: 0;
 }
 
+/* ─────────────────────────────────────────────────────────
+   Rouge syntax highlighting – dark theme override
+   (overrides minima's built-in light-mode highlight classes)
+───────────────────────────────────────────────────────── */
+.highlight {
+  background: #111822;
+  color: var(--code-ink);
+}
+
+/* comments */
+.highlight .c, .highlight .c1, .highlight .cm,
+.highlight .cs, .highlight .cp, .highlight .cpf {
+  color: #5c7a5c;
+  font-style: italic;
+}
+
+/* keywords: SELECT, FROM, def, if, import … */
+.highlight .k,  .highlight .kd, .highlight .kn,
+.highlight .kp, .highlight .kr, .highlight .kv,
+.highlight .kt {
+  color: #c678dd;
+  font-weight: 600;
+}
+
+/* strings */
+.highlight .s,  .highlight .s1, .highlight .s2,
+.highlight .sb, .highlight .sc, .highlight .sd,
+.highlight .se, .highlight .sh, .highlight .si,
+.highlight .sx, .highlight .sr, .highlight .ss {
+  color: #98c379;
+}
+
+/* numbers */
+.highlight .mi, .highlight .mf, .highlight .mh,
+.highlight .mo, .highlight .il, .highlight .m {
+  color: #d19a66;
+}
+
+/* built-in names (print, len, True …) */
+.highlight .nb, .highlight .bp { color: #7ed0ff; }
+
+/* function / method names */
+.highlight .nf, .highlight .fm { color: #61afef; }
+
+/* class / namespace names */
+.highlight .nc, .highlight .nn { color: #e5c07b; }
+
+/* attributes & labels */
+.highlight .na, .highlight .ni, .highlight .nl { color: #d19a66; }
+
+/* tag names (HTML/XML) */
+.highlight .nt { color: #c678dd; }
+
+/* variables */
+.highlight .nv, .highlight .vc,
+.highlight .vg, .highlight .vi { color: #e06c75; }
+
+/* operators */
+.highlight .o, .highlight .ow { color: #56b6c2; }
+
+/* punctuation & default name */
+.highlight .p, .highlight .n { color: var(--code-ink); }
+
+/* errors */
+.highlight .err { color: #e06c75; background: transparent; }
+
+/* diff colours */
+.highlight .gi { color: #98c379; background: rgba(152,195,121,0.10); }
+.highlight .gd { color: #e06c75; background: rgba(224,108,117,0.10); }
+.highlight .gh, .highlight .gp { color: var(--muted); }
+.highlight .ge { font-style: italic; }
+.highlight .gs { font-weight: bold; }
+
 .post-content table {
   display: block;
   width: 100%;
