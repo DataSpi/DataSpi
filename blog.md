@@ -4,25 +4,26 @@ title: Blog
 permalink: /blog/
 ---
 
-### English
+### Vietnamese *(English below)*
 
-Hello everyone, I’m Spyno. Welcome to my little corner, a place where I share interesting insights and ideas with you all.
+Xin chào tất cả mọi người, mình là Spyno. Chào mừng mọi người đến với góc nhỏ mình xây lên để chia sẻ một vài điều thú vị đến mọi người.
 
-I’ve actually been writing for years across various platforms. Lately, I’ve been focusing on my Spyno Substack, where I will continue to publish content on life, personal reflections, and my perspectives on different topics. This channel will run alongside my Substack, but with a specific focus on deep dives into data, technology, and my professional career journey.
+Thực ra mình là một người đã tập viết lâu năm, từng xuất hiện trên nhiều nền tảng khác nhau. Gần đây thì mình chủ yếu viết trên [Spyno Substack](https://spyno.substack.com/) và vẫn sẽ tiếp tục viết trên này về các chủ đề chung trong cuộc sống, chia sẻ cá nhân, quan điểm của mình về một điều gì đó.  Kênh này sẽ được duy trì song song cùng với Substack, với mục đích chia sẻ các bài viết chuyên sâu trong mảng dữ liệu, công nghệ, và hành trình đi làm của mình. 
 
-Some posts will be cross-posted on both platforms, while others will be exclusive to this blog. I hope you find value in the content I share here, and I look forward to engaging with you all through comments and discussions.
+Một số bài viết sẽ được đăng trên cả hai nền tảng, một số sẽ chỉ có trên blog này. Mình hy vọng mọi người sẽ tìm thấy giá trị trong những nội dung mình chia sẻ ở đây, và mình rất mong được tương tác với mọi người qua phần bình luận và thảo luận.
 
-That’s a quick intro for now. Stay tuned for my upcoming posts!
+Một vài lời giới thiệu ngắn thế thôi, mọi người hãy đón đọc những bài viết của mình nhé. 
 
-### *Vietnamese*
+### *English*
 
-*Xin chào tất cả mọi người, mình là Spyno. Chào mừng mọi người đến với góc nhỏ mình xây lên để chia sẻ một vài điều thú vị đến mọi người.*
+*Hello everyone, I’m Spyno. Welcome to my little corner, a place where I share interesting insights and ideas with you all.*
 
-*Thực ra mình là một người đã tập viết lâu năm, từng xuất hiện trên nhiều nền tảng khác nhau. Gần đây thì mình chủ yếu viết trên [Spyno Substack](https://spyno.substack.com/) và vẫn sẽ tiếp tục viết trên này về các chủ đề chung trong cuộc sống, chia sẻ cá nhân, quan điểm của mình về một điều gì đó.  Kênh này sẽ được duy trì song song cùng với Substack, với mục đích chia sẻ các bài viết chuyên sâu trong mảng dữ liệu, công nghệ, và hành trình đi làm của mình.* 
+*I’ve actually been writing for years across various platforms. Lately, I’ve been focusing on my Spyno Substack, where I will continue to publish content on life, personal reflections, and my perspectives on different topics. This channel will run alongside my Substack, but with a specific focus on deep dives into data, technology, and my professional career journey.*
 
-*Một số bài viết sẽ được đăng trên cả hai nền tảng, một số sẽ chỉ có trên blog này. Mình hy vọng mọi người sẽ tìm thấy giá trị trong những nội dung mình chia sẻ ở đây, và mình rất mong được tương tác với mọi người qua phần bình luận và thảo luận.*
+*Some posts will be cross-posted on both platforms, while others will be exclusive to this blog. I hope you find value in the content I share here, and I look forward to engaging with you all through comments and discussions.*
 
-*Một vài lời giới thiệu ngắn thế thôi, mọi người hãy đón đọc những bài viết của mình nhé.* 
+*That’s a quick intro for now. Stay tuned for my upcoming posts!*
+
 
 ---
 
