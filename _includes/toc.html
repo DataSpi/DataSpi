@@ -7,7 +7,9 @@
         <button class="toc-close" id="toc-close" aria-label="Close">&#x2715;</button>
       </div>
     </div>
-    <ol class="toc-list" id="toc-list"></ol>
+    <div class="toc-scroll">
+      <ol class="toc-list" id="toc-list"></ol>
+    </div>
   </div>
 </nav>
 <button class="toc-fab" id="toc-fab" aria-label="Table of contents" aria-expanded="false">
@@ -68,6 +70,7 @@
     toggleBtn.innerHTML = isCollapsed ? '&#9654;' : '&#9660;';
     toggleBtn.setAttribute('aria-expanded', isCollapsed ? 'false' : 'true');
     toggleBtn.setAttribute('aria-label', isCollapsed ? 'Expand table of contents' : 'Collapse table of contents');
+    panel.setAttribute('aria-expanded', isCollapsed ? 'false' : 'true');
   }
 
   if (fab) fab.addEventListener('click', openToc);

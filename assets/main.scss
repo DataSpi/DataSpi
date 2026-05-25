@@ -442,21 +442,25 @@ hr {
   /* Align with page canvas right edge (wrapper max-width 780px), not viewport edge */
   right: max(1rem, calc((100vw - 780px) / 2 - 220px - 2.75rem));
   width: 220px;
-  max-height: calc((100vh - 100px) * 0.7);
-  overflow-y: auto;
+  height: calc((100vh - 100px) * 0.7);
+  overflow: visible;
   z-index: 100;
 }
 
 .toc-panel.toc-collapsed {
-  max-height: none;
-  overflow-y: visible;
+  height: auto;
 }
 
 .toc-inner {
   background: var(--paper-sheet);
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 0.85rem 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
 }
 
 .toc-header {
@@ -464,6 +468,7 @@ hr {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 0.6rem;
+  flex: 0 0 auto;
 }
 
 .toc-actions {
@@ -480,32 +485,60 @@ hr {
   color: var(--muted);
 }
 
-.toc-close {
-  display: none;
-  background: none;
-  border: none;
-  color: var(--muted);
-  cursor: pointer;
-  padding: 0;
-  font-size: 1rem;
-  line-height: 1;
-
-  &:hover { color: var(--ink); }
-}
-
+.toc-close,
 .toc-toggle {
-  background: none;
-  border: none;
-  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #1a212c;
+  color: #c3ccd7;
   cursor: pointer;
   padding: 0;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   line-height: 1;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 
-  &:hover { color: var(--ink); }
+  &:hover {
+    color: var(--ink);
+    border-color: #4e5a68;
+    background: #222c3a;
+  }
 }
 
-.toc-panel.toc-collapsed .toc-list {
+.toc-scroll {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(232, 237, 243, 0.3) transparent;
+}
+
+.toc-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.toc-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.toc-scroll::-webkit-scrollbar-thumb {
+  background: rgba(232, 237, 243, 0.28);
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background-clip: content-box;
+}
+
+.toc-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(232, 237, 243, 0.45);
+}
+
+.toc-panel.toc-collapsed .toc-scroll {
   display: none;
 }
 
@@ -598,7 +631,7 @@ hr {
     border-top: none;
     border-bottom: none;
     border-right: none;
-    overflow-y: auto;
+    overflow: hidden;
     padding-top: 1.25rem;
   }
 
