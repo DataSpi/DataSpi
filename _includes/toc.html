@@ -4,7 +4,6 @@
       <span class="toc-title">On this page</span>
       <div class="toc-actions">
         <button class="toc-toggle" id="toc-toggle" aria-label="Collapse table of contents" aria-expanded="true">&#9660;</button>
-        <button class="toc-close" id="toc-close" aria-label="Close">&#x2715;</button>
       </div>
     </div>
     <div class="toc-scroll">
@@ -28,7 +27,6 @@
   var list = document.getElementById('toc-list');
   var fab = document.getElementById('toc-fab');
   var toggleBtn = document.getElementById('toc-toggle');
-  var closeBtn = document.getElementById('toc-close');
   var overlay = document.getElementById('toc-overlay');
   if (!panel || !list) return;
 
@@ -75,7 +73,6 @@
 
   if (fab) fab.addEventListener('click', openToc);
   if (toggleBtn) toggleBtn.addEventListener('click', toggleCollapse);
-  if (closeBtn) closeBtn.addEventListener('click', closeToc);
   overlay.addEventListener('click', closeToc);
 
   // Close drawer when a TOC link is clicked (mobile)
