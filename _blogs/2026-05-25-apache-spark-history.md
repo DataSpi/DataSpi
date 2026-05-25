@@ -1,8 +1,8 @@
 ---
 layout: page
-title: "Welcome To My Blog"
+title: "Lịch sử Apache Spark"
 date: 2026-05-25 09:00:00 +0700
-excerpt: "Spyno testing the new blog"
+excerpt: "Hành trình từ một dự án nghiên cứu đến công cụ xử lý dữ liệu hàng đầu."
 ---
 
 This is the testing post. Real content comming soon!
