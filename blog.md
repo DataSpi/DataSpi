@@ -4,11 +4,11 @@ title: Blog
 permalink: /blog/
 ---
 
-Xin chào tất cả mọi người, mình là Spyno. Chào mừng mọi người đến với góc nhỏ 
+Xin chào tất cả mọi người, mình là Spyno. Chào mừng mọi người đến với góc nhỏ mình xây lên để chia sẻ một vài điều thú vị đến mọi người. 
 
-Chào mọi người đến với góc nhỏ chia sẻ của Spyno về Data Engineering. Ở đây, mình sẽ viết về những trải nghiệm, kiến thức, và dự án liên quan đến lĩnh vực dữ liệu cũng như hành trình học tập và phát triển bản thân của mình. Mục tiêu của blog là tạo ra một nơi để chia sẻ và học hỏi cùng nhau trong cộng đồng Data Engineering.
+Thực ra mình là một người đã tập viết lâu năm, từng xuất hiện trên nhiều nền tảng khác nhau. Gần đây thì mình chủ yếu viết trên [Spyno Substack](https://spyno.substack.com/) và vẫn sẽ tiếp tục viết trên này về các chủ đề chung trong cuộc sống, chia sẻ cá nhân, quan điểm của mình về một điều gì đó.  Kênh này sẽ được duy trì song song cùng với substack, với mục đích chia sẻ các bài viết chuyên sâu trong mảng dữ liệu, công nghệ, và hành trình đi làm của mình. 
 
-Thực ra mình là một người viết đã lâu năm, mình có vài trang blog cá nhân về nhiều chủ đề khác nhau trong cuộc sống. Hiện tại thì mình chủ yếu chỉ còn viết trên Substack, các bạn có thể theo dõi mình tại đây: [Spyno Substack](https://spyno.substack.com/). Blog này sẽ là nơi mình tập trung chia sẻ về Data Engineering, và mình sẽ cố gắng cập nhật thường xuyên những bài viết mới nhất về chủ đề này. Mình cũng rất mong nhận được sự ủng hộ và góp ý từ các bạn để blog ngày càng hoàn thiện hơn.
+Một vài lời giới thiệu ngắn thế thôi, mọi người hãy đón đọc những bài viết của mình nhé. 
 
 ---
 
