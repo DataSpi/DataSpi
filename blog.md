@@ -4,7 +4,7 @@ title: Blog
 permalink: /blog/
 ---
 
-### Vietnamese *(English below)*
+<!-- ### Vietnamese *(English below)*
 
 Xin chào tất cả mọi người, mình là Spyno. Chào mừng mọi người đến với góc nhỏ mình xây lên để chia sẻ một vài điều thú vị đến mọi người.
 
@@ -23,7 +23,7 @@ Một vài lời giới thiệu ngắn thế thôi, mọi người hãy đón đ
 *Some posts will be cross-posted on both platforms, while others will be exclusive to this blog. I hope you find value in the content I share here, and I look forward to engaging with you all through comments and discussions.*
 
 *That’s a quick intro for now. Stay tuned for my upcoming posts!*
-
+ -->
 
 ---
 

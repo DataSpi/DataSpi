@@ -20,6 +20,96 @@ layout: default
 
 </article>
 
+{%- if page.toc -%}
+<nav class="toc-panel" id="toc-panel" aria-label="Table of contents">
+  <div class="toc-inner">
+    <div class="toc-header">
+      <span class="toc-title">On this page</span>
+      <button class="toc-close" id="toc-close" aria-label="Close">&#x2715;</button>
+    </div>
+    <ol class="toc-list" id="toc-list"></ol>
+  </div>
+</nav>
+<button class="toc-fab" id="toc-fab" aria-label="Table of contents" aria-expanded="false">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+       stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="3" y1="6" x2="21" y2="6"/>
+    <line x1="3" y1="12" x2="15" y2="12"/>
+    <line x1="3" y1="18" x2="18" y2="18"/>
+  </svg>
+</button>
+<div class="toc-overlay" id="toc-overlay"></div>
+
+<script>
+(function () {
+  var panel   = document.getElementById('toc-panel');
+  var list    = document.getElementById('toc-list');
+  var fab     = document.getElementById('toc-fab');
+  var closeBtn = document.getElementById('toc-close');
+  var overlay = document.getElementById('toc-overlay');
+  if (!panel || !list) return;
+
+  // Build TOC from h2 / h3 inside post content
+  var headings = document.querySelectorAll('.post-content h2, .post-content h3');
+  if (headings.length === 0) {
+    panel.style.display = 'none';
+    if (fab) fab.style.display = 'none';
+    return;
+  }
+
+  headings.forEach(function (h) {
+    // Ensure heading has an id (kramdown provides these automatically)
+    if (!h.id) return;
+    var li = document.createElement('li');
+    li.className = h.tagName === 'H3' ? 'toc-h3' : 'toc-h2';
+    var a = document.createElement('a');
+    a.href = '#' + h.id;
+    a.textContent = h.textContent.replace(/^[#\s]+/, '');
+    li.appendChild(a);
+    list.appendChild(li);
+  });
+
+  // Open / close helpers
+  function openToc() {
+    panel.classList.add('toc-open');
+    overlay.classList.add('toc-open');
+    if (fab) fab.setAttribute('aria-expanded', 'true');
+  }
+  function closeToc() {
+    panel.classList.remove('toc-open');
+    overlay.classList.remove('toc-open');
+    if (fab) fab.setAttribute('aria-expanded', 'false');
+  }
+
+  if (fab)      fab.addEventListener('click', openToc);
+  if (closeBtn) closeBtn.addEventListener('click', closeToc);
+  overlay.addEventListener('click', closeToc);
+
+  // Close drawer when a TOC link is clicked (mobile)
+  list.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') closeToc();
+  });
+
+  // Active-heading highlight via IntersectionObserver
+  var tocLinks = list.querySelectorAll('a');
+  var activeId = null;
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        activeId = entry.target.id;
+        tocLinks.forEach(function (a) {
+          a.classList.toggle('toc-active', a.getAttribute('href') === '#' + activeId);
+        });
+      }
+    });
+  }, { rootMargin: '0px 0px -70% 0px', threshold: 0 });
+
+  headings.forEach(function (h) { if (h.id) observer.observe(h); });
+})();
+</script>
+{%- endif -%}
+
 <script type="module">
   // Convert Jekyll-rendered ```mermaid blocks to elements mermaid.js can process
   document.querySelectorAll('pre code.language-mermaid').forEach(function (el) {
