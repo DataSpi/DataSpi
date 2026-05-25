@@ -174,6 +174,4 @@ Analyzed employee and manager survey data to compare stress and mental health pe
 [Project Link](https://www.notion.so/Survey-about-Mental-Health-Stress-status-of-ITL-Employees-Aug2023-a4e3286b13f34e5a933361d19f796e76?pvs=21)  
 **Tech stack:** `Pandas`, `Matplotlib`, `Google Forms`, `Python`
 
-toc: true
-toc: true
 ---
