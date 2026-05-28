@@ -31,8 +31,9 @@ Jeff và Sanjay được nhắc đến trong đoạn phía trên là Jeff Dean v
 ![Pasted image 20260528202348]({{ '/assets/media/Pasted%20image%2020260528202348.png' | relative_url }})
 
 Tiếp tục làm việc cùng nhau và liên tục hoàn thiện các thuật toán tối ưu cho tính toán phân tán trên một cụm nhiều máy tính nối lại với nhau, năm 2003 và 2004, Jeff và Sanjay lần lượt cho ra hai paper có tính đột phá:
-- [The Google File System](https://static.googleusercontent.com/media/research.google.com/en//archive/gfs-sosp2003.pdf): Giải pháp lưu trữ phân tán
-- [MapReduce: Simplified Data Processing on Large Clusters](https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf): Giải pháp tính toán song song trên nhiều phần cứng rẻ tiền
+- [The Google File System](https://static.googleusercontent.com/media/research.google.com/en//archive/gfs-sosp2003.pdf): Giải pháp lưu trữ phân tán.
+- [MapReduce: Simplified Data Processing on Large Clusters](https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf): Giải pháp tính toán song song trên nhiều máy tính. 
+
 ## The Google File System
 
 Ý tưởng chính của GFS là chặt 1 file khổng lồ (Petabyte ~ triệu GB) ra thành nhiều khúc nhỏ và lưu ở nhiều máy chủ nhỏ. Các máy chủ nhỏ này, được gọi là **Chunkserver**, báo cáo cho một máy chủ **Master**. 
