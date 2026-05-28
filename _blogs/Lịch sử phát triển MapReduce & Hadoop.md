@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Lịch sử phát triển MapReduce & Hadoop"
-date: 2026-05-28
+date: 2026-05-29
 excerpt: "Đầu những năm 2000, Internet bùng nổ, kích thước mạng World Wide Web tăng theo cấp số nhân qua từng năm."
 toc: true
 ---
@@ -10,7 +10,7 @@ toc: true
 
 Đầu những năm 2000, Internet bùng nổ, kích thước mạng World Wide Web tăng theo cấp số nhân qua từng năm. Các kỹ sư hàng đầu tại những công ty công nghệ đối mặt với thách thức rất lớn về việc scale-up hệ thống lên một mức độ chưa từng có trước đây.
 
-Google lúc này là một startup kỳ lân đã chuyển lên văn phòng chính thức tại Mountain View, chứ không còn hoạt động trong phòng ký túc xá của Larry Page nữa; công cụ tìm kiếm của họ đã có hàng trăm triệu lượt tìm kiếm mỗi ngày. Khi ta search the web, ta không thực sự làm động tác Ctrl+F trên toàn hệ thống World Wide Web mà chỉ đơn giản là tìm kiếm trên một tấm bản đồ mà Google đã lập sẵn.
+Google lúc này là một startup kỳ lân đã chuyển lên văn phòng chính thức tại Mountain View, chứ không còn hoạt động trong phòng ký túc xá của Larry Page nữa; công cụ của họ đã có hàng trăm triệu lượt tìm kiếm mỗi ngày. Mỗi khi người dùng sử dụng Google để tìm kiếm, Google không làm động tác Ctrl+F trên toàn hệ thống World Wide Web mà nó chỉ đơn giản là tìm kiếm trên một tấm bản đồ mà đã được lập sẵn.
 
 <div class="obs-callout obs-callout-quote" markdown="1">
 <div class="obs-callout-title">Quote</div>
@@ -26,17 +26,18 @@ Làm việc 90 giờ mỗi tuần, họ viết mã để một ổ cứng hỏng
 [The Friendship That Made Google Huge \| The New Yorker](https://www.newyorker.com/magazine/2018/12/10/the-friendship-that-made-google-huge)
 </div>
 
-Jeff và Sanjay được nhắc đến trong đoạn phía trên là Jeff Dean và Sanjay Ghemawat - hai kỹ sư huyền thoại của Google, hai kỹ sư cấp 11 duy nhất và nắm danh hiệu Google Senior Fellow cao quý cho tới thời điểm hiện tại. Vào đầu những năm 2000, đôi bạn thân này dính với nhau như hình với bóng, thậm chí nổi tiếng vì luôn code chung với nhau trên cùng một máy tính.
+Jeff và Sanjay được nhắc đến trong đoạn phía trên là Jeff Dean và Sanjay Ghemawat - hai lập trình viên huyền thoại của Google, hai kỹ sư cấp 11 duy nhất và nắm danh hiệu Google Senior Fellow cao quý cho tới thời điểm hiện tại. Vào đầu những năm 2000, đôi bạn thân này dính với nhau như hình với bóng, thậm chí nổi tiếng vì luôn code chung với nhau trên cùng một máy tính.
 
 ![Pasted image 20260528202348]({{ '/assets/media/Pasted%20image%2020260528202348.png' | relative_url }})
 
-Tiếp tục làm việc cùng nhau và liên tục hoàn thiện các thuật toán tối ưu cho tính toán phân tán trên một cụm nhiều máy tính nối lại với nhau, năm 2003 và 2004, Jeff và Sanjay lần lượt cho ra hai paper có tính đột phá:
+Tiếp tục làm việc cùng nhau và liên tục hoàn thiện các thuật toán tối ưu cho tính toán phân tán trên một cụm nhiều máy tính nối lại với nhau, năm 2003 và 2004, Jeff và Sanjay lần lượt cho ra hai nghiên cứu có tính đột phá, sẽ trở thành nền tảng cho nhiều công nghệ phát triển sau này:
 - [The Google File System](https://static.googleusercontent.com/media/research.google.com/en//archive/gfs-sosp2003.pdf): Giải pháp lưu trữ phân tán.
 - [MapReduce: Simplified Data Processing on Large Clusters](https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf): Giải pháp tính toán song song trên nhiều máy tính. 
 
 ## The Google File System
 
-Ý tưởng chính của GFS là chặt 1 file khổng lồ (Petabyte ~ triệu GB) ra thành nhiều khúc nhỏ và lưu ở nhiều máy chủ nhỏ. Các máy chủ nhỏ này, được gọi là **Chunkserver**, báo cáo cho một máy chủ **Master**. 
+Ý tưởng chính của GFS là chặt 1 file khổng lồ (Petabyte ~ triệu GB) ra thành nhiều khúc và lưu ở nhiều máy chủ nhỏ. Các máy chủ nhỏ này, được gọi là **Chunkserver**, báo cáo cho một máy chủ **Master**. 
+
 Hãy tưởng tượng hệ thống GFS như một nhà kho: 
 - **Master** là ông quản lý kho nắm hết vị trí của từng loại mặt hàng (sách kệ 1, đồ ăn kệ 2, tivi kệ 3,…)
 - **Chunkserver** là các kệ thực sự chứa hàng
@@ -44,20 +45,18 @@ Hãy tưởng tượng hệ thống GFS như một nhà kho:
 
 ```mermaid
 graph TD
-    Master["Master (Chứa Metadata)"] -->|Giám sát| CS1["Chunkserver 1"]
-    Master -->|Giám sát| CS2["Chunkserver 2"]
-    Master -->|Giám sát| CS3["Chunkserver 3"]
+    Master["Master (Chứa Metadata)"] -->|Giám sát| CS1["Chunkserver 1"]
+    Master -->|Giám sát| CS2["Chunkserver 2"]
+    Master -->|Giám sát| CS3["Chunkserver 3"]
 ```
 
-Vậy câu hỏi đặt ra là: khi ta cắt nhỏ dữ liệu và lưu trữ ở nhiều nơi như vậy, nếu chẳng may một node bị lỗi thì làm sao? Phần cứng máy tính tương đối ổn định và hiếm khi gặp lỗi... cho tới khi bạn có đủ nhiều. Quản lý một hạm đội hàng nghìn bộ xử lý nối lại với nhau bằng dây rợ loằng ngoằng thật không phải một công việc đơn giản. Các vấn đề như đứt dây, chập điện, thậm chí là random byte flip vì bức xạ vi sóng vũ trụ xảy ra như cơm bữa. Sẽ là thảm họa nếu file dữ liệu khổng lồ của bạn tự nhiên mất đi vài mảnh chỉ vì một cái dây điện đột nhiên sút ra.
+Vậy câu hỏi đặt ra là: khi ta cắt nhỏ dữ liệu và lưu trữ ở nhiều nơi như vậy, nếu chẳng may một node bị lỗi thì làm sao? Phần cứng máy tính tương đối ổn định và hiếm khi gặp lỗi... cho tới khi bạn có đủ nhiều. Quản lý một hạm đội hàng nghìn bộ xử lý nối lại với nhau bằng dây rợ loằng ngoằng thật không phải một công việc đơn giản. Các vấn đề như đứt dây, chập điện, thậm chí hiện tượng lật bit ngẫu nhiên vì bức xạ vi sóng vũ trụ cũng xảy ra như cơm bữa. Sẽ là thảm họa nếu file dữ liệu khổng lồ của bạn tự nhiên mất đi vài mảnh chỉ vì một cái dây điện đột nhiên sút ra.
 
 Các nhà khoa học tại Google đã tính đến cả cơ chế chịu lỗi cho việc này trong thuật toán của mình. 
 - Cách giải quyết là mỗi block dữ liệu nhỏ sẽ được nhân bản thành 3 bản sao và lưu ở 3 máy chủ khác nhau. Nếu một máy fail thì có thể lấy từ máy khác sang backup. Đây là lý do GFS được quảng cáo với khả năng chịu lỗi cao.
-- rack awareness: **Master** sẽ quyết định 3 bản ghi trên được lưu ở node nào thông qua một thuật toán gọi là rack awareness (ưu tiên 2 bản cùng 1 rack để đọc, ghi nhanh bản thứ 3 ở rack khác để phòng hư máy, mất điện)
+- Thuật toán rack awareness: **Master** sẽ quyết định 3 bản ghi trên được lưu ở nút nào thông qua một thuật toán gọi là rack awareness (ưu tiên 2 bản cùng 1 rack để đọc, ghi nhanh bản thứ 3 ở rack khác để phòng hư máy, mất điện)
 
 Tuy nhiên, **GFS** cũng có một số hạn chế. Đổi lại sự bá đạo về dung lượng, GFS chấp nhận đánh đổi. Nó sinh ra chỉ để phục vụ cho việc **đọc/ghi dữ liệu lớn một cách tuần tự** (quét từ đầu đến cuối file để làm index công cụ tìm kiếm). GFS sẽ cực kỳ phế và chậm chạp nếu bạn dùng nó cho các tác vụ đòi hỏi chỉnh sửa, ghi đè liên tục hoặc nhảy cóc để đọc một phần nhỏ ở giữa file (Random Access).
-- [Tìm Hiểu Về Hadoop, HDFS, Hadoop MapReduce - Viblo](https://viblo.asia/p/tim-hieu-ve-hadoop-hdfs-hadoop-mapreduce-ly-thuyet-5pPLkjNZJRZ#_hdfs-hadoop-distributes-file-system-2)
-
 ## Map & Reduce
 
 <div class="obs-callout obs-callout-quote" markdown="1">
@@ -91,7 +90,7 @@ Hai kỹ sư huyền thoại Jeff & Sanjay đã bắt tay viết những dòng c
 
 Nhưng điều thú vị là, khi công bố paper vào năm 2004, chính Jeff và Sanjay cũng thừa nhận họ đã vô cùng bất ngờ trước độ "đa năng" của hệ thống do chính tay mình tạo ra. MapReduce nhanh chóng vượt ra khỏi bài toán Indexing ban đầu và lan rộng ra mọi ngóc ngách dự án tại Google. Khắp các phòng ban, người ta dùng nó để giải quyết đủ thứ chuyện:
 
-- Các bài toán Machine Learning quy mô khổng lồ.
+- Các bài toán Machine Learning quy mô lớn.
 - Phân cụm dữ liệu (clustering) để vận hành Google News và Froogle.
 - Khai thác dữ liệu để chạy các báo cáo xu hướng tìm kiếm toàn cầu (như Google Zeitgeist).
 - Bóc tách thuộc tính từ hàng triệu trang web (chẳng hạn trích xuất thông tin địa lý để tối ưu cho hệ thống local search).
@@ -109,18 +108,19 @@ Tại sao MapReduce lại có sức lan tỏa khủng khiếp đến vậy? Câu
 
 1. **Mang tính toán đến với dữ liệu thay vì mang dữ liệu về nơi tính toán:** sách (dữ liệu) nằm im trên kệ, thứ duy nhất di chuyển là thuật toán `map` (siêu nhẹ) được gửi đến cho các công nhân. 
 2. **Sức mạnh của đám đông:** Điều này hiển nhiên, ông kế toán trưởng dù có đếm nhanh cộng giỏi cỡ nào cũng không lại 1000 công nhân đếm cùng một lúc. Nếu giả sử có tìm được ông đếm nhanh gấp 1000 lần người thường thì giá chắc chắn sẽ đắt hơn 1000 người bình thường cộng lại.
-3. **Khả năng chịu lỗi:** Đang đếm nửa chừng, ông công nhân ở Kệ 5 bị ngất (Node bị sập). Ông quản lý kho lập tức chạy sang Kệ 8 (nơi đang chứa bản sao - sao chép dự phòng của Kệ 5 nhờ cơ chế nhân bản của HDFS) và bảo ông công nhân ở đó: _"Đếm hộ tao đống sách của Kệ 5 luôn cái"_. Hệ thống vẫn vận hành mượt mà, không phải chạy lại từ đầu.
+3. **Khả năng chịu lỗi:** Đang đếm nửa chừng, ông công nhân ở Kệ 5 bị ngất (Node bị sập). Ông quản lý kho lập tức chạy sang Kệ 8 (nơi đang chứa bản sao - sao chép dự phòng của Kệ 5 nhờ cơ chế nhân bản của GFS) và bảo ông công nhân ở đó: _"Đếm hộ tao đống sách của Kệ 5 luôn cái"_. Hệ thống vẫn vận hành mượt mà, không phải chạy lại từ đầu.
+
 ### Hạn chế của MapReduce
 
 MapReduce là một framework rất mạnh nhưng nó không phải là siêu thuật toán giải quyết được mọi vấn đề. MapReduce phù hợp nếu vấn đề của bạn có 2 thuộc tính sau đây:
-- Bộ dữ liệu cực lớn.
+- Bộ dữ liệu lớn.
 - Phép toán có tính chất giao hoán và kết hợp, chẳng hạn phép cộng trong bài toán đếm bên trên.
 
 Nhưng đối với các bài toán phức tạp hơn, chẳng hạn tính trung bình (average), trung vị (median), hay các bài toán machine learning như k-means, gradient descent, kiến trúc MapReduce sẽ gặp 2 vấn đề chính như sau:
 - Trải nghiệm của developer tồi tệ: với mỗi vấn đề phía trên, developer phải vắt óc ra một bộ hàm `map` và `reduce` mới:
 	- Ví dụ với Average giá sách toàn kho: 
-		- map: cần trả về `[mã_kệ, (giá_TB, số_sách_trên_kệ)]`
-		- reduce: tính trung bình có trọng số của `giá_TB` & `số_sách_trên_kệ`
+		- `map`: cần trả về `[mã_kệ, (giá_TB, số_sách_trên_kệ)]`
+		- `reduce`: tính trung bình có trọng số của `giá_TB` & `số_sách_trên_kệ`
 	- Các bộ `map` và `reduce` này sẽ càng trở nên phức tạp khi bài toán phức tạp hơn -> trải nghiệm viết code và maintain tồi tệ.
 - Xử lý bài toán có tính lặp: hầu hết các bài toán của machine learning đều có tính lặp, tức là thực hiện 1 phép tính nhiều lần, output của vòng lặp trước sẽ là input của vòng sau và lặp lại cho tới khi đạt một điều kiện dừng nhất định.
 	- MapReduce được thiết kế để sau mỗi vòng lặp tính toán, kết quả được ghi xuống ổ đĩa cứng rồi đọc lại ở vòng tiếp theo. Điều này dẫn tới hàng trăm lần đọc/ghi xuống ổ đĩa cứng khi giải bài toán có tính lặp, và đây là nút cổ chai chí mạng khiến MapReduce hụt hơi trước những bài toán hiện đại hơn.
@@ -135,7 +135,7 @@ Nhìn ra được các điểm yếu của MapReduce ở đây, ta sẽ có cơ 
 
 ### 1. Hành trình từ Nutch đến Yahoo
 
-Năm 2004, trong một góc của San Francisco có một lập trình viên khoảng đầu 40, cao gầy, khỏe khoắn, tóc hơi vàng, đôi mắt xanh và nụ cười thường trực nở trên môi mang tên Doug Cutting. Đồng sự của anh là Mike Cafarella, 30 tuổi, một nghiên cứu sinh trẻ đang theo học Thạc sĩ Khoa học Máy tính tại Đại học Washington. Hai người đang cùng nhau xây dựng Nutch, một công cụ tìm kiếm mã nguồn mở với mục tiêu đầy tham vọng là lập chỉ mục hàng tỷ trang web. Tuy nhiên, họ nhanh chóng va phải "bức tường" về khả năng mở rộng khi kiến trúc cũ không thể xử lý khối lượng dữ liệu khổng lồ này trên một vài máy tính đơn lẻ.
+Năm 2004, trong một góc của San Francisco có một lập trình viên khoảng đầu 40, cao gầy, khỏe khoắn, tóc hơi vàng, đôi mắt xanh và nụ cười thường trực nở trên môi mang tên Doug Cutting. Đồng sự của anh là Mike Cafarella, 30 tuổi, một nghiên cứu sinh trẻ đang theo học Thạc sĩ Khoa học Máy tính tại Đại học Washington. Hai người đang cùng nhau xây dựng Nutch, một công cụ tìm kiếm mã nguồn mở với mục tiêu đầy tham vọng là lập chỉ mục hàng tỷ trang web. Tuy nhiên, họ nhanh chóng va phải bức tường về khả năng mở rộng khi kiến trúc cũ không thể xử lý khối lượng dữ liệu khổng lồ này trên một vài máy tính đơn lẻ.
 
 Cùng thời điểm này, cặp đôi Jeff & Sanjay tại Google cũng đã làm việc với nhau được vài năm và cho ra 2 paper mang tính đột phá mà ta đã cùng lướt qua ở phần trên:
 - **Google File System (GFS - 2003):** Giải pháp lưu trữ phân tán.
@@ -167,7 +167,6 @@ Yahoo! đóng vai trò là vườn ươm khổng lồ, cung cấp nguồn lực 
 
 Để chứng minh sức mạnh của Hadoop, Yahoo! đã tham gia các cuộc thi sắp xếp dữ liệu (sort benchmark) thế giới và liên tục lập kỷ lục:
 #### Sort 1TB (~1000GB)
-
 
 - **Năm 2008:**
 	- Hadoop trở thành hệ thống nhanh nhất sắp xếp 1 TB dữ liệu (209s trên 910 nút), đánh bại các siêu máy tính đắt tiền.
