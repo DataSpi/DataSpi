@@ -12,26 +12,23 @@ toc: true
 
 Google lúc này là một startup kỳ lân đã chuyển lên văn phòng chính thức tại Mountain View, chứ không còn hoạt động trong phòng ký túc xá của Larry Page nữa; công cụ tìm kiếm của họ đã có hàng trăm triệu lượt tìm kiếm mỗi ngày. Khi ta search the web, ta không thực sự làm động tác Ctrl+F trên toàn hệ thống World Wide Web mà chỉ đơn giản là tìm kiếm trên một tấm bản đồ mà Google đã lập sẵn.
 
-<div class="obs-callout obs-callout-quote" markdown="1">
-<div class="obs-callout-title">Quote</div>
-
-Khi Google còn tên BackRub (1996), bản đồ ấy nhỏ đến mức để vừa trong dàn máy đặt trong phòng ký túc xá của Page. Đến tháng Ba 2000, không có siêu máy tính nào đủ lớn để xử lý nó. Cách duy nhất để theo kịp là mua nhiều máy phổ thông rồi nối thành một hạm đội.
-
-Vì gần nửa chi phí của các máy này nằm ở những linh kiện chẳng có mấy giá trị với Google như vỏ kim loại hay ổ đĩa, công ty đặt mua bo mạch chủ và ổ cứng rời rồi tự ráp chúng lại với nhau. Họ xếp được khoảng 1.500 thiết bị như vậy thành các cột cao gần 2 mét trong một tòa nhà ở Santa Clara, California; nhưng do lỗi phần cứng, chỉ khoảng 1.200 máy hoạt động. Các lỗi xuất hiện tưởng như ngẫu nhiên liên tục làm hệ thống đứt gãy. Muốn sống sót, Google phải hợp nhất đám máy đó thành một thể thống nhất, đàn hồi và chịu lỗi.
-
-Jeff và Sanjay sát cánh phụ trách nỗ lực này. Wayne Rosing, từng làm ở Apple thời tiền Macintosh, gia nhập Google tháng 11/2000 để lãnh đạo đội kỹ thuật 100 người. “Họ mới là những người dẫn đường,” ông nói.
-
-Làm việc 90 giờ mỗi tuần, họ viết mã để một ổ cứng hỏng cũng không kéo sập cả hệ thống. Họ thêm checkpoint vào quá trình crawl để có thể khởi động lại giữa chừng. Bằng cách phát triển sơ đồ mã hóa và nén mới, họ gần như nhân đôi sức chứa hệ thống.  
-
-Trích: **The Friendship That Made Google Huge** _(xuất bản ngày 3 tháng 12, 2018 trên The New Yorker)_
-</div>
+> **Quote**
+>
+> Khi Google còn tên BackRub (1996), bản đồ ấy nhỏ đến mức để vừa trong dàn máy đặt trong phòng ký túc xá của Page. Đến tháng Ba 2000, không có siêu máy tính nào đủ lớn để xử lý nó. Cách duy nhất để theo kịp là mua nhiều máy phổ thông rồi nối thành một hạm đội.
+>
+> Vì gần nửa chi phí của các máy này nằm ở những linh kiện chẳng có mấy giá trị với Google như vỏ kim loại hay ổ đĩa, công ty đặt mua bo mạch chủ và ổ cứng rời rồi tự ráp chúng lại với nhau. Họ xếp được khoảng 1.500 thiết bị như vậy thành các cột cao gần 2 mét trong một tòa nhà ở Santa Clara, California; nhưng do lỗi phần cứng, chỉ khoảng 1.200 máy hoạt động. Các lỗi xuất hiện tưởng như ngẫu nhiên liên tục làm hệ thống đứt gãy. Muốn sống sót, Google phải hợp nhất đám máy đó thành một thể thống nhất, đàn hồi và chịu lỗi.
+>
+> Jeff và Sanjay sát cánh phụ trách nỗ lực này. Wayne Rosing, từng làm ở Apple thời tiền Macintosh, gia nhập Google tháng 11/2000 để lãnh đạo đội kỹ thuật 100 người. “Họ mới là những người dẫn đường,” ông nói.
+>
+> Làm việc 90 giờ mỗi tuần, họ viết mã để một ổ cứng hỏng cũng không kéo sập cả hệ thống. Họ thêm checkpoint vào quá trình crawl để có thể khởi động lại giữa chừng. Bằng cách phát triển sơ đồ mã hóa và nén mới, họ gần như nhân đôi sức chứa hệ thống.  
+>
+> [The Friendship That Made Google Huge \| The New Yorker](https://www.newyorker.com/magazine/2018/12/10/the-friendship-that-made-google-huge)
 
 Jeff và Sanjay được nhắc đến trong đoạn phía trên là Jeff Dean và Sanjay Ghemawat - hai kỹ sư huyền thoại của Google, hai kỹ sư cấp 11 duy nhất và nắm danh hiệu Google Senior Fellow cao quý cho tới thời điểm hiện tại. Vào đầu những năm 2000, đôi bạn thân này dính với nhau như hình với bóng, thậm chí nổi tiếng vì luôn code chung với nhau trên cùng một máy tính.
 
 Tiếp tục làm việc cùng nhau và liên tục hoàn thiện các thuật toán tối ưu cho tính toán phân tán trên một cụm nhiều máy tính nối lại với nhau, năm 2003 và 2004, Jeff và Sanjay lần lượt cho ra hai paper có tính đột phá:
 - [The Google File System](https://static.googleusercontent.com/media/research.google.com/en//archive/gfs-sosp2003.pdf): Giải pháp lưu trữ phân tán
 - [MapReduce: Simplified Data Processing on Large Clusters](https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf): Giải pháp tính toán song song trên nhiều phần cứng rẻ tiền
-
 ## The Google File System
 
 Ý tưởng chính của GFS là chặt 1 file khổng lồ (Petabyte ~ triệu GB) ra thành nhiều khúc nhỏ và lưu ở nhiều máy chủ nhỏ. Các máy chủ nhỏ này, được gọi là **Chunkserver**, báo cáo cho một máy chủ **Master**. 
@@ -51,16 +48,14 @@ Tuy nhiên, **GFS** cũng có một số hạn chế. Đổi lại sự bá đ�
 
 ## Map & Reduce
 
-<div class="obs-callout obs-callout-quote" markdown="1">
-<div class="obs-callout-title">Quote</div>
-
-Trong vài năm đầu của thập niên 2000, hai tác giả cùng nhiều nhà nghiên cứu khác tại Google đã thử rất nhiều cách khác nhau để xử lý một lượng lớn dữ liệu thô, chẳng hạn: file crawled về từ web, web requests logs,... để tính toán nhiều loại dữ liệu thứ cấp khác nhau, chẳng hạn như chỉ mục đảo ngược, cấu trúc đồ thị của tài liệu web, số lượng trang được cào về trên mỗi máy chủ, tập hợp các truy vấn phổ biến nhất theo từng ngày, v.v. 
-
-Hầu hết các tính toán phía trên đều khá đơn giản về mặt khái niệm, tuy nhiên lại khó khăn trong khâu thực hành vì lượng dữ liệu đầu vào quá lớn và các phép tính phải được phân phối trên hàng trăm hoặc hàng nghìn máy để hoàn thành trong một khoảng thời gian hợp lý. Các vấn đề về tính toán song song, phân phối dữ liệu và xử lý lỗi đòi hỏi một lượng code lớn và phức tạp để giải quyết, vì thế thường đẩy nhà nghiên cứu xa khỏi việc hoàn thành các bài toán ban đầu.
-
-*Theo Jeff & Sanjay - 2004*
-[static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf](https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf)
-</div>
+> **Quote**
+>
+> Trong vài năm đầu của thập niên 2000, hai tác giả cùng nhiều nhà nghiên cứu khác tại Google đã thử rất nhiều cách khác nhau để xử lý một lượng lớn dữ liệu thô, chẳng hạn: file crawled về từ web, web requests logs,... để tính toán nhiều loại dữ liệu thứ cấp khác nhau, chẳng hạn như chỉ mục đảo ngược, cấu trúc đồ thị của tài liệu web, số lượng trang được cào về trên mỗi máy chủ, tập hợp các truy vấn phổ biến nhất theo từng ngày, v.v. 
+>
+> Hầu hết các tính toán phía trên đều khá đơn giản về mặt khái niệm, tuy nhiên lại khó khăn trong khâu thực hành vì lượng dữ liệu đầu vào quá lớn và các phép tính phải được phân phối trên hàng trăm hoặc hàng nghìn máy để hoàn thành trong một khoảng thời gian hợp lý. Các vấn đề về tính toán song song, phân phối dữ liệu và xử lý lỗi đòi hỏi một lượng code lớn và phức tạp để giải quyết, vì thế thường đẩy nhà nghiên cứu xa khỏi việc hoàn thành các bài toán ban đầu.
+>
+> *Theo Jeff & Sanjay - 2004*
+> [MapReduce: Simplified Data Processing on Large Clusters](https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf)
 
 Để giải quyết sự phức tạp này, hai nhà khoa học đã thiết kế một framework tính toán mới, tự động hóa các setup phức tạp của việc song song hóa code, kiểm soát lỗi phần cứng, phân phối dữ liệu giữa nhiều bộ xử lý khác nhau. Mô hình tính toán này được lấy cảm hứng từ các hàm cơ bản `map` và `reduce` trong các functional programming languages như Lisp.
 
@@ -75,6 +70,7 @@ Ví dụ:
 - Cách (2) là cách của MapReduce, trong đó câu lệnh Map & Reduce sẽ như sau:
 	- Map: Hãy đếm cho tôi số lần xuất hiện của từ "hạnh phúc" trên kệ của bạn, ghi kết quả ra giấy với cú pháp như sau: `[mã_kệ, kết_quả_đếm]`
 	- Reduce: Collect toàn bộ kết quả từ các kệ & tính tổng `kết_quả_đếm`. 
+
 ### Sự bùng nổ tại Google
 
 Hai kỹ sư huyền thoại Jeff & Sanjay đã bắt tay viết những dòng code đầu tiên cho thư viện MapReduce vào tháng 2/2003. Chỉ 6 tháng sau, đến tháng 8/2003, họ tiếp tục tung ra các bản nâng cấp lớn, đưa vào những cơ chế then chốt như ưu tiên xử lý dữ liệu tại chỗ (locality optimization) và cân bằng tải động (dynamic load balancing) giữa các máy worker.
@@ -89,7 +85,7 @@ Nhưng điều thú vị là, khi công bố paper vào năm 2004, chính Jeff v
 
 Sự bùng nổ này thể hiện rất rõ qua các con số trong kho lưu trữ mã nguồn của Google lúc bấy giờ. Từ con số 0 tròn trĩnh vào đầu năm 2003, lượng chương trình dùng MapReduce được đẩy (check-in) lên hệ thống đã vọt lên gần 900 chương trình độc lập chỉ trong vòng 1 năm rưỡi (tính đến tháng 9/2004).
 
-[laurel.datsi.fi.upm.es/\_media/docencia/asignaturas/ppd/mapreduce-osdi04slides.pdf](https://laurel.datsi.fi.upm.es/_media/docencia/asignaturas/ppd/mapreduce-osdi04slides.pdf)
+[MapReduce Introduction Presentation - 2004](https://laurel.datsi.fi.upm.es/_media/docencia/asignaturas/ppd/mapreduce-osdi04slides.pdf)
 ![Pasted image 20260528163614]({{ '/assets/media/Pasted%20image%2020260528163614.png' | relative_url }})
 
 Tại sao MapReduce lại có sức lan tỏa khủng khiếp đến vậy? Câu trả lời nằm ở sự tối giản. Nó cho phép một kỹ sư viết ra một đoạn code đơn giản và chạy trơn tru trên cả nghìn máy chủ chỉ trong chưa đầy 30 phút, đẩy tốc độ làm bản mẫu (prototyping) lên mức không tưởng ở thời điểm đó.
@@ -119,8 +115,8 @@ Nhìn ra được các điểm yếu của MapReduce ở đây, ta sẽ có cơ 
 ## Con voi vàng Hadoop, một bản viết lại dân chủ hóa
 
 <div class="yt-embed">
-	<iframe src="https://www.youtube.com/embed/ebgXN7VaIZA" title="Doug Cutting: The Origins of Hadoop" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-	<p class="yt-embed-caption"><a href="https://www.youtube.com/watch?v=ebgXN7VaIZA" target="_blank" rel="noopener">Doug Cutting: The Origins of Hadoop</a></p>
+  <iframe src="https://www.youtube.com/embed/ebgXN7VaIZA" title="Doug Cutting: The Origins of Hadoop" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <p class="yt-embed-caption"><a href="https://www.youtube.com/watch?v=ebgXN7VaIZA" target="_blank" rel="noopener">Doug Cutting: The Origins of Hadoop</a></p>
 </div>
 
 ### 1. Hành trình từ Nutch đến Yahoo
@@ -140,18 +136,16 @@ Như buồn ngủ gặp chiếu manh, Cutting và Cafarella đã tự mình tái
 
 ### 2. Sự phát triển tại Yahoo! và chiến thắng trước Google
 
-<div class="obs-callout obs-callout-note" markdown="1">
-<div class="obs-callout-title">Note</div>
-
-Tham khảo: 
-- [Official Google Blog: Sorting 1PB with MapReduce](https://googleblog.blogspot.com/2008/11/sorting-1pb-with-mapreduce.html)
-- [Winning a 60 Second Dash with a Yellow Elephant - 2009](https://sortbenchmark.org/Yahoo2009.pdf)
-- [TeraByte Sort on Apache Hadoop - 2008](https://sortbenchmark.org/YahooHadoop.pdf)
-
-Có thể thấy là cả 2 papers của Yahoo đều cite Google GFS & MapReduce
-
-> Apache Hadoop is a open source software framework that dramatically simplifies writing distributed data intensive applications. It provides a distributed file system, which is modelled after the Google File System[2], and a map/reduce[1] implementation that manages distributed computation. Since the primary primitive of map/reduce is a distributed sort, most of the custom code is glue to get the desired behavior.
-</div>
+> **Note**
+>
+> Tham khảo: 
+> - [Official Google Blog: Sorting 1PB with MapReduce](https://googleblog.blogspot.com/2008/11/sorting-1pb-with-mapreduce.html)
+> - [Winning a 60 Second Dash with a Yellow Elephant - 2009](https://sortbenchmark.org/Yahoo2009.pdf)
+> - [TeraByte Sort on Apache Hadoop - 2008](https://sortbenchmark.org/YahooHadoop.pdf)
+>
+> Có thể thấy là cả 2 papers của Yahoo đều cite Google GFS & MapReduce
+>
+> > Apache Hadoop is a open source software framework that dramatically simplifies writing distributed data intensive applications. It provides a distributed file system, which is modelled after the Google File System[2], and a map/reduce[1] implementation that manages distributed computation. Since the primary primitive of map/reduce is a distributed sort, most of the custom code is glue to get the desired behavior.
 
 Yahoo! đóng vai trò là vườn ươm khổng lồ, cung cấp nguồn lực mà không một cá nhân nào có được: hàng trăm kỹ sư (dẫn đầu bởi **Owen O'Malley** và **Arun Murthy**) và các cụm máy chủ lên tới hàng ngàn nút.
 
