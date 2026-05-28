@@ -16,7 +16,7 @@ Google lúc này là một startup kỳ lân đã chuyển lên văn phòng chí
 >
 > Khi Google còn tên BackRub (1996), bản đồ ấy nhỏ đến mức để vừa trong dàn máy đặt trong phòng ký túc xá của Page. Đến tháng Ba 2000, không có siêu máy tính nào đủ lớn để xử lý nó. Cách duy nhất để theo kịp là mua nhiều máy phổ thông rồi nối thành một hạm đội.
 >
-> Vì gần nửa chi phí của các máy này nằm ở những linh kiện chẳng có mấy giá trị với Google như vỏ kim loại hay ổ đĩa, công ty đặt mua bo mạch chủ và ổ cứng rời rồi tự ráp chúng lại với nhau. Họ xếp được khoảng 1.500 thiết bị như vậy thành các cột cao gần 2 mét trong một tòa nhà ở Santa Clara, California; nhưng do lỗi phần cứng, chỉ khoảng 1.200 máy hoạt động. Các lỗi xuất hiện tưởng như ngẫu nhiên liên tục làm hệ thống đứt gãy. Muốn sống sót, Google phải hợp nhất đám máy đó thành một thể thống nhất, đàn hồi và chịu lỗi.
+> Vì gần nửa chi phí của một chiếc máy tính hoàn chỉnh nằm ở vỏ nhựa hay ổ đĩa, những thứ chẳng có mấy giá trị với Google, công ty đặt linh kiện rời (bo mạch, ổ cứng) rồi tự ráp chúng lại với nhau. Họ xếp được khoảng 1.500 thiết bị như vậy thành các cột cao gần 2 mét trong một tòa nhà ở Santa Clara, California; nhưng do lỗi phần cứng, chỉ khoảng 1.200 máy hoạt động. Các lỗi xuất hiện tưởng như ngẫu nhiên liên tục làm hệ thống đứt gãy. Muốn sống sót, Google phải hợp nhất đám máy đó thành một thể thống nhất, đàn hồi và có khả năng chịu lỗi.
 >
 > Jeff và Sanjay sát cánh phụ trách nỗ lực này. Wayne Rosing, từng làm ở Apple thời tiền Macintosh, gia nhập Google tháng 11/2000 để lãnh đạo đội kỹ thuật 100 người. “Họ mới là những người dẫn đường,” ông nói.
 >
@@ -25,6 +25,8 @@ Google lúc này là một startup kỳ lân đã chuyển lên văn phòng chí
 > [The Friendship That Made Google Huge \| The New Yorker](https://www.newyorker.com/magazine/2018/12/10/the-friendship-that-made-google-huge)
 
 Jeff và Sanjay được nhắc đến trong đoạn phía trên là Jeff Dean và Sanjay Ghemawat - hai kỹ sư huyền thoại của Google, hai kỹ sư cấp 11 duy nhất và nắm danh hiệu Google Senior Fellow cao quý cho tới thời điểm hiện tại. Vào đầu những năm 2000, đôi bạn thân này dính với nhau như hình với bóng, thậm chí nổi tiếng vì luôn code chung với nhau trên cùng một máy tính.
+
+![Pasted image 20260528202348]({{ '/assets/media/Pasted%20image%2020260528202348.png' | relative_url }})
 
 Tiếp tục làm việc cùng nhau và liên tục hoàn thiện các thuật toán tối ưu cho tính toán phân tán trên một cụm nhiều máy tính nối lại với nhau, năm 2003 và 2004, Jeff và Sanjay lần lượt cho ra hai paper có tính đột phá:
 - [The Google File System](https://static.googleusercontent.com/media/research.google.com/en//archive/gfs-sosp2003.pdf): Giải pháp lưu trữ phân tán
