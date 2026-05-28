@@ -276,51 +276,76 @@ def convert_obsidian_admonitions(content: str) -> tuple[str, int]:
         body = (match.group(2) or "").strip("\n")
         label = normalize_callout_label(raw_type)
 
-        quoted_lines = []
-        for line in body.splitlines():
-            if line.strip():
-                quoted_lines.append(f"> {line}")
-            else:
-                quoted_lines.append(">")
-
         converted_count += 1
-        return "\n".join([
-            f"> **{label}**",
-            ">",
-            *quoted_lines,
-        ])
+        return (
+            f'<div class="obs-callout obs-callout-{raw_type}" markdown="1">\n'
+            f'<div class="obs-callout-title">{label}</div>\n\n'
+            f"{body}\n"
+            f"</div>"
+        )
 
     updated = ADMONITION_RE.sub(replacer, content)
     return updated, converted_count
 
 
 def convert_html_callouts(content: str) -> tuple[str, int]:
+    # Keep already-converted HTML callouts intact.
+    return content, 0
+
+
+def convert_markdown_callout_blockquotes(content: str) -> tuple[str, int]:
+    lines = content.splitlines()
+    output: list[str] = []
     converted_count = 0
+    i = 0
 
-    def replacer(match: re.Match[str]) -> str:
-        nonlocal converted_count
+    while i < len(lines):
+        line = lines[i]
+        if not line.startswith(">"):
+            output.append(line)
+            i += 1
+            continue
 
-        raw_type = (match.group(1) or "note").strip().lower()
-        title = (match.group(2) or "").strip()
-        body = (match.group(3) or "").strip("\n")
-        label = title or normalize_callout_label(raw_type)
+        start = i
+        while i < len(lines) and lines[i].startswith(">"):
+            i += 1
 
-        quoted_lines = []
-        for line in body.splitlines():
-            if line.strip():
-                quoted_lines.append(f"> {line}")
-            else:
-                quoted_lines.append(">")
+        block = lines[start:i]
+        stripped = [re.sub(r"^>\s?", "", b) for b in block]
+
+        first_non_empty = 0
+        while first_non_empty < len(stripped) and not stripped[first_non_empty].strip():
+            first_non_empty += 1
+
+        if first_non_empty >= len(stripped):
+            output.extend(block)
+            continue
+
+        marker = stripped[first_non_empty].strip()
+        marker_match = re.fullmatch(r"\*\*([^*]+)\*\*", marker)
+        if not marker_match:
+            output.extend(block)
+            continue
+
+        label = marker_match.group(1).strip()
+        if not label:
+            output.extend(block)
+            continue
+
+        callout_type = re.sub(r"[^a-z0-9_-]+", "-", label.lower()).strip("-") or "note"
+        body_lines = stripped[first_non_empty + 1 :]
+        body = "\n".join(body_lines).strip("\n")
+
+        output.append(f'<div class="obs-callout obs-callout-{callout_type}" markdown="1">')
+        output.append(f'<div class="obs-callout-title">{label}</div>')
+        output.append("")
+        if body:
+            output.extend(body.splitlines())
+        output.append("</div>")
 
         converted_count += 1
-        return "\n".join([
-            f"> **{label}**",
-            ">",
-            *quoted_lines,
-        ])
 
-    updated = HTML_CALLOUT_RE.sub(replacer, content)
-    return updated, converted_count
+    return "\n".join(output), converted_count
 
 
 def convert_embeds_and_copy_images(content: str, source_md: Path) -> tuple[str, list[str], list[str]]:
@@ -373,6 +398,7 @@ def main() -> int:
 
     updated, copied_images, missing_images = convert_embeds_and_copy_images(content, source_md)
     updated, youtube_previews = convert_youtube_image_links(updated)
+    updated, converted_md_callouts = convert_markdown_callout_blockquotes(updated)
     updated, converted_html_callouts = convert_html_callouts(updated)
     updated, converted_admonitions = convert_obsidian_admonitions(updated)
 
@@ -400,6 +426,9 @@ def main() -> int:
 
     if converted_html_callouts:
         print(f"Converted HTML callouts: {converted_html_callouts}")
+
+    if converted_md_callouts:
+        print(f"Converted markdown callouts: {converted_md_callouts}")
 
     print("Done.")
     return 0
