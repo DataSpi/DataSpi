@@ -14,11 +14,15 @@ What it does:
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import shutil
 import sys
+from datetime import date
 from pathlib import Path
+from urllib.error import URLError
 from urllib.parse import parse_qs, quote, urlparse
+from urllib.request import urlopen
 
 # Hardcoded paths (edit these once to match your machine)
 OBSIDIAN_VAULT = Path(r"C:\Users\LAP14354\OneDrive - VNG Corporation\Documents\Kiem - LEGO\Zettelkasten")
@@ -30,7 +34,18 @@ MEDIA_DIR = REPO_ROOT / "assets" / "media"
 OBSIDIAN_EMBED_RE = re.compile(r"!\[\[([^\]|]+)(?:\|([^\]]+))?\]\]")
 MARKDOWN_IMAGE_RE = re.compile(r"!\[([^\]]*)\]\((https?://[^\s)]+)\)")
 ADMONITION_RE = re.compile(r"```ad-([a-zA-Z0-9_-]+)\n(.*?)\n```", re.DOTALL)
+HTML_CALLOUT_RE = re.compile(
+    r'<div class="obs-callout obs-callout-([a-zA-Z0-9_-]+)"(?:\s+markdown="1")?>\s*\n'
+    r'<div class="obs-callout-title">([^<]+)</div>\s*\n'
+    r"(.*?)\n</div>",
+    re.DOTALL,
+)
 IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".bmp", ".svg"}
+OBSIDIAN_META_LINE_RE = re.compile(
+    r"^(Status:\s*.*|Tag:\s*.*|Tags:\s*.*|Linking Notes:\s*.*)$",
+    re.IGNORECASE,
+)
+OBSIDIAN_DATETIME_RE = re.compile(r"^\d{4}-\d{2}-\d{2}(?:\s+\d{2}:\d{2})?$")
 
 
 def parse_args() -> argparse.Namespace:
@@ -42,6 +57,83 @@ def parse_args() -> argparse.Namespace:
         help="Markdown filename inside Obsidian vault (example: note.md)",
     )
     return parser.parse_args()
+
+
+def remove_existing_front_matter(content: str) -> str:
+    stripped = content.lstrip()
+    if not stripped.startswith("---\n"):
+        return content
+
+    lines = stripped.splitlines()
+    end_idx = None
+    for i in range(1, len(lines)):
+        if lines[i].strip() == "---":
+            end_idx = i
+            break
+
+    if end_idx is None:
+        return content
+
+    remaining = "\n".join(lines[end_idx + 1 :])
+    return remaining.lstrip("\n")
+
+
+def strip_obsidian_header_lines(content: str) -> str:
+    lines = content.splitlines()
+    idx = 0
+
+    while idx < len(lines):
+        current = lines[idx].strip()
+        if not current:
+            idx += 1
+            continue
+
+        if OBSIDIAN_DATETIME_RE.match(current) or OBSIDIAN_META_LINE_RE.match(current):
+            idx += 1
+            continue
+        break
+
+    return "\n".join(lines[idx:]).lstrip("\n")
+
+
+def infer_excerpt(content: str) -> str:
+    for line in content.splitlines():
+        text = line.strip()
+        if not text:
+            continue
+        if text.startswith("#"):
+            continue
+        if text.startswith("```"):
+            continue
+        if text.startswith("<") and text.endswith(">"):
+            continue
+        if text.startswith(("- ", "* ", ">")):
+            continue
+
+        text = re.sub(r"\[\[([^\]]+)\]\]", r"\1", text)
+        text = re.sub(r"\[([^\]]+)\]\([^\)]+\)", r"\1", text)
+        text = re.sub(r"!\[[^\]]*\]\([^\)]+\)", "", text).strip()
+        if not text:
+            continue
+
+        sentence_match = re.search(r"(.+?[.!?])(?:\s|$)", text)
+        sentence = sentence_match.group(1).strip() if sentence_match else text
+        return sentence.replace('"', '\\"')
+
+    return ""
+
+
+def build_front_matter(title: str, excerpt: str) -> str:
+    today = date.today().isoformat()
+    return (
+        "---\n"
+        "layout: page\n"
+        f'title: "{title}"\n'
+        f"date: {today}\n"
+        f'excerpt: "{excerpt}"\n'
+        "toc: true\n"
+        "---\n\n"
+    )
 
 
 def resolve_markdown_source(input_filename: str) -> Path:
@@ -86,7 +178,7 @@ def find_image_in_vault(source_md: Path, embedded_name: str) -> Path | None:
 
 def to_markdown_path_for_blog(image_filename: str) -> str:
     encoded = quote(image_filename)
-    return f"../assets/media/{encoded}"
+    return f"{{{{ '/assets/media/{encoded}' | relative_url }}}}"
 
 
 def extract_youtube_video_id(url: str) -> str | None:
@@ -112,6 +204,30 @@ def extract_youtube_video_id(url: str) -> str | None:
 
 def convert_youtube_image_links(content: str) -> tuple[str, int]:
     converted_count = 0
+    title_cache: dict[str, str] = {}
+
+    def fetch_youtube_title(video_id: str) -> str | None:
+        if video_id in title_cache:
+            return title_cache[video_id]
+
+        watch_url = f"https://www.youtube.com/watch?v={video_id}"
+        oembed_url = (
+            "https://www.youtube.com/oembed"
+            f"?url={quote(watch_url, safe=':/?=&')}&format=json"
+        )
+
+        try:
+            with urlopen(oembed_url, timeout=5) as response:
+                payload = json.loads(response.read().decode("utf-8"))
+                title = (payload.get("title") or "").strip()
+                if title:
+                    title_cache[video_id] = title
+                    return title
+        except (URLError, TimeoutError, json.JSONDecodeError, OSError):
+            pass
+
+        title_cache[video_id] = ""
+        return None
 
     def replacer(match: re.Match[str]) -> str:
         nonlocal converted_count
@@ -124,10 +240,20 @@ def convert_youtube_image_links(content: str) -> tuple[str, int]:
             return match.group(0)
 
         converted_count += 1
-        safe_alt = alt_text or f"YouTube video {video_id}"
+        resolved_title = fetch_youtube_title(video_id)
+        safe_alt = resolved_title or alt_text or f"YouTube video {video_id}"
         watch_url = f"https://www.youtube.com/watch?v={video_id}"
-        thumbnail_url = f"https://img.youtube.com/vi/{video_id}/hqdefault.jpg"
-        return f"[![{safe_alt}]({thumbnail_url})]({watch_url})"
+        embed_url = f"https://www.youtube.com/embed/{video_id}"
+        safe_title_attr = safe_alt.replace('"', "&quot;")
+        return (
+            '<div class="yt-embed">\n'
+            f'  <iframe src="{embed_url}" title="{safe_title_attr}" '
+            'loading="lazy" allow="accelerometer; autoplay; clipboard-write; '
+            'encrypted-media; gyroscope; picture-in-picture; web-share" '
+            'referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>\n'
+            f'  <p class="yt-embed-caption"><a href="{watch_url}" target="_blank" rel="noopener">{safe_alt}</a></p>\n'
+            '</div>'
+        )
 
     updated = MARKDOWN_IMAGE_RE.sub(replacer, content)
     return updated, converted_count
@@ -150,15 +276,50 @@ def convert_obsidian_admonitions(content: str) -> tuple[str, int]:
         body = (match.group(2) or "").strip("\n")
         label = normalize_callout_label(raw_type)
 
+        quoted_lines = []
+        for line in body.splitlines():
+            if line.strip():
+                quoted_lines.append(f"> {line}")
+            else:
+                quoted_lines.append(">")
+
         converted_count += 1
-        return (
-            f'<div class="obs-callout obs-callout-{raw_type}" markdown="1">\n'
-            f'<div class="obs-callout-title">{label}</div>\n\n'
-            f"{body}\n"
-            f"</div>"
-        )
+        return "\n".join([
+            f"> **{label}**",
+            ">",
+            *quoted_lines,
+        ])
 
     updated = ADMONITION_RE.sub(replacer, content)
+    return updated, converted_count
+
+
+def convert_html_callouts(content: str) -> tuple[str, int]:
+    converted_count = 0
+
+    def replacer(match: re.Match[str]) -> str:
+        nonlocal converted_count
+
+        raw_type = (match.group(1) or "note").strip().lower()
+        title = (match.group(2) or "").strip()
+        body = (match.group(3) or "").strip("\n")
+        label = title or normalize_callout_label(raw_type)
+
+        quoted_lines = []
+        for line in body.splitlines():
+            if line.strip():
+                quoted_lines.append(f"> {line}")
+            else:
+                quoted_lines.append(">")
+
+        converted_count += 1
+        return "\n".join([
+            f"> **{label}**",
+            ">",
+            *quoted_lines,
+        ])
+
+    updated = HTML_CALLOUT_RE.sub(replacer, content)
     return updated, converted_count
 
 
@@ -207,10 +368,18 @@ def main() -> int:
     target_md = BLOGS_DIR / source_md.name
 
     content = source_md.read_text(encoding="utf-8")
+    content = remove_existing_front_matter(content)
+    content = strip_obsidian_header_lines(content)
+
     updated, copied_images, missing_images = convert_embeds_and_copy_images(content, source_md)
     updated, youtube_previews = convert_youtube_image_links(updated)
+    updated, converted_html_callouts = convert_html_callouts(updated)
     updated, converted_admonitions = convert_obsidian_admonitions(updated)
-    target_md.write_text(updated, encoding="utf-8")
+
+    title = source_md.stem
+    excerpt = infer_excerpt(updated)
+    front_matter = build_front_matter(title=title, excerpt=excerpt)
+    target_md.write_text(front_matter + updated.lstrip("\n"), encoding="utf-8")
 
     print(f"Imported markdown: {source_md} -> {target_md}")
     if copied_images:
@@ -228,6 +397,9 @@ def main() -> int:
 
     if converted_admonitions:
         print(f"Converted admonition blocks: {converted_admonitions}")
+
+    if converted_html_callouts:
+        print(f"Converted HTML callouts: {converted_html_callouts}")
 
     print("Done.")
     return 0

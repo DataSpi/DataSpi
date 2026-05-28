@@ -1,3 +1,4 @@
 .tmp-edge/
 .vscode/
 _blogs/tmp/
+__pycache__/

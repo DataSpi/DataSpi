@@ -346,6 +346,35 @@ pre code {
   height: auto;
 }
 
+.yt-embed {
+  margin: 1.2rem 0 1.5rem;
+}
+
+.yt-embed iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #000;
+  display: block;
+}
+
+.yt-embed-caption {
+  margin: 0.5rem 0 0;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.yt-embed-caption a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.yt-embed-caption a:hover,
+.yt-embed-caption a:focus-visible {
+  text-decoration: underline;
+}
+
 .post-content table {
   display: block;
   width: 100%;

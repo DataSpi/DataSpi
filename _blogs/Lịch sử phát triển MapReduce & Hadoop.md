@@ -1,11 +1,10 @@
 ---
 layout: page
 title: "Lịch sử phát triển MapReduce & Hadoop"
-date: 2026-05-28 
-excerpt: "Đầu những năm 2000, Internet bùng nổ, kích thước mạng World Wide Web tăng theo cấp số nhân qua từng năm. Các kỹ sư hàng đầu tại những công ty công nghệ đối mặt với thách thức rất lớn về việc scale-up hệ thống lên một mức độ chưa từng có trước đây."
+date: 2026-05-28
+excerpt: "Đầu những năm 2000, Internet bùng nổ, kích thước mạng World Wide Web tăng theo cấp số nhân qua từng năm."
 toc: true
 ---
-
 
 ## Bối cảnh đầu những năm 2000
 
@@ -32,6 +31,7 @@ Jeff và Sanjay được nhắc đến trong đoạn phía trên là Jeff Dean v
 Tiếp tục làm việc cùng nhau và liên tục hoàn thiện các thuật toán tối ưu cho tính toán phân tán trên một cụm nhiều máy tính nối lại với nhau, năm 2003 và 2004, Jeff và Sanjay lần lượt cho ra hai paper có tính đột phá:
 - [The Google File System](https://static.googleusercontent.com/media/research.google.com/en//archive/gfs-sosp2003.pdf): Giải pháp lưu trữ phân tán
 - [MapReduce: Simplified Data Processing on Large Clusters](https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf): Giải pháp tính toán song song trên nhiều phần cứng rẻ tiền
+
 ## The Google File System
 
 Ý tưởng chính của GFS là chặt 1 file khổng lồ (Petabyte ~ triệu GB) ra thành nhiều khúc nhỏ và lưu ở nhiều máy chủ nhỏ. Các máy chủ nhỏ này, được gọi là **Chunkserver**, báo cáo cho một máy chủ **Master**. 
@@ -90,7 +90,7 @@ Nhưng điều thú vị là, khi công bố paper vào năm 2004, chính Jeff v
 Sự bùng nổ này thể hiện rất rõ qua các con số trong kho lưu trữ mã nguồn của Google lúc bấy giờ. Từ con số 0 tròn trĩnh vào đầu năm 2003, lượng chương trình dùng MapReduce được đẩy (check-in) lên hệ thống đã vọt lên gần 900 chương trình độc lập chỉ trong vòng 1 năm rưỡi (tính đến tháng 9/2004).
 
 [laurel.datsi.fi.upm.es/\_media/docencia/asignaturas/ppd/mapreduce-osdi04slides.pdf](https://laurel.datsi.fi.upm.es/_media/docencia/asignaturas/ppd/mapreduce-osdi04slides.pdf)
-![Pasted image 20260528163614](../assets/media/Pasted%20image%2020260528163614.png)
+![Pasted image 20260528163614]({{ '/assets/media/Pasted%20image%2020260528163614.png' | relative_url }})
 
 Tại sao MapReduce lại có sức lan tỏa khủng khiếp đến vậy? Câu trả lời nằm ở sự tối giản. Nó cho phép một kỹ sư viết ra một đoạn code đơn giản và chạy trơn tru trên cả nghìn máy chủ chỉ trong chưa đầy 30 phút, đẩy tốc độ làm bản mẫu (prototyping) lên mức không tưởng ở thời điểm đó.
 
@@ -118,7 +118,10 @@ Nhưng đối với các bài toán phức tạp hơn, chẳng hạn tính trung
 Nhìn ra được các điểm yếu của MapReduce ở đây, ta sẽ có cơ sở để hiểu cách mà các hệ thống sau này giải quyết những vấn đề này trong các phần tiếp theo của bài viết.
 ## Con voi vàng Hadoop, một bản viết lại dân chủ hóa
 
-[![YouTube video ebgXN7VaIZA](https://img.youtube.com/vi/ebgXN7VaIZA/hqdefault.jpg)](https://www.youtube.com/watch?v=ebgXN7VaIZA)
+<div class="yt-embed">
+	<iframe src="https://www.youtube.com/embed/ebgXN7VaIZA" title="Doug Cutting: The Origins of Hadoop" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	<p class="yt-embed-caption"><a href="https://www.youtube.com/watch?v=ebgXN7VaIZA" target="_blank" rel="noopener">Doug Cutting: The Origins of Hadoop</a></p>
+</div>
 
 ### 1. Hành trình từ Nutch đến Yahoo
 
@@ -133,7 +136,7 @@ Như buồn ngủ gặp chiếu manh, Cutting và Cafarella đã tự mình tái
 Đến tháng 1 năm 2006, Doug Cutting gia nhập Yahoo!, một công ty đang khao khát giải pháp cho các vấn đề dữ liệu tìm kiếm của chính mình. Một tháng sau, Hadoop chính thức được tách ra khỏi Nutch để trở thành một dự án độc lập, với cái tên được đặt theo *con voi đồ chơi của con trai Doug* [(accorsi.net/docs/hadoop.pdf - page 10)](https://accorsi.net/docs/hadoop.pdf). 
 
 *(Doug Cutting cùng con voi đồ chơi & Mike Cafarella)*
-![Pasted image 20260528172841](../assets/media/Pasted%20image%2020260528172841.png)
+![Pasted image 20260528172841]({{ '/assets/media/Pasted%20image%2020260528172841.png' | relative_url }})
 
 ### 2. Sự phát triển tại Yahoo! và chiến thắng trước Google
 
@@ -173,4 +176,3 @@ Nếu chỉ nhìn tốc độ thuần, Google thắng. Nhưng Yahoo lại giật
 ## Kết
 
 MapReduce và Hadoop đã hoàn thành xuất sắc sứ mệnh lịch sử của mình: dân chủ hóa năng lực xử lý dữ liệu phân tán ở quy mô lớn, biến những cụm máy phổ thông thành một cỗ máy tính toán khổng lồ mà doanh nghiệp và cộng đồng đều có thể tiếp cận. Nhưng cũng chính vì được thiết kế cho bối cảnh kỹ thuật đầu những năm 2000, chúng mang theo những giới hạn cố hữu về mô hình lập trình và hiệu năng, đặc biệt ở các bài toán lặp và phân tích tương tác hiện đại. Khi nhu cầu dữ liệu tiếp tục phình to và đòi hỏi tốc độ phản hồi cao hơn, những tay chơi mới tất yếu sẽ xuất hiện. Trong bài tiếp theo, chúng ta sẽ nghiên cứu một đại diện tiêu biểu của data platform hiện đại: **Apache Spark**.
-
