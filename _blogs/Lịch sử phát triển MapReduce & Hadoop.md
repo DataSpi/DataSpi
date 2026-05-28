@@ -1,7 +1,11 @@
-2026-05-27 12:09
-Status: #ideas
-Tag: [[Lập trình cơ bản]]
-Linking Notes: [[Jeff Dean và Sanjay Ghemawat - Tình bạn đưa google đến vĩ đại]], [[Hadoop]]
+---
+layout: page
+title: "Lịch sử phát triển MapReduce & Hadoop"
+date: 2026-05-28 
+excerpt: "Đầu những năm 2000, Internet bùng nổ, kích thước mạng World Wide Web tăng theo cấp số nhân qua từng năm. Các kỹ sư hàng đầu tại những công ty công nghệ đối mặt với thách thức rất lớn về việc scale-up hệ thống lên một mức độ chưa từng có trước đây."
+toc: true
+---
+
 
 ## Bối cảnh đầu những năm 2000
 
