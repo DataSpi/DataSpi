@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Lịch sử phát triển MapReduce & Hadoop"
-date: 2026-05-29
+date: 2026-05-29 00:10:00 +0700
 excerpt: "Đầu những năm 2000, Internet bùng nổ, kích thước mạng World Wide Web tăng theo cấp số nhân qua từng năm."
 toc: true
 ---
