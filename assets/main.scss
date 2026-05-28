@@ -352,6 +352,61 @@ pre code {
   overflow-x: auto;
 }
 
+/* Converted Obsidian admonition blocks */
+.obs-callout {
+  margin: 1.25rem 0;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--line);
+  border-left-width: 4px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.obs-callout-title {
+  margin: 0 0 0.55rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.obs-callout > :last-child {
+  margin-bottom: 0;
+}
+
+.obs-callout-note {
+  border-left-color: #7ed0ff;
+  background: rgba(126, 208, 255, 0.08);
+}
+
+.obs-callout-quote {
+  border-left-color: #9b8cff;
+  background: rgba(155, 140, 255, 0.08);
+}
+
+.obs-callout-info {
+  border-left-color: #58c4dd;
+  background: rgba(88, 196, 221, 0.08);
+}
+
+.obs-callout-warning {
+  border-left-color: #f2b95c;
+  background: rgba(242, 185, 92, 0.11);
+}
+
+.obs-callout-danger,
+.obs-callout-error {
+  border-left-color: #e06c75;
+  background: rgba(224, 108, 117, 0.11);
+}
+
+.obs-callout-success,
+.obs-callout-tip {
+  border-left-color: #88c57f;
+  background: rgba(136, 197, 127, 0.1);
+}
+
 hr {
   border: 0;
   border-top: 1px solid var(--line);

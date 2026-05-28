@@ -1,10 +1,7 @@
----
-layout: page
-title: "MapReduce & Hadoop: Cuộc cách mạng dữ liệu của thập niên 2000"
-date: 2026-05-28
-excerpt: "Đầu những năm 2000, Internet bùng nổ, kích thước mạng World Wide Web tăng theo cấp số nhân qua từng năm. Các kỹ sư hàng đầu tại những công ty công nghệ đối mặt với thách thức rất lớn về việc scale-up hệ thống lên một mức độ chưa từng có trước đây."
-toc: true
----
+2026-05-27 12:09
+Status: #ideas
+Tag: [[Lập trình cơ bản]]
+Linking Notes: [[Jeff Dean và Sanjay Ghemawat - Tình bạn đưa google đến vĩ đại]], [[Hadoop]]
 
 ## Bối cảnh đầu những năm 2000
 
@@ -12,7 +9,8 @@ toc: true
 
 Google lúc này là một startup kỳ lân đã chuyển lên văn phòng chính thức tại Mountain View, chứ không còn hoạt động trong phòng ký túc xá của Larry Page nữa; công cụ tìm kiếm của họ đã có hàng trăm triệu lượt tìm kiếm mỗi ngày. Khi ta search the web, ta không thực sự làm động tác Ctrl+F trên toàn hệ thống World Wide Web mà chỉ đơn giản là tìm kiếm trên một tấm bản đồ mà Google đã lập sẵn.
 
-```ad-quote
+<div class="obs-callout obs-callout-quote" markdown="1">
+<div class="obs-callout-title">Quote</div>
 
 Khi Google còn tên BackRub (1996), bản đồ ấy nhỏ đến mức để vừa trong dàn máy đặt trong phòng ký túc xá của Page. Đến tháng Ba 2000, không có siêu máy tính nào đủ lớn để xử lý nó. Cách duy nhất để theo kịp là mua nhiều máy phổ thông rồi nối thành một hạm đội.
 
@@ -23,8 +21,7 @@ Jeff và Sanjay sát cánh phụ trách nỗ lực này. Wayne Rosing, từng l�
 Làm việc 90 giờ mỗi tuần, họ viết mã để một ổ cứng hỏng cũng không kéo sập cả hệ thống. Họ thêm checkpoint vào quá trình crawl để có thể khởi động lại giữa chừng. Bằng cách phát triển sơ đồ mã hóa và nén mới, họ gần như nhân đôi sức chứa hệ thống.  
 
 Trích: **The Friendship That Made Google Huge** _(xuất bản ngày 3 tháng 12, 2018 trên The New Yorker)_
-
-```
+</div>
 
 Jeff và Sanjay được nhắc đến trong đoạn phía trên là Jeff Dean và Sanjay Ghemawat - hai kỹ sư huyền thoại của Google, hai kỹ sư cấp 11 duy nhất và nắm danh hiệu Google Senior Fellow cao quý cho tới thời điểm hiện tại. Vào đầu những năm 2000, đôi bạn thân này dính với nhau như hình với bóng, thậm chí nổi tiếng vì luôn code chung với nhau trên cùng một máy tính.
 
@@ -50,14 +47,16 @@ Tuy nhiên, **GFS** cũng có một số hạn chế. Đổi lại sự bá đ�
 
 ## Map & Reduce
 
-```ad-quote
+<div class="obs-callout obs-callout-quote" markdown="1">
+<div class="obs-callout-title">Quote</div>
+
 Trong vài năm đầu của thập niên 2000, hai tác giả cùng nhiều nhà nghiên cứu khác tại Google đã thử rất nhiều cách khác nhau để xử lý một lượng lớn dữ liệu thô, chẳng hạn: file crawled về từ web, web requests logs,... để tính toán nhiều loại dữ liệu thứ cấp khác nhau, chẳng hạn như chỉ mục đảo ngược, cấu trúc đồ thị của tài liệu web, số lượng trang được cào về trên mỗi máy chủ, tập hợp các truy vấn phổ biến nhất theo từng ngày, v.v. 
 
 Hầu hết các tính toán phía trên đều khá đơn giản về mặt khái niệm, tuy nhiên lại khó khăn trong khâu thực hành vì lượng dữ liệu đầu vào quá lớn và các phép tính phải được phân phối trên hàng trăm hoặc hàng nghìn máy để hoàn thành trong một khoảng thời gian hợp lý. Các vấn đề về tính toán song song, phân phối dữ liệu và xử lý lỗi đòi hỏi một lượng code lớn và phức tạp để giải quyết, vì thế thường đẩy nhà nghiên cứu xa khỏi việc hoàn thành các bài toán ban đầu.
 
 *Theo Jeff & Sanjay - 2004*
 [static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf](https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf)
-```
+</div>
 
 Để giải quyết sự phức tạp này, hai nhà khoa học đã thiết kế một framework tính toán mới, tự động hóa các setup phức tạp của việc song song hóa code, kiểm soát lỗi phần cứng, phân phối dữ liệu giữa nhiều bộ xử lý khác nhau. Mô hình tính toán này được lấy cảm hứng từ các hàm cơ bản `map` và `reduce` trong các functional programming languages như Lisp.
 
@@ -87,7 +86,7 @@ Nhưng điều thú vị là, khi công bố paper vào năm 2004, chính Jeff v
 Sự bùng nổ này thể hiện rất rõ qua các con số trong kho lưu trữ mã nguồn của Google lúc bấy giờ. Từ con số 0 tròn trĩnh vào đầu năm 2003, lượng chương trình dùng MapReduce được đẩy (check-in) lên hệ thống đã vọt lên gần 900 chương trình độc lập chỉ trong vòng 1 năm rưỡi (tính đến tháng 9/2004).
 
 [laurel.datsi.fi.upm.es/\_media/docencia/asignaturas/ppd/mapreduce-osdi04slides.pdf](https://laurel.datsi.fi.upm.es/_media/docencia/asignaturas/ppd/mapreduce-osdi04slides.pdf)
-![[Pasted image 20260528163614.png]]
+![Pasted image 20260528163614](../assets/media/Pasted%20image%2020260528163614.png)
 
 Tại sao MapReduce lại có sức lan tỏa khủng khiếp đến vậy? Câu trả lời nằm ở sự tối giản. Nó cho phép một kỹ sư viết ra một đoạn code đơn giản và chạy trơn tru trên cả nghìn máy chủ chỉ trong chưa đầy 30 phút, đẩy tốc độ làm bản mẫu (prototyping) lên mức không tưởng ở thời điểm đó.
 
@@ -115,7 +114,7 @@ Nhưng đối với các bài toán phức tạp hơn, chẳng hạn tính trung
 Nhìn ra được các điểm yếu của MapReduce ở đây, ta sẽ có cơ sở để hiểu cách mà các hệ thống sau này giải quyết những vấn đề này trong các phần tiếp theo của bài viết.
 ## Con voi vàng Hadoop, một bản viết lại dân chủ hóa
 
-![](https://www.youtube.com/watch?v=ebgXN7VaIZA)
+[![YouTube video ebgXN7VaIZA](https://img.youtube.com/vi/ebgXN7VaIZA/hqdefault.jpg)](https://www.youtube.com/watch?v=ebgXN7VaIZA)
 
 ### 1. Hành trình từ Nutch đến Yahoo
 
@@ -130,11 +129,13 @@ Như buồn ngủ gặp chiếu manh, Cutting và Cafarella đã tự mình tái
 Đến tháng 1 năm 2006, Doug Cutting gia nhập Yahoo!, một công ty đang khao khát giải pháp cho các vấn đề dữ liệu tìm kiếm của chính mình. Một tháng sau, Hadoop chính thức được tách ra khỏi Nutch để trở thành một dự án độc lập, với cái tên được đặt theo *con voi đồ chơi của con trai Doug* [(accorsi.net/docs/hadoop.pdf - page 10)](https://accorsi.net/docs/hadoop.pdf). 
 
 *(Doug Cutting cùng con voi đồ chơi & Mike Cafarella)*
-![[Pasted image 20260528172841.png]]
+![Pasted image 20260528172841](../assets/media/Pasted%20image%2020260528172841.png)
 
 ### 2. Sự phát triển tại Yahoo! và chiến thắng trước Google
 
-```ad-note
+<div class="obs-callout obs-callout-note" markdown="1">
+<div class="obs-callout-title">Note</div>
+
 Tham khảo: 
 - [Official Google Blog: Sorting 1PB with MapReduce](https://googleblog.blogspot.com/2008/11/sorting-1pb-with-mapreduce.html)
 - [Winning a 60 Second Dash with a Yellow Elephant - 2009](https://sortbenchmark.org/Yahoo2009.pdf)
@@ -143,7 +144,7 @@ Tham khảo:
 Có thể thấy là cả 2 papers của Yahoo đều cite Google GFS & MapReduce
 
 > Apache Hadoop is a open source software framework that dramatically simplifies writing distributed data intensive applications. It provides a distributed file system, which is modelled after the Google File System[2], and a map/reduce[1] implementation that manages distributed computation. Since the primary primitive of map/reduce is a distributed sort, most of the custom code is glue to get the desired behavior.
-```
+</div>
 
 Yahoo! đóng vai trò là vườn ươm khổng lồ, cung cấp nguồn lực mà không một cá nhân nào có được: hàng trăm kỹ sư (dẫn đầu bởi **Owen O'Malley** và **Arun Murthy**) và các cụm máy chủ lên tới hàng ngàn nút.
 
