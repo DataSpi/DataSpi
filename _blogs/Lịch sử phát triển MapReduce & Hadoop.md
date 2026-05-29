@@ -126,7 +126,7 @@ Nhưng đối với các bài toán phức tạp hơn, chẳng hạn tính trung
 - Xử lý bài toán có tính lặp: hầu hết các bài toán của machine learning đều có tính lặp, tức là thực hiện 1 phép tính nhiều lần, output của vòng trước sẽ là input của vòng sau và lặp lại cho tới khi đạt một điều kiện dừng nhất định.
 	- MapReduce được thiết kế để sau mỗi vòng lặp tính toán, kết quả được ghi xuống ổ đĩa cứng rồi đọc lại ở vòng tiếp theo. Điều này dẫn tới hàng trăm lần đọc/ghi xuống ổ đĩa cứng, đây là nút cổ chai chí mạng khiến MapReduce hụt hơi trước những bài toán hiện đại hơn.
 
-Nhìn ra được các điểm yếu của MapReduce ở đây, ta sẽ có cơ sở để hiểu cách mà các hệ thống sau này giải quyết những vấn đề này trong các phần tiếp theo của bài viết.
+Nhìn ra được các điểm yếu của MapReduce ở đây, ta sẽ có cơ sở để hiểu cách mà các hệ thống sau này giải quyết những vấn đề của MapReduce trong các phần tiếp theo.
 ## Con voi vàng Hadoop, một bản viết lại dân chủ hóa
 
 <div class="yt-embed">
@@ -167,6 +167,7 @@ Có thể thấy là cả 2 papers của Yahoo đều cite Google GFS & MapReduc
 Yahoo! đóng vai trò là vườn ươm khổng lồ, cung cấp nguồn lực mà không một cá nhân nào có được: hàng trăm kỹ sư (dẫn đầu bởi **Owen O'Malley** và **Arun Murthy**) và các cụm máy chủ lên tới hàng ngàn nút.
 
 Để chứng minh sức mạnh của Hadoop, Yahoo! đã tham gia các cuộc thi sắp xếp dữ liệu (sort benchmark) thế giới và liên tục lập kỷ lục.
+
 #### Sort 1TB (~1000GB)
 
 - **Năm 2008:**
@@ -174,6 +175,7 @@ Yahoo! đóng vai trò là vườn ươm khổng lồ, cung cấp nguồn lực 
 	- Cuối năm đó Google tập trung vào tuning và cho ra kỷ lục sort 1TB trong 68s với 1000 nút.
 - **Tháng 4 năm 2009:**
 	- Đội ngũ Yahoo! đã sử dụng Hadoop để sắp xếp **1TB chỉ trong 62 giây**, chính thức vượt qua kỷ lục 68 giây do Google thiết lập vào tháng 11 năm trước đó.
+
 #### Sort 1PB (~1 triệu GB)
 
 - **Google (Tháng 11/2008):** Sort 1PB trong 6 tiếng 2 phút/48.000 nút → Tốc độ đạt **2.76TB/phút**.
