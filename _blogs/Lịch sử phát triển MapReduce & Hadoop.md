@@ -37,6 +37,8 @@ Tiếp tục làm việc cùng nhau và liên tục hoàn thiện các thuật t
 
 ## The Google File System
 
+### Cắt và xắt 
+
 Ý tưởng chính của GFS là chặt 1 file khổng lồ (Petabyte ~ triệu GB) ra thành nhiều khúc và lưu ở nhiều máy chủ nhỏ. Các máy chủ nhỏ này, được gọi là **Chunkserver**, báo cáo cho một máy chủ **Master**. 
 
 Hãy tưởng tượng hệ thống GFS như một nhà kho: 
@@ -50,6 +52,8 @@ graph TD
     Master -->|Giám sát| CS2["Chunkserver 2"]
     Master -->|Giám sát| CS3["Chunkserver 3"]
 ```
+
+### Nếu mất file thì sao? 
 
 Vậy câu hỏi đặt ra là: khi ta cắt nhỏ dữ liệu và lưu trữ ở nhiều nơi như vậy, nếu chẳng may một nút bị lỗi thì làm sao? Phần cứng máy tính tương đối ổn định và hiếm khi gặp lỗi... cho tới khi bạn có đủ nhiều. Quản lý một hạm đội hàng nghìn bộ xử lý nối lại với nhau bằng dây rợ loằng ngoằng thật không phải một công việc đơn giản. Các vấn đề như đứt dây, chập điện, thậm chí hiện tượng lật bit ngẫu nhiên vì bức xạ vi sóng vũ trụ cũng xảy ra như cơm bữa. Sẽ là thảm họa nếu file dữ liệu khổng lồ của bạn tự nhiên mất đi vài mảnh chỉ vì một cái dây điện đột nhiên sút ra.
 
@@ -85,7 +89,7 @@ Ví dụ:
 	- Map: Hãy đếm cho tôi số lần xuất hiện của từ "hạnh phúc" trên kệ của bạn, ghi kết quả ra giấy với cú pháp như sau: `[mã_kệ, kết_quả_đếm]`
 	- Reduce: Collect toàn bộ kết quả từ các kệ & tính tổng `kết_quả_đếm`. 
 
-### Sự bùng nổ tại Google
+### Bùng nổ tại Google
 
 Hai kỹ sư huyền thoại Jeff & Sanjay đã bắt tay viết những dòng code đầu tiên cho thư viện MapReduce vào tháng 2/2003. Chỉ 6 tháng sau, đến tháng 8/2003, họ tiếp tục tung ra các bản nâng cấp lớn, đưa vào những cơ chế then chốt như ưu tiên xử lý dữ liệu tại chỗ (locality optimization) và cân bằng tải động (dynamic load balancing) giữa các máy worker.
 
@@ -134,7 +138,7 @@ Nhìn ra được các điểm yếu của MapReduce ở đây, ta sẽ có cơ 
   <p class="yt-embed-caption"><a href="https://www.youtube.com/watch?v=ebgXN7VaIZA" target="_blank" rel="noopener">Doug Cutting: The Origins of Hadoop</a></p>
 </div>
 
-### 1. Hành trình từ Nutch đến Yahoo
+### Từ Nutch đến Yahoo
 
 Năm 2004, trong một góc của San Francisco có một lập trình viên khoảng đầu 40, cao gầy, khỏe khoắn, tóc hơi vàng, đôi mắt xanh và nụ cười thường trực nở trên môi mang tên Doug Cutting. Đồng sự của anh là Mike Cafarella, 30 tuổi, một nghiên cứu sinh trẻ đang theo học Thạc sĩ Khoa học Máy tính tại Đại học Washington. Hai người đang cùng nhau xây dựng Nutch, một công cụ tìm kiếm mã nguồn mở với mục tiêu đầy tham vọng là lập chỉ mục hàng tỷ trang web. Tuy nhiên, họ nhanh chóng va phải bức tường về khả năng mở rộng khi kiến trúc cũ không thể xử lý khối lượng dữ liệu khổng lồ này trên một vài máy tính đơn lẻ.
 
@@ -149,7 +153,7 @@ Như buồn ngủ gặp chiếu manh, Cutting và Cafarella đã tự mình tái
 *(Doug Cutting cùng con voi đồ chơi & Mike Cafarella)*
 ![Pasted image 20260528172841]({{ '/assets/media/Pasted%20image%2020260528172841.png' | relative_url }})
 
-### 2. Sự phát triển tại Yahoo! và chiến thắng trước Google
+### Chiến thắng trước Google
 
 <div class="obs-callout obs-callout-note" markdown="1">
 <div class="obs-callout-title">Note</div>
