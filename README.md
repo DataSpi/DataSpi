@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Kiem Pham (sPyno)</h1>
 <h3 align="center">A passionate Data Practitioner</h3>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=dataspi&label=Profile%20views&color=0e75b6&style=flat" alt="dataspi" /> </p>
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=DataSpi&label=Profile%20views&color=0e75b6&style=flat" alt="dataspi" /> </p>
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=dataspi" alt="dataspi" /></a> </p>
 
@@ -61,5 +61,5 @@ Feel free to contact me via email at 📧 phamkiem.ns@gmail.com.
 <br />
 
 <p align="center">
-	<img src="https://github-readme-stats.vercel.app/api?username=dataspi&show_icons=true&hide_border=true&rank_icon=github&theme=transparent" alt="DataSpi GitHub profile stats" height="165" />
+	<img src="https://github-readme-stats.vercel.app/api?username=DataSpi&show_icons=true&hide_border=true&rank_icon=github&theme=transparent" alt="DataSpi GitHub profile stats" height="165" />
 </p>
