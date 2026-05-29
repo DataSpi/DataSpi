@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "Lịch sử phát triển MapReduce & Hadoop"
-date: 2026-05-29 00:10:00 +0700
+date: 2026-05-29
 excerpt: "Đầu những năm 2000, Internet bùng nổ, kích thước mạng World Wide Web tăng theo cấp số nhân qua từng năm."
 toc: true
 ---
 
-## Bối cảnh đầu những năm 2000
+## Đầu những năm 2000
 
 Đầu những năm 2000, Internet bùng nổ, kích thước mạng World Wide Web tăng theo cấp số nhân qua từng năm. Các kỹ sư hàng đầu tại những công ty công nghệ đối mặt với thách thức rất lớn về việc scale-up hệ thống lên một mức độ chưa từng có trước đây.
 
@@ -28,6 +28,7 @@ Làm việc 90 giờ mỗi tuần, họ viết mã để một ổ cứng hỏng
 
 Jeff và Sanjay được nhắc đến trong đoạn phía trên là Jeff Dean và Sanjay Ghemawat - hai lập trình viên huyền thoại của Google, hai kỹ sư cấp 11 duy nhất và nắm danh hiệu Google Senior Fellow cao quý cho tới thời điểm hiện tại. Vào đầu những năm 2000, đôi bạn thân này dính với nhau như hình với bóng, thậm chí nổi tiếng vì luôn code chung với nhau trên cùng một máy tính.
 
+*(Sanjay Ghemawat và Jeff Dean)*
 ![Pasted image 20260528202348]({{ '/assets/media/Pasted%20image%2020260528202348.png' | relative_url }})
 
 Tiếp tục làm việc cùng nhau và liên tục hoàn thiện các thuật toán tối ưu cho tính toán phân tán trên một cụm nhiều máy tính nối lại với nhau, năm 2003 và 2004, Jeff và Sanjay lần lượt cho ra hai nghiên cứu có tính đột phá, sẽ trở thành nền tảng cho nhiều công nghệ phát triển sau này:
@@ -50,13 +51,13 @@ graph TD
     Master -->|Giám sát| CS3["Chunkserver 3"]
 ```
 
-Vậy câu hỏi đặt ra là: khi ta cắt nhỏ dữ liệu và lưu trữ ở nhiều nơi như vậy, nếu chẳng may một node bị lỗi thì làm sao? Phần cứng máy tính tương đối ổn định và hiếm khi gặp lỗi... cho tới khi bạn có đủ nhiều. Quản lý một hạm đội hàng nghìn bộ xử lý nối lại với nhau bằng dây rợ loằng ngoằng thật không phải một công việc đơn giản. Các vấn đề như đứt dây, chập điện, thậm chí hiện tượng lật bit ngẫu nhiên vì bức xạ vi sóng vũ trụ cũng xảy ra như cơm bữa. Sẽ là thảm họa nếu file dữ liệu khổng lồ của bạn tự nhiên mất đi vài mảnh chỉ vì một cái dây điện đột nhiên sút ra.
+Vậy câu hỏi đặt ra là: khi ta cắt nhỏ dữ liệu và lưu trữ ở nhiều nơi như vậy, nếu chẳng may một nút bị lỗi thì làm sao? Phần cứng máy tính tương đối ổn định và hiếm khi gặp lỗi... cho tới khi bạn có đủ nhiều. Quản lý một hạm đội hàng nghìn bộ xử lý nối lại với nhau bằng dây rợ loằng ngoằng thật không phải một công việc đơn giản. Các vấn đề như đứt dây, chập điện, thậm chí hiện tượng lật bit ngẫu nhiên vì bức xạ vi sóng vũ trụ cũng xảy ra như cơm bữa. Sẽ là thảm họa nếu file dữ liệu khổng lồ của bạn tự nhiên mất đi vài mảnh chỉ vì một cái dây điện đột nhiên sút ra.
 
-Các nhà khoa học tại Google đã tính đến cả cơ chế chịu lỗi cho việc này trong thuật toán của mình. 
+Các nhà khoa học tại Google đã tính đến cả cơ chế chịu lỗi cho việc này trong thuật toán của mình:
 - Cách giải quyết là mỗi block dữ liệu nhỏ sẽ được nhân bản thành 3 bản sao và lưu ở 3 máy chủ khác nhau. Nếu một máy fail thì có thể lấy từ máy khác sang backup. Đây là lý do GFS được quảng cáo với khả năng chịu lỗi cao.
 - Thuật toán rack awareness: **Master** sẽ quyết định 3 bản ghi trên được lưu ở nút nào thông qua một thuật toán gọi là rack awareness (ưu tiên 2 bản cùng 1 rack để đọc, ghi nhanh bản thứ 3 ở rack khác để phòng hư máy, mất điện)
 
-Tuy nhiên, **GFS** cũng có một số hạn chế. Đổi lại sự bá đạo về dung lượng, GFS chấp nhận đánh đổi. Nó sinh ra chỉ để phục vụ cho việc **đọc/ghi dữ liệu lớn một cách tuần tự** (quét từ đầu đến cuối file để làm index công cụ tìm kiếm). GFS sẽ cực kỳ phế và chậm chạp nếu bạn dùng nó cho các tác vụ đòi hỏi chỉnh sửa, ghi đè liên tục hoặc nhảy cóc để đọc một phần nhỏ ở giữa file (Random Access).
+Tuy nhiên, để đạt được dung lượng lưu trữ cực lớn thì GFS cũng có một vài đánh đổi. Nó sinh ra chỉ để phục vụ cho việc **đọc/ghi dữ liệu lớn một cách tuần tự** (quét từ đầu đến cuối file để làm index công cụ tìm kiếm). GFS sẽ cực kỳ chậm chạp nếu bạn dùng nó cho các tác vụ đòi hỏi chỉnh sửa, ghi đè liên tục hoặc nhảy cóc để đọc một phần nhỏ ở giữa file (Random Access).
 ## Map & Reduce
 
 <div class="obs-callout obs-callout-quote" markdown="1">
@@ -67,7 +68,7 @@ Trong vài năm đầu của thập niên 2000, hai tác giả cùng nhiều nh�
 Hầu hết các tính toán phía trên đều khá đơn giản về mặt khái niệm, tuy nhiên lại khó khăn trong khâu thực hành vì lượng dữ liệu đầu vào quá lớn và các phép tính phải được phân phối trên hàng trăm hoặc hàng nghìn máy để hoàn thành trong một khoảng thời gian hợp lý. Các vấn đề về tính toán song song, phân phối dữ liệu và xử lý lỗi đòi hỏi một lượng code lớn và phức tạp để giải quyết, vì thế thường đẩy nhà nghiên cứu xa khỏi việc hoàn thành các bài toán ban đầu.
 
 *Theo Jeff & Sanjay - 2004*
-[MapReduce: Simplified Data Processing on Large Clusters](https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf)
+*[MapReduce: Simplified Data Processing on Large Clusters](https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf)*
 </div>
 
 Để giải quyết sự phức tạp này, hai nhà khoa học đã thiết kế một framework tính toán mới, tự động hóa các setup phức tạp của việc song song hóa code, kiểm soát lỗi phần cứng, phân phối dữ liệu giữa nhiều bộ xử lý khác nhau. Mô hình tính toán này được lấy cảm hứng từ các hàm cơ bản `map` và `reduce` trong các functional programming languages như Lisp.
@@ -96,17 +97,17 @@ Nhưng điều thú vị là, khi công bố paper vào năm 2004, chính Jeff v
 - Bóc tách thuộc tính từ hàng triệu trang web (chẳng hạn trích xuất thông tin địa lý để tối ưu cho hệ thống local search).
 - Xử lý các phép toán đồ thị (graph computations) cực lớn.
 
-Sự bùng nổ này thể hiện rất rõ qua các con số trong kho lưu trữ mã nguồn của Google lúc bấy giờ. Từ con số 0 tròn trĩnh vào đầu năm 2003, lượng chương trình dùng MapReduce được đẩy (check-in) lên hệ thống đã vọt lên gần 900 chương trình độc lập chỉ trong vòng 1 năm rưỡi (tính đến tháng 9/2004).
+Sự bùng nổ này thể hiện rất rõ qua các con số trong kho lưu trữ mã nguồn của Google lúc bấy giờ. Từ con số 0 tròn trĩnh vào đầu năm 2003, lượng chương trình dùng MapReduce được đẩy lên hệ thống đã vọt lên gần 900 chương trình độc lập chỉ trong vòng 1 năm rưỡi (tính đến tháng 9/2004).
 
-[MapReduce Introduction Presentation - 2004](https://laurel.datsi.fi.upm.es/_media/docencia/asignaturas/ppd/mapreduce-osdi04slides.pdf)
+[MapReduce - Google Presentation - 2004](https://laurel.datsi.fi.upm.es/_media/docencia/asignaturas/ppd/mapreduce-osdi04slides.pdf)
 ![Pasted image 20260528163614]({{ '/assets/media/Pasted%20image%2020260528163614.png' | relative_url }})
 
 Tại sao MapReduce lại có sức lan tỏa khủng khiếp đến vậy? Câu trả lời nằm ở sự tối giản. Nó cho phép một kỹ sư viết ra một đoạn code đơn giản và chạy trơn tru trên cả nghìn máy chủ chỉ trong chưa đầy 30 phút, đẩy tốc độ làm bản mẫu (prototyping) lên mức không tưởng ở thời điểm đó.
 
-Đột phá lớn nhất của hệ thống này là tính trừu tượng hóa: Nó trao sức mạnh siêu máy tính cho cả những lập trình viên **chưa từng có một ngày kinh nghiệm** làm việc với hệ thống phân tán hay tính toán song song. Họ không cần đau đầu vì lỗi phần cứng hay đứt mạng, họ chỉ việc viết logic, mọi sự phức tạp của hạ tầng đã có MapReduce lo.
+Đột phá lớn nhất của hệ thống này là tính trừu tượng hóa: Nó trao sức mạnh siêu máy tính cho cả những lập trình viên **chưa từng có kinh nghiệm** làm việc với hệ thống phân tán hay tính toán song song. Họ không cần đau đầu vì lỗi phần cứng hay đứt mạng, họ chỉ việc viết logic, mọi sự phức tạp của hạ tầng đã có MapReduce lo.
 ### Tại sao MapReduce lại là một cuộc cách mạng?
 
-1. **Mang tính toán đến với dữ liệu thay vì mang dữ liệu về nơi tính toán:** sách (dữ liệu) nằm im trên kệ, thứ duy nhất di chuyển là thuật toán `map` (siêu nhẹ) được gửi đến cho các công nhân. 
+1. **Mang tính toán đến với dữ liệu thay vì mang dữ liệu về nơi tính toán:** Sách (dữ liệu) nằm im trên kệ, thứ duy nhất di chuyển là thuật toán `map` (siêu nhẹ) được gửi đến cho các công nhân. 
 2. **Sức mạnh của đám đông:** Điều này hiển nhiên, ông kế toán trưởng dù có đếm nhanh cộng giỏi cỡ nào cũng không lại 1000 công nhân đếm cùng một lúc. Nếu giả sử có tìm được ông đếm nhanh gấp 1000 lần người thường thì giá chắc chắn sẽ đắt hơn 1000 người bình thường cộng lại.
 3. **Khả năng chịu lỗi:** Đang đếm nửa chừng, ông công nhân ở Kệ 5 bị ngất (Node bị sập). Ông quản lý kho lập tức chạy sang Kệ 8 (nơi đang chứa bản sao - sao chép dự phòng của Kệ 5 nhờ cơ chế nhân bản của GFS) và bảo ông công nhân ở đó: _"Đếm hộ tao đống sách của Kệ 5 luôn cái"_. Hệ thống vẫn vận hành mượt mà, không phải chạy lại từ đầu.
 
@@ -114,16 +115,16 @@ Tại sao MapReduce lại có sức lan tỏa khủng khiếp đến vậy? Câu
 
 MapReduce là một framework rất mạnh nhưng nó không phải là siêu thuật toán giải quyết được mọi vấn đề. MapReduce phù hợp nếu vấn đề của bạn có 2 thuộc tính sau đây:
 - Bộ dữ liệu lớn.
-- Phép toán có tính chất giao hoán và kết hợp, chẳng hạn phép cộng trong bài toán đếm bên trên.
+- Phép toán có tính chất giao hoán và kết hợp *(phép cộng trong bài toán đếm bên trên)*.
 
 Nhưng đối với các bài toán phức tạp hơn, chẳng hạn tính trung bình (average), trung vị (median), hay các bài toán machine learning như k-means, gradient descent, kiến trúc MapReduce sẽ gặp 2 vấn đề chính như sau:
-- Trải nghiệm của developer tồi tệ: với mỗi vấn đề phía trên, developer phải vắt óc ra một bộ hàm `map` và `reduce` mới:
-	- Ví dụ với Average giá sách toàn kho: 
+- Trải nghiệm của developer tồi tệ: với mỗi vấn đề phía trên, developer phải vắt óc cho ra một bộ hàm `map` và `reduce` mới:
+	- Ví dụ với `average` giá sách toàn kho: 
 		- `map`: cần trả về `[mã_kệ, (giá_TB, số_sách_trên_kệ)]`
 		- `reduce`: tính trung bình có trọng số của `giá_TB` & `số_sách_trên_kệ`
-	- Các bộ `map` và `reduce` này sẽ càng trở nên phức tạp khi bài toán phức tạp hơn -> trải nghiệm viết code và maintain tồi tệ.
-- Xử lý bài toán có tính lặp: hầu hết các bài toán của machine learning đều có tính lặp, tức là thực hiện 1 phép tính nhiều lần, output của vòng lặp trước sẽ là input của vòng sau và lặp lại cho tới khi đạt một điều kiện dừng nhất định.
-	- MapReduce được thiết kế để sau mỗi vòng lặp tính toán, kết quả được ghi xuống ổ đĩa cứng rồi đọc lại ở vòng tiếp theo. Điều này dẫn tới hàng trăm lần đọc/ghi xuống ổ đĩa cứng khi giải bài toán có tính lặp, và đây là nút cổ chai chí mạng khiến MapReduce hụt hơi trước những bài toán hiện đại hơn.
+	- Các bộ `map` và `reduce` này sẽ càng trở nên phức tạp khi bài toán phức tạp hơn -> trải nghiệm viết code và maintain tồi tệ. Bạn cứ google thử cách làm bài toán trung vị (`median`) với MapReduce mà xem. 
+- Xử lý bài toán có tính lặp: hầu hết các bài toán của machine learning đều có tính lặp, tức là thực hiện 1 phép tính nhiều lần, output của vòng trước sẽ là input của vòng sau và lặp lại cho tới khi đạt một điều kiện dừng nhất định.
+	- MapReduce được thiết kế để sau mỗi vòng lặp tính toán, kết quả được ghi xuống ổ đĩa cứng rồi đọc lại ở vòng tiếp theo. Điều này dẫn tới hàng trăm lần đọc/ghi xuống ổ đĩa cứng, đây là nút cổ chai chí mạng khiến MapReduce hụt hơi trước những bài toán hiện đại hơn.
 
 Nhìn ra được các điểm yếu của MapReduce ở đây, ta sẽ có cơ sở để hiểu cách mà các hệ thống sau này giải quyết những vấn đề này trong các phần tiếp theo của bài viết.
 ## Con voi vàng Hadoop, một bản viết lại dân chủ hóa
@@ -165,18 +166,18 @@ Có thể thấy là cả 2 papers của Yahoo đều cite Google GFS & MapReduc
 
 Yahoo! đóng vai trò là vườn ươm khổng lồ, cung cấp nguồn lực mà không một cá nhân nào có được: hàng trăm kỹ sư (dẫn đầu bởi **Owen O'Malley** và **Arun Murthy**) và các cụm máy chủ lên tới hàng ngàn nút.
 
-Để chứng minh sức mạnh của Hadoop, Yahoo! đã tham gia các cuộc thi sắp xếp dữ liệu (sort benchmark) thế giới và liên tục lập kỷ lục:
+Để chứng minh sức mạnh của Hadoop, Yahoo! đã tham gia các cuộc thi sắp xếp dữ liệu (sort benchmark) thế giới và liên tục lập kỷ lục.
 #### Sort 1TB (~1000GB)
 
 - **Năm 2008:**
-	- Hadoop trở thành hệ thống nhanh nhất sắp xếp 1 TB dữ liệu (209s trên 910 nút), đánh bại các siêu máy tính đắt tiền.
-	- Cuối năm đó Google tập trung vào tuning và cho ra kỷ lục sort 1 TB trong 68s với 1000 nút.
+	- Hadoop trở thành hệ thống nhanh nhất sắp xếp 1TB dữ liệu (209s trên 910 nút), đánh bại các siêu máy tính đắt tiền.
+	- Cuối năm đó Google tập trung vào tuning và cho ra kỷ lục sort 1TB trong 68s với 1000 nút.
 - **Tháng 4 năm 2009:**
-	- Đội ngũ Yahoo! đã sử dụng Hadoop để sắp xếp **1 TB chỉ trong 62 giây**, chính thức vượt qua kỷ lục 68 giây do Google thiết lập vào tháng 11 năm trước đó.
+	- Đội ngũ Yahoo! đã sử dụng Hadoop để sắp xếp **1TB chỉ trong 62 giây**, chính thức vượt qua kỷ lục 68 giây do Google thiết lập vào tháng 11 năm trước đó.
 #### Sort 1PB (~1 triệu GB)
 
-- **Google (Tháng 11/2008):** Sort 1PB trong 6 tiếng 2 phút / 48.000 nút → Tốc độ đạt **2.76 TB/phút**.
-- **Yahoo (Tháng 5/2009):** Sort 1PB trong 16 tiếng 15 phút / 3658 nút → Tốc độ đạt **1.03 TB/phút**.
+- **Google (Tháng 11/2008):** Sort 1PB trong 6 tiếng 2 phút/48.000 nút → Tốc độ đạt **2.76TB/phút**.
+- **Yahoo (Tháng 5/2009):** Sort 1PB trong 16 tiếng 15 phút/3658 nút → Tốc độ đạt **1.03TB/phút**.
 
 Nếu chỉ nhìn tốc độ thuần, Google thắng. Nhưng Yahoo lại giật giải **GraySort chính thức của năm 2009** vì đơn giản Google chỉ viết blog khoe chứ không nộp bài. Kết quả của Google được team nhà tự setup và tự đo kết quả. Trong khi đó Yahoo đem toàn bộ tài liệu kỹ thuật, minh bạch hóa cấu hình trước ban giám khảo của Sort Benchmark 2009. Thêm nữa, hãy nhớ Google đã sử dụng một bộ phần cứng khủng hơn hẳn so với Yahoo cho các vụ sort 1PB đó, chỉ xét riêng về số lượng nút.
 
