@@ -1,9 +1,12 @@
 <h1 align="center">Hi 👋, I'm Kiem Pham (sPyno)</h1>
 <h3 align="center">A passionate Data Practitioner</h3>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=DataSpi&label=Profile%20views&color=0e75b6&style=flat" alt="dataspi" /> </p>
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=DataSpi&label=Profile%20views&color=0e75b6&style=flat" alt="DataSpi" /> </p>
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=dataspi" alt="dataspi" /></a> </p>
+<p align="left">
+	<a href="https://github.com/DataSpi?tab=followers"><img src="https://img.shields.io/github/followers/DataSpi?style=flat&label=Followers" alt="DataSpi followers" /></a>
+	<a href="https://github.com/DataSpi?tab=repositories"><img src="https://img.shields.io/badge/Repositories-View%20Projects-1f6feb?style=flat" alt="View DataSpi repositories" /></a>
+</p>
 
 ## About Me
 
@@ -61,5 +64,6 @@ Feel free to contact me via email at 📧 phamkiem.ns@gmail.com.
 <br />
 
 <p align="center">
-	<img src="https://github-readme-stats.vercel.app/api?username=DataSpi&show_icons=true&hide_border=true&rank_icon=github&theme=transparent" alt="DataSpi GitHub profile stats" height="165" />
+	<a href="https://github.com/DataSpi"><img src="https://img.shields.io/badge/GitHub-DataSpi-181717?logo=github&logoColor=white&style=for-the-badge" alt="DataSpi GitHub" /></a>
+	<a href="https://github.com/DataSpi/DataSpi/commits/main/"><img src="https://img.shields.io/github/last-commit/DataSpi/DataSpi?style=for-the-badge&label=Last%20Update" alt="Last update" /></a>
 </p>
