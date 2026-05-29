@@ -66,7 +66,7 @@ toc: true
 *Aug 2023 - Nov 2024 (1yr 3m)*
 
 - Analyzing & crafting reports from data of HRMS Database:
--    - Develope a full data pipeline from Database -> Data Warehouse -> Reporting (using `MSSQL`, `PostgreSQL`)
+    - Develope a full data pipeline from Database -> Data Warehouse -> Reporting (using `MSSQL`, `PostgreSQL`)
     - Streamline data using `SQL` & `Python`.
     - Visualize & create report on `Power BI`.
 - Scraping jobs from job-listing-sites using `BeautifulSoup`, `Selenium`, `Pandas` to report about the recruiting market.
