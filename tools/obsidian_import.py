@@ -25,7 +25,8 @@ from urllib.parse import parse_qs, quote, urlparse
 from urllib.request import urlopen
 
 # Hardcoded paths (edit these once to match your machine)
-OBSIDIAN_VAULT = Path(r"C:\Users\LAP14354\OneDrive - VNG Corporation\Documents\Kiem - LEGO\Zettelkasten")
+# OBSIDIAN_VAULT = Path(r"C:\Users\LAP14354\OneDrive - VNG Corporation\Documents\Kiem - LEGO\Zettelkasten")
+OBSIDIAN_VAULT = Path(r"/Users/spinokiem/Library/CloudStorage/OneDrive-VNGGroupJSC/Documents/Kiem - LEGO/Zettelkasten")
 REPO_ROOT = Path(__file__).resolve().parents[1]
 BLOGS_DIR = REPO_ROOT / "_blogs"
 MEDIA_DIR = REPO_ROOT / "assets" / "media"
@@ -137,26 +138,44 @@ def build_front_matter(title: str, excerpt: str) -> str:
 
 
 def resolve_markdown_source(input_filename: str) -> Path:
-    source = OBSIDIAN_VAULT / input_filename
-    if source.exists() and source.is_file():
-        return source
+    raw_input = input_filename.strip()
+    candidate_inputs = [raw_input]
 
-    matches = list(OBSIDIAN_VAULT.rglob(input_filename))
-    matches = [p for p in matches if p.is_file()]
+    # Allow users to pass filenames without the markdown extension.
+    if Path(raw_input).suffix == "":
+        candidate_inputs.append(f"{raw_input}.md")
 
-    if not matches:
+    for candidate_name in candidate_inputs:
+        source = OBSIDIAN_VAULT / candidate_name
+        if source.exists() and source.is_file():
+            return source
+
+    matches: list[Path] = []
+    for candidate_name in candidate_inputs:
+        matches.extend(p for p in OBSIDIAN_VAULT.rglob(candidate_name) if p.is_file())
+
+    # Deduplicate while preserving order.
+    unique_matches: list[Path] = []
+    seen: set[Path] = set()
+    for match in matches:
+        if match in seen:
+            continue
+        seen.add(match)
+        unique_matches.append(match)
+
+    if not unique_matches:
         raise FileNotFoundError(
             f"Cannot find markdown file '{input_filename}' in vault: {OBSIDIAN_VAULT}"
         )
 
-    if len(matches) > 1:
-        preview = "\n".join(f"- {m}" for m in matches[:5])
+    if len(unique_matches) > 1:
+        preview = "\n".join(f"- {m}" for m in unique_matches[:5])
         raise FileExistsError(
             "Found multiple files with the same name. Please pass a more specific path\n"
             f"within the vault. Example matches:\n{preview}"
         )
 
-    return matches[0]
+    return unique_matches[0]
 
 
 def find_image_in_vault(source_md: Path, embedded_name: str) -> Path | None:

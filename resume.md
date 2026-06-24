@@ -25,7 +25,7 @@ toc: true
 ---
 <br />
 
-> Data Engineer with 3+ years of experience building analytics and data platforms using `Python`, `SQL`, `PostgreSQL`, `BigQuery`, `Airflow`, `AWS Glue`, `dbt`, and `Power BI`. Delivered end-to-end pipelines, automated reporting workflows, and executive-ready insights for HR, manufacturing, and financial operations.
+> Data Engineer with 3+ years of experience designing, building, and operating data platforms for analytics. Strong in `Python`, `SQL`, `PostgreSQL`, `BigQuery`, `Airflow`, `AWS Glue`, and `dbt`, with hands-on delivery of stable ETL/ELT pipelines (batch and near real-time), data modeling, and operational monitoring. Proven ability to collaborate with BI, analysts, and business stakeholders to deliver trusted, actionable data products.
 
 # 💻 Work experience
 
@@ -37,25 +37,20 @@ toc: true
 
 **Key Projects & Impact:**
 
-- Data Migration: Engineered an `Odoo-to-ATS` migration pipeline; implemented data reconciliation layers to eliminate data mismatches and ensure zero loss during the product launch.
-
-- Cloud Automation: Programmed `Python`/`Boto3` scripts to fully automate `AWS Glue` operations, eliminating manual intervention and optimizing compute resource allocation.
-
-- DB Engineering: Managed `PostgreSQL`/`Hasura` ecosystems; built automated monthly partitioning frameworks, custom functions, and cron jobs to sustain query performance under scaling data volumes.
-
-- GenAI & Semantic Modeling: R&D’d and integrated `Malloy` into the `IPay` system, deploying a `Text-to-Malloy` feature that enables accurate natural language data querying by defining explicit semantic layers.
-
-- Operations & Docs: Standardized system architecture documentation; partnered with operations to deploy monitoring and alerting workflows, ensuring high pipeline availability.
+- Data Platform & Migration: Designed and operated an `Odoo-to-ATS` data migration pipeline with reconciliation controls to maintain data integrity and prevent data loss at go-live.
+- ETL/ELT Automation: Built `Python` + `Boto3` automation for `AWS Glue` jobs, reducing manual operations and improving pipeline stability and run-time consistency.
+- Managed `PostgreSQL`/`Hasura` workloads, including automated monthly partitioning, custom SQL functions, and scheduled maintenance (`pg_cron`) to keep query latency stable as data volume grew.
+- Data Modeling & Consumption: Integrated `Malloy` semantic modeling into the `IPay` environment to improve self-service analytics and natural language querying accuracy.
+- Monitoring & Documentation: Established technical documentation standards and implemented monitoring/alerting flows with operations teams to improve reliability and incident response.
 
 ## LEGO Manufacturing Vietnam - Data Analyst
 
  *Nov 2024 - Nov 2025 (1yr)*
 
 - Developed comprehensive reporting solutions for the PPC department, covering headcount and workforce planning, turnover by category, D&I KPIs, L&D, overtime, absenteeism, and retention policy analysis to support strategic decision-making.
-- Built PPC reporting across headcount/workforce planning, turnover, D&I, L&D, overtime, absenteeism, and retention to support strategic decisions.
 - Produced monthly executive summaries from `Power BI` dashboards for senior leadership.
 - Partnered with BI Manufacturing on Factory Huddle and Visual Factory reports used in daily operations and leadership meetings.
-- Delivered an end-to-end reporting solution for LEGO Vietnam's 3-month Active Summer program via `Google Forms API` + `Python` + `Power BI`.
+- Delivered an end-to-end data flow for LEGO Vietnam's 3-month Active Summer program via `Google Forms API` + `Python` + `Power BI`.
 - Supported development of a `Power App` for gym consent and reservations, improving process efficiency and user experience.
 
 
@@ -66,9 +61,9 @@ toc: true
 *Aug 2023 - Nov 2024 (1yr 3m)*
 
 - Analyzing & crafting reports from data of HRMS Database:
-    - Develope a full data pipeline from Database -> Data Warehouse -> Reporting (using `MSSQL`, `PostgreSQL`)
-    - Streamline data using `SQL` & `Python`.
-    - Visualize & create report on `Power BI`.
+    - Developed a full data pipeline from source database -> data warehouse -> reporting (using `MSSQL`, `PostgreSQL`).
+    - Built ETL transformations and data preparation workflows using `SQL` and `Python`.
+    - Published reporting datasets and dashboards on `Power BI` for HR and management teams.
 - Scraping jobs from job-listing-sites using `BeautifulSoup`, `Selenium`, `Pandas` to report about the recruiting market.
 - Conducting internal survey to measure HR metrics: stress level, employee satisfaction, employees attachments,...
 - Teaming up with IT to build an Internal AI Assistant using `OpenAI API` & `Langchain`
@@ -99,19 +94,26 @@ toc: true
 ### Python
 
 - Advanced `Python` for end-to-end analytics and data engineering: ingestion, transformation, and reporting automation.
-- Delivered production-grade `Python` pipelines with API integration, scraping, scheduling, data quality checks, and reusable components.
+- Delivered production-grade `Python` pipelines with API integration, scheduling, data quality checks, and reusable components.
 - Proficient with `pandas`, `matplotlib`, `seaborn`, `plotly`, `Selenium`, `BeautifulSoup`, and orchestration-based workflows.
 
 ### SQL & Malloy
 
-- Advanced `SQL` for analytics: complex joins, aggregations, recursive logic, query optimization, and semantic modeling/querying with `Malloy` (`PostgreSQL`, `BigQuery`, `MSSQL`).
+- Advanced `SQL` for analytics and pipeline development: complex joins, aggregations, recursive logic, query optimization, and semantic modeling/querying with `Malloy` (`PostgreSQL`, `BigQuery`, `MSSQL`).
 - Built and maintained reporting-ready models/datasets for executive and operational decisions.
 
 ### Data Engineering & Analytics Delivery
 
-- Built and operated pipelines for HR, business, and financial analytics.
-- Hands-on with `Airflow`, `dbt`, `AWS Glue`, `BigQuery`, and `pg_cron` for orchestration, transformation, and scheduled maintenance.
+- Built and operated ETL/ELT pipelines for HR, business, and financial analytics use cases.
+- Hands-on with `Airflow`, `dbt`, `AWS Glue`, `BigQuery`, and `pg_cron` for orchestration, transformation, monitoring, and scheduled maintenance.
+- Applied data modeling practices for analytics datasets and reporting layers.
 - Delivered analytics products end-to-end: data collection, modeling, dashboards, and stakeholder-facing insights.
+
+### DataOps, Governance & Collaboration
+
+- Practical DataOps workflows with `Git`, deployment discipline, and operational runbooks/documentation.
+- Implemented reconciliation and validation checks to improve data quality and consistency across pipelines.
+- Experience collaborating cross-functionally with BI, analysts, operations, and business teams to translate data requirements into reliable data products.
 
 ### BI & Business Applications
 
