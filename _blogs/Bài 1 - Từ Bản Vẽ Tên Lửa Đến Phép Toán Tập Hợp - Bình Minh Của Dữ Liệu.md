@@ -228,7 +228,7 @@ Không. IBM đã chọn cách dập tắt nó.
 
 Lý do đằng sau thì rất đời thường. Lúc bấy giờ, con gà đẻ trứng vàng của IBM vẫn là IMS. Nó đang bán rất chạy và tạo ra lợi nhuận khổng lồ. Giới chóp bu của IBM nhìn bài báo của Codd như một thứ dị giáo rủi ro đập vỡ nồi cơm hiện tại của công ty.
 
-Codd không chịu ngồi yên, vượt rào sự ngăn cản của IBM để present ý tưởng relational database với khách hàng. Mãi đến khi khách hàng bắt đầu rục rịch đòi hỏi, IBM mới chậm chạp đẻ ra dự án System R (nơi thai nghén ngôn ngữ SQL). Nhưng vì còn mải mê đánh nhau trong cuộc chiến máy tính cá nhân và vẫn rón rén bảo vệ doanh số IMS, phải đến tận năm 1983 IBM mới tung ra sản phẩm relational database thương mại DB2.
+Codd không chịu ngồi yên, vượt rào sự ngăn cản của IBM để trình bày ý tưởng relational database với khách hàng. Mãi đến khi khách hàng bắt đầu rục rịch đòi hỏi, IBM mới chậm chạp đẻ ra dự án System R (nơi thai nghén ngôn ngữ SQL). Nhưng vì còn mải mê đánh nhau trong cuộc chiến máy tính cá nhân và vẫn rón rén bảo vệ doanh số IMS, phải đến tận năm 1983 IBM mới tung ra sản phẩm relational database thương mại DB2.
 
 Và lúc đó thì miếng bánh đã bị kẻ khác cuỗm mất từ lâu.
 
