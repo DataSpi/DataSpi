@@ -8,9 +8,8 @@ toc: true
 
 # Data Engineer - Lịch sử, giới hạn và tương lai của nghề dữ liệu
 
-```ad-note
-Bài này viết cho độc giả chính là người đã có chút kiến thức về công nghệ thông tin. Nhưng tôi đã đặt tiêu chuẩn cao cho bản thân là viết sao cho cả người bình thường cũng có thể hiểu được. Thế nên kể cả bạn không phải là dân tech thì cũng đừng ngại đọc bài nhé.
-```
+> *Bài này viết cho độc giả chính là người đã có chút kiến thức về công nghệ thông tin. Nhưng tôi đã đặt tiêu chuẩn cao cho bản thân là viết sao cho cả người bình thường cũng có thể hiểu được. Thế nên kể cả bạn không phải là dân tech thì cũng đừng ngại đọc bài nhé.*
+
 
 Là một Data Engineer còn đang trong giai đoạn tích lũy chuyên môn, tôi nhận thấy việc hiểu sâu sắc về ngành mà mình theo đuổi là một nhu cầu thiết yếu. Khả năng đặt câu hỏi sâu về bối cảnh lịch sử, các áp lực thực tại thúc đẩy những bước tiến công nghệ trong quá khứ sẽ cho chúng ta một điểm tựa vững chắc để định hình lộ trình cá nhân. 
 
