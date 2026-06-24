@@ -2,7 +2,7 @@
 layout: page
 title: "Bài 1 - Từ Bản Vẽ Tên Lửa Đến Phép Toán Tập Hợp - Bình Minh Của Dữ Liệu"
 date: 2026-06-24
-excerpt: "Ngày 25 tháng 5 năm 1961, JFK đưa ra thử thách cho toàn nước Mỹ đưa người lên mặt trăng và trở lại trái đất an toàn."
+excerpt: "Hành trình tiến hóa của hệ thống OLTP. Từ bài toán quản lý 2 triệu linh kiện của tên lửa Saturn V bằng mô hình phân cấp (IMS), bước ngoặt giải phóng tư duy của Edgar Codd với mô hình quan hệ, cho đến sự thống trị thương trường của Oracle và di sản cộng đồng mang tên PostgreSQL."
 toc: true
 ---
 
