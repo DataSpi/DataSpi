@@ -2,21 +2,21 @@
 layout: page
 title: "Bài 1 - Từ Bản Vẽ Tên Lửa Đến Phép Toán Tập Hợp - Bình Minh Của Dữ Liệu"
 date: 2026-06-24
-excerpt: "Ngày 25 tháng 5 năm 1961, JFK đưa ra thử thách cho toàn nước Mỹ đưa người lên mặt trăng và trở lại trái đất an toàn."
+excerpt: "Hành trình tiến hóa của hệ thống OLTP. Từ bài toán quản lý 2 triệu linh kiện của tên lửa Saturn V bằng mô hình phân cấp (IMS), bước ngoặt giải phóng tư duy của Edgar Codd với mô hình quan hệ, cho đến sự thống trị thương trường của Oracle và di sản cộng đồng mang tên PostgreSQL."
 toc: true
 ---
 
 # 1. Làm sao lắp tàu mặt trăng?
 
-Ngày 25 tháng 5 năm 1961, JFK đưa ra thử thách cho toàn nước Mỹ đưa người lên mặt trăng và trở lại trái đất an toàn. Kỳ tích này phải hoàn thành trước khi thập kỷ kết thúc. Đây là một phần của Nhiệm vụ Apollo. 
+Ngày 25 tháng 5 năm 1961, JFK đưa ra thử thách cho toàn nước Mỹ đưa người lên mặt trăng và trở lại Trái Đất an toàn. Kỳ tích này phải hoàn thành trước khi thập kỷ kết thúc. Đây là một phần của Nhiệm vụ Apollo. 
 
-American Rockwell là thầu chính chịu trách nhiệm thiết kế và chế tạo tên lửa đẩy Saturn V có nhiệm vụ mang tàu thám hiểm Apollo bay vào không gian. Saturn V là một trong những kì quan công nghệ của toàn nhân loại. Tên lửa này được cấu tạo từ khoảng 2 triệu linh kiện khác nhau, và chỉ nội việc quản lý thông tin của các bộ phận này như: nguồn gốc, thông số kĩ thuật, thứ tự lắp ráp đã là một thử thách cực đại. 
+American Rockwell là thầu chính chịu trách nhiệm thiết kế và chế tạo tên lửa đẩy Saturn V có nhiệm vụ mang tàu thám hiểm Apollo bay vào không gian. Saturn V là một trong những kỳ quan công nghệ của toàn nhân loại. Tên lửa này được cấu tạo từ khoảng 2 triệu linh kiện khác nhau, và chỉ nội việc quản lý thông tin của các bộ phận này như: nguồn gốc, thông số kỹ thuật, thứ tự lắp ráp đã là một thử thách cực đại. 
 
 ![300]({{ '/assets/media/Pasted%20image%2020260623160209.png' | relative_url }})
 
 Ở thập niên 60, công nghệ lưu trữ dữ liệu lúc đó vẫn chủ yếu là trên băng từ hoặc thẻ đục lỗ. Chắc chắn Rockwell không thể quản lý 2 triệu mảnh tên lửa với những công nghệ đó, vì thế họ bắt tay với IBM. Năm 1966, một đội 12 người được thành lập với thành viên đến từ IBM, Rockwell, Caterpillar Tractor với nhiệm vụ xây một hệ thống quản lý danh mục vật tư cho việc chế tạo tàu vũ trụ. Hệ thống đó được đặt tên *Information Control System and Data Language/Interface (ICS)*, phiên bản đầu tiên ra lò năm 1967, cài đặt lần đầu tại Rockwell Space Division năm 1968. 
 
-Một năm sau thành công đó đó, IBM mở một nhánh kinh doanh mới, đem ICS đổi tên thành IMS (Information Management System/360) và mở bán với toàn thị trường.
+Một năm sau thành công đó, IBM mở một nhánh kinh doanh mới, đem ICS đổi tên thành IMS (Information Management System/360) và mở bán với toàn thị trường.
 
 <div class="obs-callout obs-callout-info" markdown="1">
 <div class="obs-callout-title">Info</div>
@@ -62,10 +62,10 @@ Ví dụ:
 1. Cha -> con : Kiểm tra số dư của tài khoản ID 103 thuộc chi nhánh Kì Đồng của Vietcombank
 2. Con -> cha: Tìm xem số điện thoại 0987123456 là của chủ tài khoản nào? 
 
-Nếu muốn truy xuất dữ liệu không theo quy tắc leo các nhánh cây đã được định sẵn như trên ta sẽ gặp khó khăn. Đó là chưa kể đến các truy vấn tùy biến, đa điều kiện của các bài toán hiện đại như: 
+Nếu muốn truy xuất dữ liệu không theo quy tắc leo các nhánh cây đã được định sẵn như trên, ta sẽ gặp khó khăn. Đó là chưa kể đến các truy vấn tùy biến, đa điều kiện của các bài toán hiện đại như: 
 - Giám đốc ngân hàng hỏi: Liệt kê tất cả các khách hàng mở tài khoản trong năm 2025, có số dư trên 1 tỷ đồng. 
 
-Các truy vấn ad-hoc kiểu này sẽ cực kì hóc búa và khó nhằn với kĩ sư dữ liệu của hệ thống IMS. 
+Các truy vấn ad-hoc kiểu này sẽ cực kỳ hóc búa và khó nhằn với kỹ sư dữ liệu của hệ thống IMS. 
 ## 1.2. Thành công của IMS
 
 Mặc dù sở hữu những điểm yếu cố hữu ở tầng thiết kế nhưng IMS vẫn nhanh chóng trở thành lựa chọn hàng đầu trong nhiều ngành công nghiệp ở thời điểm nó ra mắt. Đầu những năm 1970s, IBM đã thành công bán nó cho nhiều nhà máy, nhà bán lẻ, ngân hàng trên khắp nước Mỹ. 
@@ -246,7 +246,7 @@ Larry bỏ đại học tới hai lần, tự học lập trình rồi mưu sinh
 <div class="obs-callout obs-callout-info" markdown="1">
 <div class="obs-callout-title">Info</div>
 
-[Britanica - Larry Ellison](https://www.britannica.com/money/Larry-Ellison)
+[Britannica - Larry Ellison](https://www.britannica.com/money/Larry-Ellison)
 </div>
 
 Larry Ellison không phải một nhà khoa học máy tính lỗi lạc, nhưng ông là một người bán hàng thiên tài. Nếu xét thuần túy về công nghệ thời điểm đó, Oracle V2 rất nhiều lỗi và thua xa dự án mã nguồn mở Ingres (do Michael Stonebraker tại UC Berkeley phát triển). Nhưng trên thương trường, có một sự thật phũ phàng: **Sản phẩm xịn nhất chưa chắc đã là sản phẩm chiến thắng.**

@@ -58,7 +58,7 @@ graph TD
 Vậy câu hỏi đặt ra là: khi ta cắt nhỏ dữ liệu và lưu trữ ở nhiều nơi như vậy, nếu chẳng may một nút bị lỗi thì làm sao? Phần cứng máy tính tương đối ổn định và hiếm khi gặp lỗi... cho tới khi bạn có đủ nhiều. Quản lý một hạm đội hàng nghìn bộ xử lý nối lại với nhau bằng dây rợ loằng ngoằng thật không phải một công việc đơn giản. Các vấn đề như đứt dây, chập điện, thậm chí hiện tượng lật bit ngẫu nhiên vì bức xạ vi sóng vũ trụ cũng xảy ra như cơm bữa. Sẽ là thảm họa nếu file dữ liệu khổng lồ của bạn tự nhiên mất đi vài mảnh chỉ vì một cái dây điện đột nhiên sút ra.
 
 Các nhà khoa học tại Google đã tính đến cả cơ chế chịu lỗi cho việc này trong thuật toán của mình:
-- Cách giải quyết là mỗi block dữ liệu nhỏ sẽ được nhân bản thành 3 bản sao và lưu ở 3 máy chủ khác nhau. Nếu một máy fail thì có thể lấy từ máy khác sang backup. Đây là lý do GFS được quảng cáo với khả năng chịu lỗi cao.
+- Cách giải quyết là mỗi block dữ liệu nhỏ sẽ được nhân bản thành 3 bản sao và lưu ở 3 máy chủ khác nhau. Nếu một máy gặp sự cố thì có thể lấy từ máy khác để sao lưu. Đây là lý do GFS được quảng cáo với khả năng chịu lỗi cao.
 - Thuật toán rack awareness: **Master** sẽ quyết định 3 bản ghi trên được lưu ở nút nào thông qua một thuật toán gọi là rack awareness (ưu tiên 2 bản cùng 1 rack để đọc, ghi nhanh bản thứ 3 ở rack khác để phòng hư máy, mất điện)
 
 Tuy nhiên, để đạt được dung lượng lưu trữ cực lớn thì GFS cũng có một vài đánh đổi. Nó sinh ra chỉ để phục vụ cho việc **đọc/ghi dữ liệu lớn một cách tuần tự** (quét từ đầu đến cuối file để làm index công cụ tìm kiếm). GFS sẽ cực kỳ chậm chạp nếu bạn dùng nó cho các tác vụ đòi hỏi chỉnh sửa, ghi đè liên tục hoặc nhảy cóc để đọc một phần nhỏ ở giữa file (Random Access).
@@ -75,7 +75,7 @@ Hầu hết các tính toán phía trên đều khá đơn giản về mặt kh�
 *[MapReduce: Simplified Data Processing on Large Clusters](https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf)*
 </div>
 
-Để giải quyết sự phức tạp này, hai nhà khoa học đã thiết kế một framework tính toán mới, tự động hóa các setup phức tạp của việc song song hóa code, kiểm soát lỗi phần cứng, phân phối dữ liệu giữa nhiều bộ xử lý khác nhau. Mô hình tính toán này được lấy cảm hứng từ các hàm cơ bản `map` và `reduce` trong các functional programming languages như Lisp.
+Để giải quyết sự phức tạp này, hai nhà khoa học đã thiết kế một framework tính toán mới, tự động hóa các thiết lập phức tạp của việc song song hóa code, kiểm soát lỗi phần cứng, phân phối dữ liệu giữa nhiều bộ xử lý khác nhau. Mô hình tính toán này được lấy cảm hứng từ các hàm cơ bản `map` và `reduce` trong các ngôn ngữ lập trình hàm như Lisp.
 
 Về cơ bản có thể tóm gọn: 
 - **Map:** Các máy đồng loạt xử lý phần dữ liệu mình đang giữ để cho ra kết quả trung gian.
@@ -87,7 +87,7 @@ Ví dụ:
 	2. Thuê 1000 công nhân đứng sẵn ở từng kệ, đếm 1000 kệ một lúc rồi ông kế toán trưởng đi lấy số cộng lại thôi.
 - Cách (2) là cách của MapReduce, trong đó câu lệnh Map & Reduce sẽ như sau:
 	- Map: Hãy đếm cho tôi số lần xuất hiện của từ "hạnh phúc" trên kệ của bạn, ghi kết quả ra giấy với cú pháp như sau: `[mã_kệ, kết_quả_đếm]`
-	- Reduce: Collect toàn bộ kết quả từ các kệ & tính tổng `kết_quả_đếm`. 
+	- Reduce: Thu thập toàn bộ kết quả từ các kệ & tính tổng `kết_quả_đếm`. 
 
 ### Bùng nổ tại Google
 
@@ -146,7 +146,7 @@ Cùng thời điểm này, cặp đôi Jeff & Sanjay tại Google cũng đã là
 - **Google File System (GFS - 2003):** Giải pháp lưu trữ phân tán.
 - **MapReduce (2004):** Mô hình tính toán song song.
 
-Như buồn ngủ gặp chiếu manh, Cutting và Cafarella đã tự mình tái tạo các hệ thống này trong dự án Nutch dưới dạng **NDFS** (Nutch Distributed File System) và một bộ thực thi MapReduce sơ khai. Khi Jeff và Sanjay viết ra MapReduce tại Google, họ share phần ý tưởng với cả thế giới, giữ lại phần code cho riêng Google sử dụng. Doug và Mike lấy cảm hứng từ ý tưởng này để viết lại một bản mã nguồn mở và chia sẻ cho cả cộng đồng cùng xài chung.
+Như buồn ngủ gặp chiếu manh, Cutting và Cafarella đã tự mình tái tạo các hệ thống này trong dự án Nutch dưới dạng **NDFS** (Nutch Distributed File System) và một bộ thực thi MapReduce sơ khai. Khi Jeff và Sanjay viết ra MapReduce tại Google, họ chia sẻ phần ý tưởng với cả thế giới, giữ lại phần code cho riêng Google sử dụng. Doug và Mike lấy cảm hứng từ ý tưởng này để viết lại một bản mã nguồn mở và chia sẻ cho cả cộng đồng cùng xài chung.
 
 Đến tháng 1 năm 2006, Doug Cutting gia nhập Yahoo!, một công ty đang khao khát giải pháp cho các vấn đề dữ liệu tìm kiếm của chính mình. Một tháng sau, Hadoop chính thức được tách ra khỏi Nutch để trở thành một dự án độc lập, với cái tên được đặt theo *con voi đồ chơi của con trai Doug* [(accorsi.net/docs/hadoop.pdf - page 10)](https://accorsi.net/docs/hadoop.pdf). 
 

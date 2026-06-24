@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Chuỗi bài: Data Engineer -  Lịch sử, giới hạn và tương lai của nghề dữ liệu"
+title: "Chuỗi bài: Data Engineer - Lịch sử, giới hạn và tương lai của nghề dữ liệu"
 date: 2026-06-24
 excerpt: "Lịch sử là thứ ánh sáng tốt nhất để soi rọi những bất định trong thời đại AI. Vì thế mà chuỗi bài viết này ra đời."
 toc: true
@@ -8,14 +8,14 @@ toc: true
 
 # Data Engineer - Lịch sử, giới hạn và tương lai của nghề dữ liệu
 
-> *Bài này viết cho độc giả chính là người đã có chút kiến thức về công nghệ thông tin. Nhưng tôi đã đặt tiêu chuẩn cao cho bản thân là viết sao cho cả người bình thường cũng có thể hiểu được. Thế nên kể cả bạn không phải là dân tech thì cũng đừng ngại đọc bài nhé.*
+> *Bài này viết cho độc giả chính là những người đã có chút kiến thức về công nghệ thông tin. Nhưng tôi đã đặt tiêu chuẩn cao cho bản thân là viết sao cho cả người bình thường cũng có thể hiểu được. Thế nên kể cả bạn không phải là dân tech thì cũng đừng ngại đọc bài nhé.*
 
 
 Là một Data Engineer còn đang trong giai đoạn tích lũy chuyên môn, tôi nhận thấy việc hiểu sâu sắc về ngành mà mình theo đuổi là một nhu cầu thiết yếu. Khả năng đặt câu hỏi sâu về bối cảnh lịch sử, các áp lực thực tại thúc đẩy những bước tiến công nghệ trong quá khứ sẽ cho chúng ta một điểm tựa vững chắc để định hình lộ trình cá nhân. 
 
 Điều này lại càng trở nên sống còn trong kỷ nguyên AI. 
 
-Khi các công cụ Ai đẩy tốc độ viết code và triển khai sản phẩm lên mức chưa từng có, ranh giới công nghệ bị san phẳng, thị trường bắt đầu xuất hiện những hoài nghi về giá trị của kỹ sư IT. Trong một bối cảnh dịch chuyển quá nhanh, nếu chỉ liên tục chạy theo guồng máy, ta dễ bị kiệt sức và mất phương hướng. Chỉ với một hiểu biết vững chắc về lịch sử, ta mới có thể lùi lại một bước để nhìn rõ bức tranh toàn cảnh và nhận ra đâu là bài toán cốt lõi cần được giải. 
+Khi các công cụ AI đẩy tốc độ viết code và triển khai sản phẩm lên mức chưa từng có, ranh giới công nghệ bị san phẳng, thị trường bắt đầu xuất hiện những hoài nghi về giá trị của kỹ sư công nghệ. Trong một bối cảnh dịch chuyển quá nhanh, nếu chỉ liên tục chạy theo guồng máy, ta dễ bị kiệt sức và mất phương hướng. Chỉ với một hiểu biết vững chắc về lịch sử, ta mới có thể lùi lại một bước để nhìn rõ bức tranh toàn cảnh và nhận ra đâu là bài toán cốt lõi cần được giải. 
 
 Lịch sử chính là thứ ánh sáng tốt nhất để soi rọi những bất định hiện tại. 
 
