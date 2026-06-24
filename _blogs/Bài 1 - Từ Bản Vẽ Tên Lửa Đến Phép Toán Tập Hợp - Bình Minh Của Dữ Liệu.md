@@ -239,9 +239,9 @@ Và lúc đó thì miếng bánh đã bị kẻ khác cuỗm mất từ lâu.
   <p class="yt-embed-caption"><a href="https://www.youtube.com/watch?v=nG5hYn93GQ8" target="_blank" rel="noopener">The Database Wars: How Oracle Ruthlessly crushed iBM & took over MySQL</a></p>
 </div>
 
-Năm 1945, Florence Spellman - một mẹ đơn thân 19 tuổi - ngậm ngùi gửi đứa con trai 9 tháng vừa qua cơn bạo bệnh cho người dì tại Chicago của mình nhận nuôi. Đứa bé đó chính là Larry Ellison. Lớn lên, Larry rất gắn bó với người mẹ nuôi nhưng lại xa cách với người bố - người luôn cay nghiệt nói rằng ông sẽ chẳng bao giờ làm nên trò trống gì. Những tác lực đặc biệt thời thơ ấu này đã nhào nặn nên một Larry Ellison gai góc, ngạo nghễ và có phần tàn nhẫn trên thương trường sau này.
+Năm 1945, Florence Spellman - một mẹ đơn thân 19 tuổi - ngậm ngùi gửi đứa con trai 9 tháng vừa qua cơn bạo bệnh cho người dì tại Chicago của mình nhận nuôi. Đứa bé tên là Larry Ellison. Lớn lên, Larry rất gắn bó với người mẹ nuôi nhưng lại xa cách với người bố - người luôn cay nghiệt nói rằng ông sẽ chẳng bao giờ làm nên trò trống gì. Những tác lực đặc biệt thời thơ ấu ấy đã nhào nặn nên một Larry Ellison gai góc, ngạo nghễ và có phần tàn nhẫn trên thương trường sau này.
 
-Larry bỏ đại học tới hai lần, rồi tự học lập trình rồi mưu sinh bằng nghề viết code. Sau vài năm lăn lộn tại nhiều công ty khác nhau, Larry đọc được bài báo của Codd, ông cùng các đồng sự thành lập Software Development Laboratories năm 1977 (sau đổi tên thành Oracle). Năm 1979, Oracle tung ra bản thương mại Relational Database đầu tiên. Một fact thú vị: Bản phát hành đầu tiên mang tên **Oracle V2** (bỏ qua bản V1 vì Larry nắm thóp tâm lý khách hàng: _"Chẳng ai lại bỏ tiền đi mua phiên bản số 1 để làm chuột bạch cả"_).
+Larry bỏ đại học tới hai lần, tự học lập trình rồi mưu sinh bằng nghề viết code. Sau vài năm lăn lộn tại nhiều công ty khác nhau, Larry đọc được bài báo của Codd, ông cùng các đồng sự thành lập Software Development Laboratories năm 1977 (sau đổi tên thành Oracle). Năm 1979, Oracle tung ra bản relational database thương mại đầu tiên. Một fact thú vị: Bản phát hành đầu tiên mang tên **Oracle V2** (bỏ qua bản V1 vì Larry nắm thóp tâm lý khách hàng: _"Chẳng ai lại bỏ tiền đi mua phiên bản số 1 để làm chuột bạch cả"_).
 
 <div class="obs-callout obs-callout-info" markdown="1">
 <div class="obs-callout-title">Info</div>
@@ -249,7 +249,7 @@ Larry bỏ đại học tới hai lần, rồi tự học lập trình rồi mư
 [Britanica - Larry Ellison](https://www.britannica.com/money/Larry-Ellison)
 </div>
 
-Larry Ellison không phải một nhà khoa học máy tính lỗi lạc, nhưng ông là một người bán hàng thiên tài. Nếu xét thuần túy về công nghệ thời điểm đó, Oracle V2 rất nhiều lỗi và thua xa dự án mã nguồn mở Ingress (do Michael Stonebraker tại UC Berkeley phát triển). Nhưng trên thương trường, có một sự thật phũ phàng: **Sản phẩm xịn nhất chưa chắc đã là sản phẩm chiến thắng.**
+Larry Ellison không phải một nhà khoa học máy tính lỗi lạc, nhưng ông là một người bán hàng thiên tài. Nếu xét thuần túy về công nghệ thời điểm đó, Oracle V2 rất nhiều lỗi và thua xa dự án mã nguồn mở Ingres (do Michael Stonebraker tại UC Berkeley phát triển). Nhưng trên thương trường, có một sự thật phũ phàng: **Sản phẩm xịn nhất chưa chắc đã là sản phẩm chiến thắng.**
 
 Ellison đã đè bẹp các đối thủ bằng những chiến thuật cực kì khát máu như sau:
 
@@ -257,7 +257,7 @@ Ellison đã đè bẹp các đối thủ bằng những chiến thuật cực k
 2. **Phá giá cực đoan:** Sẵn sàng cắt giảm lợi nhuận, bán rẻ mạt để đè bẹp các đối thủ kỹ thuật tốt hơn như Ingres ra khỏi các gói thầu lớn.
 3. **Đứng trên vai người khổng lồ:** Cú hích lớn nhất của Ellison là giành được hợp đồng xây dựng cơ sở dữ liệu cho CIA. Hiệu ứng bầy đàn lập tức kích hoạt: Khi CIA đã tin dùng hệ thống của bạn, toàn bộ khối chính phủ và doanh nghiệp sẽ tự động xuống tiền mà không mảy may nghi ngờ.
 
-Các đối thủ ngây thơ cứ thế rụng dần. Ingress lụi tàn vì kĩ sư không biết làm business. Sybase từng gầm gừ thách thức bằng kiến trúc client-server, nhưng lại chọn nước cờ sai khi bắt tay với Microsoft làm SQL Server - tự tay nuôi lớn một con quái vật sau này nuốt chửng luôn thị phần của mình.
+Các đối thủ ngây thơ cứ thế rụng dần. Ingres lụi tàn vì kĩ sư không biết làm business. Sybase từng gầm gừ thách thức bằng kiến trúc client-server, nhưng lại chọn nước cờ sai khi bắt tay với Microsoft làm SQL Server - tự tay nuôi lớn một con quái vật sau này nuốt chửng luôn thị phần của mình.
 
 ## 2.4. Oracle - Dọn dẹp chiến trường
 
@@ -265,15 +265,15 @@ Nhiều năm sau, khi Internet bùng nổ, MySQL nổi lên như một thách th
 
 Bản năng sinh tồn tàn nhẫn của Oracle trỗi dậy. Khác với IBM rụt rè năm xưa, Larry Ellison hiểu rõ mối đe dọa. Năm 2010, Oracle gây sốc khi chi 7,4 tỷ USD mua đứt Sun Microsystems - công ty mẹ đang nắm giữ MySQL. Mua lại không phải để phát triển, mà mua lại để kiểm soát hệ sinh thái và triệt tiêu rủi ro.
 
-Sẽ có người đọc đến đây và bĩu môi nói Larry Ellison là kẻ cơ hội, chơi bẩn, còn IBM thì quá bảo thủ. Technically thì đúng là vậy. Nhưng nhìn rộng ra lớp cơ chế hệ thống, câu chuyện này phơi bày một góc khuất nghiệt ngã của thế giới công nghệ: Dữ liệu, thuật toán hay một cái paper đột phá như của Codd thực chất mới chỉ là hạt giống. Cách bạn phân phối nó, chiến lược định giá, và khả năng chốt sale mới là mảnh đất để hạt giống đó bùng nổ thành một đế chế.
+Sẽ có người đọc đến đây và cho rằng Larry Ellison là kẻ cơ hội, chơi bẩn, còn IBM thì quá bảo thủ. Technically thì đúng là vậy. Nhưng nhìn rộng ra lớp cơ chế hệ thống, câu chuyện này phơi bày một góc khuất nghiệt ngã của thế giới công nghệ: Dữ liệu, thuật toán hay một paper đột phá như của Codd thực chất mới chỉ là hạt giống. Chiến lược phân phối và định giá, khả năng chốt sale mới là mảnh đất để hạt giống đó bùng nổ thành một đế chế.
 
 ## 2.5. PostgreSQL - Di sản cộng đồng
 
 Nếu dừng ở đây thì có lẽ nhìn thị trường database có vẻ hơi đen tối, bạo chúa Oracle thống trị và làm tiền khắp thị trường. Tuy nhiên, một cái tên khác đã dần vươn lên hàng ghế đầu và làm bức tranh trở nên sáng sủa hơn. Đó chính là database mã nguồn mở Postgres. 
 
-Postgres không xuất hiện từ hư không. Nó được phát triển bởi giáo sư Michael Stonebraker tại UC Berkeley năm 1986, cha đẻ dự án Ingres (đối thủ đã thất bại trước Oracle trên thương trường ta nhắc phía trên). Không bán license cho doanh nghiệp như Oracle, Postgres phát triển trong môi trường đại học, mã nguồn được công khai, bất kỳ ai cũng có thể tải về, sử dụng và chỉnh sửa. Sau nhiều năm phát triển, nó được đổi tên thành PostgreSQL.
+Postgres không xuất hiện từ hư không. Nó được phát triển bởi giáo sư Michael Stonebraker tại UC Berkeley năm 1986, cha đẻ dự án Ingres (đối thủ đã thất bại trước Oracle trên thương trường ta nhắc phía trên). Không bán license cho doanh nghiệp như Oracle, Postgres phát triển trong môi trường đại học, mã nguồn công khai, bất kỳ ai cũng có thể tải về, sử dụng và chỉnh sửa. Sau nhiều năm phát triển, nó được đổi tên thành PostgreSQL.
 
-Postgres không thằng bởi đội sale hùng hậu, không ký những hợp đồng trăm triệu đô, không có một Larry Ellison cáo già đứng sau điều khiển. Postgres lớn lên từng chút một nhờ cộng đồng kỹ sư trên khắp thế giới. Khi Internet bùng nổ, hàng nghìn startup bắt đầu đặt câu hỏi: "Không đủ tiền mua Oracle thì sao?"
+Postgres không thắng bởi đội sale hùng hậu, không ký những hợp đồng trăm triệu đô, không có một Larry Ellison cáo già đứng sau điều khiển. Postgres lớn lên từng chút một nhờ cộng đồng kỹ sư trên khắp thế giới. Khi Internet bùng nổ, hàng nghìn startup bắt đầu đặt câu hỏi: "Không đủ tiền mua Oracle thì sao?"
 
 Câu trả lời thường là PostgreSQL.
 
