@@ -22,7 +22,7 @@ Lịch sử chính là thứ ánh sáng tốt nhất để soi rọi những b�
 
 Chuỗi bài viết này là một nỗ lực hệ thống hóa lại dòng chảy của lịch sử trong ngành hẹp dữ liệu. Danh sách các bài viết sẽ được cập nhật liên tục dưới đây: 
 
-- [Bài 1 - Từ Bản Vẽ Tên Lửa Đến Phép Toán Tập Hợp - Bình Minh Của Dữ Liệu](https://dataspi.github.io/DataSpi/blog/b%C3%A0i-1-t%E1%BB%AB-b%E1%BA%A3n-v%E1%BA%BD-t%C3%AAn-l%E1%BB%ADa-%C4%91%E1%BA%BFn-ph%C3%A9p-to%C3%A1n-t%E1%BA%ADp-h%E1%BB%A3p-b%C3%ACnh-minh-c%E1%BB%A7a-d%E1%BB%AF-li%E1%BB%87u-giao-d%E1%BB%8Bch/)
+- [Bài 1 - Từ Bản Vẽ Tên Lửa Đến Phép Toán Tập Hợp - Bình Minh Của Dữ Liệu](https://dataspi.github.io/DataSpi/blog/b%C3%A0i-1-t%E1%BB%AB-b%E1%BA%A3n-v%E1%BA%BD-t%C3%AAn-l%E1%BB%ADa-%C4%91%E1%BA%BFn-ph%C3%A9p-to%C3%A1n-t%E1%BA%ADp-h%E1%BB%A3p-b%C3%ACnh-minh-c%E1%BB%A7a-d%E1%BB%AF-li%E1%BB%87u)
     - 	**Tóm tắt:** Hành trình tiến hóa của hệ thống OLTP. Từ bài toán quản lý 2 triệu linh kiện của tên lửa Saturn V bằng mô hình phân cấp (IMS), bước ngoặt giải phóng tư duy của Edgar Codd với mô hình quan hệ, cho đến sự thống trị thương trường của Oracle và di sản cộng đồng mang tên PostgreSQL.
 - Bài 2 - Khủng hoảng báo cáo - Khi cái máy ghi không biết đọc *(Coming soon)*
 	- **Tóm tắt:** Ma sát thực tại khi dữ liệu bùng nổ. Tại sao các cơ sở dữ liệu quan hệ (OLTP) rất giỏi ghi giao dịch nhưng lại bất lực trước các câu hỏi chiến lược kinh doanh, dẫn đến cuộc đối đầu kinh điển giữa Bill Inmon và Ralph Kimball để khai sinh ra Data Warehouse (OLAP).

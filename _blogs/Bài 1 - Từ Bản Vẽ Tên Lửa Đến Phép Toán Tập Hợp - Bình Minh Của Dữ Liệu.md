@@ -2,7 +2,7 @@
 layout: page
 title: "Bài 1 - Từ Bản Vẽ Tên Lửa Đến Phép Toán Tập Hợp - Bình Minh Của Dữ Liệu"
 date: 2026-06-24
-excerpt: "Hành trình tiến hóa của hệ thống OLTP. Từ bài toán quản lý 2 triệu linh kiện của tên lửa Saturn V bằng mô hình phân cấp (IMS), bước ngoặt giải phóng tư duy của Edgar Codd với mô hình quan hệ, cho đến sự thống trị thương trường của Oracle và di sản cộng đồng mang tên PostgreSQL."
+excerpt: "Ngày 25 tháng 5 năm 1961, JFK đưa ra thử thách cho toàn nước Mỹ đưa người lên mặt trăng và trở lại trái đất an toàn."
 toc: true
 ---
 
@@ -76,15 +76,22 @@ Mặc dù đối đầu với sự cạnh tranh của mô hình cơ sở dữ li
 - Được vận hành bởi toàn bộ top 5 ngân hàng hàng đầu Hoa Kỳ, các công ty bảo hiểm, bệnh viện và cơ quan chính phủ.
 - Hầu hết các giao dịch rút tiền tại máy ATM đều tương tác với hệ thống này.
 
-> Xem thêm: [Information Management Systems \| IBM](https://www.ibm.com/history/information-management-system)
+<div class="obs-callout obs-callout-info" markdown="1">
+<div class="obs-callout-title">Info</div>
 
+[Information Management Systems \| IBM](https://www.ibm.com/history/information-management-system)
+</div>
 # 2. Mang lý thuyết tập hợp vào ổ đĩa
 
 ## 2.1. Edgar Codd - Nhà toán học đốn cây
 
 Nhà toán học Edgar F. Codd sinh ra trên hòn đảo nhỏ Portland thuộc vùng biển phía nam nước Anh. Ông từng học ngành hóa tại Oxford đầu những năm 40s rồi xung phong đi phi công cho Không quân Hoàng gia Anh trong Thế chiến 2. Sau chiến tranh ông về Oxford chuyển ngành sang toán và học nốt đại học. 
 
-> Xem [Edgar F. Codd - A.M. Turing Award Laureate](https://amturing.acm.org/award_winners/codd_1000892.cfm)
+<div class="obs-callout obs-callout-info" markdown="1">
+<div class="obs-callout-title">Info</div>
+
+[Edgar F. Codd - A.M. Turing Award Laureate](https://amturing.acm.org/award_winners/codd_1000892.cfm)
+</div>
 
 Tháng 6/1970, Codd, khi đó đang làm việc cho IBM tại chi nhánh San Jose, công bố bài báo [A Relational Model of Data for Large Shared Data Banks](https://www.cis.upenn.edu/~zives/03f/cis550/codd.pdf). Lúc này mô hình dữ liệu hình cây của IMS mới chỉ gần 3 tuổi, và cấu trúc dữ liệu hình cây có những điểm yếu cố hữu ở tầng thiết kế làm Codd không hài lòng. 
 
@@ -236,7 +243,11 @@ Năm 1945, Florence Spellman - một mẹ đơn thân 19 tuổi - ngậm ngùi g
 
 Larry bỏ đại học tới hai lần, rồi tự học lập trình rồi mưu sinh bằng nghề viết code. Sau vài năm lăn lộn tại nhiều công ty khác nhau, Larry đọc được bài báo của Codd, ông cùng các đồng sự thành lập Software Development Laboratories năm 1977 (sau đổi tên thành Oracle). Năm 1979, Oracle tung ra bản thương mại Relational Database đầu tiên. Một fact thú vị: Bản phát hành đầu tiên mang tên **Oracle V2** (bỏ qua bản V1 vì Larry nắm thóp tâm lý khách hàng: _"Chẳng ai lại bỏ tiền đi mua phiên bản số 1 để làm chuột bạch cả"_).
 
-> [Britanica - Larry Ellison](https://www.britannica.com/money/Larry-Ellison)
+<div class="obs-callout obs-callout-info" markdown="1">
+<div class="obs-callout-title">Info</div>
+
+[Britanica - Larry Ellison](https://www.britannica.com/money/Larry-Ellison)
+</div>
 
 Larry Ellison không phải một nhà khoa học máy tính lỗi lạc, nhưng ông là một người bán hàng thiên tài. Nếu xét thuần túy về công nghệ thời điểm đó, Oracle V2 rất nhiều lỗi và thua xa dự án mã nguồn mở Ingress (do Michael Stonebraker tại UC Berkeley phát triển). Nhưng trên thương trường, có một sự thật phũ phàng: **Sản phẩm xịn nhất chưa chắc đã là sản phẩm chiến thắng.**
 
@@ -268,8 +279,11 @@ Câu trả lời thường là PostgreSQL.
 
 Rồi startup lớn dần. Dữ liệu tăng dần. Lượng truy cập cũng tăng theo. Postgres dần len lỏi vào mọi ngõ ngách trong ngành công nghệ. Nửa thế kỷ sau bài báo của Codd, có lẽ PostgreSQL mới là hiện thân gần nhất của giấc mơ ban đầu mà ông theo đuổi. Ngày nay có lẽ giới kỹ sư đều đồng ý với nhau rằng Oracle là database của doanh nghiệp còn PostgreSQL là database cho kỹ sư. 
 
-> [PostgreSQL - Wikipedia](https://en.wikipedia.org/wiki/PostgreSQL#Notable_users)
+<div class="obs-callout obs-callout-info" markdown="1">
+<div class="obs-callout-title">Info</div>
 
+[PostgreSQL - Wikipedia](https://en.wikipedia.org/wiki/PostgreSQL#Notable_users)
+</div>
 # 3. Kết
 
 Cuộc cách mạng của Codd đã thành công ngoài sức tưởng tượng. Các cơ sở dữ liệu quan hệ đã phủ bóng toàn ngành công nghệ. Oracle biến nó thành một đế chế thương mại. PostgreSQL đưa nó thành tài sản chung của cộng đồng. Hàng triệu ứng dụng trên thế giới vận hành mỗi ngày dựa trên những ý tưởng được viết ra từ năm 1970.
