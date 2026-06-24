@@ -9,6 +9,10 @@ What it does:
 - Rewrites embed syntax to standard markdown image links for VS Code/Jekyll.
 - Converts markdown image links that point to YouTube into clickable thumbnail previews.
 - Converts Obsidian admonition blocks (```ad-...```) into styled HTML callouts.
+
+Hướng dẫn sử dụng: Activate conda env rồi run câu sau: 
+
+python tools/obsidian_import.py "Bài 1 - Từ Bản Vẽ Tên Lửa Đến Phép Toán Tập Hợp - Bình Minh Của Dữ Liệu Giao Dịch"  
 """
 
 from __future__ import annotations
