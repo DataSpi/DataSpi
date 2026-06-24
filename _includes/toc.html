@@ -30,19 +30,37 @@
   var overlay = document.getElementById('toc-overlay');
   if (!panel || !list) return;
 
-  // Build TOC from h2 / h3 inside post content
-  var headings = document.querySelectorAll('.post-content h2, .post-content h3');
+  // Build TOC from h1 / h2 / h3 inside post content
+  var headings = document.querySelectorAll('.post-content h1, .post-content h2, .post-content h3');
   if (headings.length === 0) {
     panel.style.display = 'none';
     if (fab) fab.style.display = 'none';
     return;
   }
 
+  function slugifyHeading(text) {
+    return (text || '')
+      .normalize('NFD')
+      .toLowerCase()
+      .trim()
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9\s-]/g, '')
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-');
+  }
+
   headings.forEach(function (h) {
-    // Ensure heading has an id (kramdown provides these automatically)
+    // Ensure heading has an id (kramdown often provides these automatically)
+    if (!h.id) {
+      var generatedId = slugifyHeading(h.textContent);
+      if (generatedId) {
+        h.id = generatedId;
+      }
+    }
     if (!h.id) return;
+
     var li = document.createElement('li');
-    li.className = h.tagName === 'H3' ? 'toc-h3' : 'toc-h2';
+    li.className = h.tagName === 'H1' ? 'toc-h1' : (h.tagName === 'H3' ? 'toc-h3' : 'toc-h2');
     var a = document.createElement('a');
     a.href = '#' + h.id;
     a.textContent = h.textContent.replace(/^[#\s]+/, '');

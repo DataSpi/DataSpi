@@ -658,8 +658,18 @@ hr {
   border-left-color: var(--link);
 }
 
+.toc-list .toc-h1 > a {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.toc-list .toc-h2 > a {
+  padding-left: 1rem;
+}
+
 .toc-list .toc-h3 > a {
-  padding-left: 1.4rem;
+  padding-left: 1.8rem;
   font-size: 0.8rem;
 }
 
