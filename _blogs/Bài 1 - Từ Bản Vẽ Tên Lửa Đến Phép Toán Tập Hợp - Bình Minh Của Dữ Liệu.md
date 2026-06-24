@@ -1,14 +1,14 @@
 ---
 layout: page
 title: "Bài 1 - Từ Bản Vẽ Tên Lửa Đến Phép Toán Tập Hợp - Bình Minh Của Dữ Liệu"
-date: 2026-06-25
-excerpt: "Ngày 25 tháng 5 năm 1961, JFK đưa ra thử thách,  nước Mỹ đưa được người lên mặt trăng và trở lại Trái Đất an toàn."
+date: 2026-06-24
+excerpt: "Hành trình tiến hóa của hệ thống OLTP. Từ bài toán quản lý 2 triệu linh kiện của tên lửa Saturn V bằng mô hình phân cấp (IMS), bước ngoặt giải phóng tư duy của Edgar Codd với mô hình quan hệ, cho đến sự thống trị thương trường của Oracle và di sản cộng đồng mang tên PostgreSQL."
 toc: true
 ---
 
 # 1. Làm sao lắp tàu mặt trăng?
 
-Ngày 25 tháng 5 năm 1961, JFK đưa ra thử thách,  nước Mỹ đưa được người lên mặt trăng và trở lại Trái Đất an toàn. Kỳ tích này phải hoàn thành trước khi thập kỷ kết thúc. Đây là một phần của Nhiệm vụ Apollo. 
+Ngày 25 tháng 5 năm 1961, JFK đưa ra thử thách cho toàn nước Mỹ đưa người lên mặt trăng và trở lại Trái Đất an toàn. Kỳ tích này phải hoàn thành trước khi thập kỷ kết thúc. Đây là một phần của Nhiệm vụ Apollo. 
 
 American Rockwell là thầu chính chịu trách nhiệm thiết kế và chế tạo tên lửa đẩy Saturn V có nhiệm vụ mang tàu thám hiểm Apollo bay vào không gian. Saturn V là một trong những kỳ quan công nghệ của toàn nhân loại. Tên lửa này được cấu tạo từ khoảng 2 triệu linh kiện khác nhau, và chỉ nội việc quản lý thông tin của các bộ phận này như: nguồn gốc, thông số kỹ thuật, thứ tự lắp ráp đã là một thử thách cực đại. 
 
@@ -62,10 +62,10 @@ Ví dụ:
 1. Cha -> con : Kiểm tra số dư của tài khoản ID 103 thuộc chi nhánh Kì Đồng của Vietcombank
 2. Con -> cha: Tìm xem số điện thoại 0987123456 là của chủ tài khoản nào? 
 
-Nếu muốn truy xuất dữ liệu không theo quy tắc leo các nhánh cây đã được định sẵn, ta sẽ gặp khó khăn. Đó là chưa kể đến các truy vấn tùy biến, đa điều kiện của các bài toán hiện đại như:
-- Giám đốc ngân hàng: Hãy liệt kê tất cả các khách hàng mở tài khoản trong năm 2025, có số dư trên 1 tỷ đồng.
+Nếu muốn truy xuất dữ liệu không theo quy tắc leo các nhánh cây đã được định sẵn, ta sẽ gặp khó khăn. Đó là chưa kể đến các truy vấn tùy biến, đa điều kiện của các bài toán hiện đại như: 
+- Giám đốc ngân hàng: Hãy liệt kê tất cả các khách hàng mở tài khoản trong năm 2025, có số dư trên 1 tỷ đồng. 
 
-Các truy vấn tùy biến kiểu này sẽ cực kỳ hóc búa và khó nhằn với kĩ sư dữ liệu của hệ thống IMS. 
+Các truy vấn ad-hoc kiểu này sẽ cực kỳ hóc búa và khó nhằn với kỹ sư dữ liệu của hệ thống IMS. 
 
 ## 1.2. Thành công của IMS
 
@@ -94,7 +94,7 @@ Nhà toán học Edgar F. Codd sinh ra trên hòn đảo nhỏ Portland thuộc 
 [Edgar F. Codd - A.M. Turing Award Laureate](https://amturing.acm.org/award_winners/codd_1000892.cfm)
 </div>
 
-Tháng 6/1970, Codd, khi đó đang làm việc cho IBM tại chi nhánh San Jose, công bố bài báo [A Relational Model of Data for Large Shared Data Banks](https://www.cis.upenn.edu/~zives/03f/cis550/codd.pdf). Lúc này mô hình dữ liệu hình cây của IMS mới chỉ gần 3 tuổi, và những điểm yếu cố hữu của nó làm Codd không hài lòng.
+Tháng 6/1970, Codd, khi đó đang làm việc cho IBM tại chi nhánh San Jose, công bố bài báo [A Relational Model of Data for Large Shared Data Banks](https://www.cis.upenn.edu/~zives/03f/cis550/codd.pdf). Lúc này mô hình dữ liệu hình cây của IMS mới chỉ gần 3 tuổi, và những điểm yếu cố hữu của nó làm Codd không hài lòng. 
 
 Trước Codd, database được xem như một cấu trúc vật lý, mỗi nút được lưu ở một điểm trên ổ đĩa, nút cha được nối với nút con, truy vấn lần theo các đường nối này. Lập trình viên phải suy nghĩ như đang đi trong bộ nhớ máy tính. Các ý tưởng đột phá của Codd có thể được tóm tắt như sau: 
 1. Dữ liệu chỉ là các tập hợp toán học
@@ -250,7 +250,7 @@ Larry bỏ đại học tới hai lần, tự học lập trình rồi mưu sinh
 [Britannica - Larry Ellison](https://www.britannica.com/money/Larry-Ellison)
 </div>
 
-Larry Ellison không phải một nhà khoa học máy tính lỗi lạc, nhưng ông là một người bán hàng thiên tài. Nếu xét thuần túy về công nghệ thời điểm đó, Oracle V2 rất nhiều lỗi và thua xa dự án mã nguồn mở Ingres (do Michael Stonebraker tại UC Berkeley phát triển). Nhưng trên thương trường có một sự thật phũ phàng: **Sản phẩm xịn nhất chưa chắc đã là sản phẩm chiến thắng.**
+Larry Ellison không phải một nhà khoa học máy tính lỗi lạc, nhưng ông là một người bán hàng thiên tài. Nếu xét thuần túy về công nghệ thời điểm đó, Oracle V2 rất nhiều lỗi và thua xa dự án mã nguồn mở Ingres (do Michael Stonebraker tại UC Berkeley phát triển). Nhưng trên thương trường, có một sự thật phũ phàng: **Sản phẩm xịn nhất chưa chắc đã là sản phẩm chiến thắng.**
 
 Ellison đã đè bẹp các đối thủ bằng những chiến thuật cực kì khát máu như sau:
 
@@ -265,6 +265,8 @@ Các đối thủ ngây thơ cứ thế rụng dần. Ingres lụi tàn vì kĩ 
 Nhiều năm sau, khi Internet bùng nổ, MySQL nổi lên như một thách thức khổng lồ mang ngọn cờ "Mã nguồn mở".
 
 Bản năng sinh tồn tàn nhẫn của Oracle trỗi dậy. Khác với IBM rụt rè năm xưa, Larry Ellison hiểu rõ mối đe dọa. Năm 2010, Oracle gây sốc khi chi 7,4 tỷ USD mua đứt Sun Microsystems - công ty mẹ đang nắm giữ MySQL. Mua lại không phải để phát triển, mà mua lại để kiểm soát hệ sinh thái và triệt tiêu rủi ro.
+
+Sẽ có người đọc đến đây và cho rằng Larry Ellison là kẻ cơ hội, chơi bẩn, còn IBM thì quá bảo thủ. Technically thì đúng là vậy. Nhưng nhìn rộng ra lớp cơ chế hệ thống, câu chuyện này phơi bày một góc khuất nghiệt ngã của thế giới công nghệ: Dữ liệu, thuật toán hay một paper đột phá như của Codd thực chất mới chỉ là hạt giống. Chiến lược phân phối và định giá, khả năng chốt sale mới là mảnh đất để hạt giống đó bùng nổ thành một đế chế.
 
 ## 2.5. PostgreSQL - Di sản cộng đồng
 
