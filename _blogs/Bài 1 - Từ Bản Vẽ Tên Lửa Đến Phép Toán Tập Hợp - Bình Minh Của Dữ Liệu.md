@@ -212,11 +212,11 @@ FROM parts
 WHERE part_id = 123
 ```
 
-#### Chuẩn hóa & Phi chuẩn hóa (Normalization & Denormalization):
+#### Chuẩn hóa & Phi chuẩn hóa (Normalization & Denormalization)
 
 Khi dữ liệu được mô hình hóa thành các tập hợp liên kết với nhau bằng key, một câu hỏi mới xuất hiện: *Nên chia dữ liệu thành bao nhiêu tập khác nhau?* (1) Lưu tất cả vào một bảng lớn hay (2) chia dữ liệu thành các tập nhỏ để giảm duplication, tối ưu lưu trữ? 
 
-Nói cách đơn giản, hướng (1) là phi chuẩn hóa, (2) là chuẩn hóa. 
+Nói một cách đơn giản, hướng (1) là phi chuẩn hóa, (2) là chuẩn hóa. 
 
 Câu trả lời của thập niên 70s là (2). Chi phí lưu trữ dữ liệu của thời đó rất đắt đỏ do giới hạn phần cứng, và các bài toán phân tích dữ liệu hiện đại chưa xuất hiện. Chúng ta sẽ trở lại với vấn đề này trong những thập niên tiếp theo của lịch sử. 
 
