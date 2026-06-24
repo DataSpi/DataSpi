@@ -18,9 +18,12 @@ American Rockwell là thầu chính chịu trách nhiệm thiết kế và chế
 
 Một năm sau thành công đó đó, IBM mở một nhánh kinh doanh mới, đem ICS đổi tên thành IMS (Information Management System/360) và mở bán với toàn thị trường.
 
-> Xem thêm: 
-> [The Most Important Database You've Never Heard of](https://twobithistory.org/2017/10/07/the-most-important-database.html)
-> [History of IMS: Beginnings at NASA - IBM Documentation](https://www.ibm.com/docs/en/zos-basic-skills?topic=now-history-ims-beginnings-nasa)
+<div class="obs-callout obs-callout-info" markdown="1">
+<div class="obs-callout-title">Info</div>
+
+- [The Most Important Database You've Never Heard of](https://twobithistory.org/2017/10/07/the-most-important-database.html)
+- [History of IMS: Beginnings at NASA - IBM Documentation](https://www.ibm.com/docs/en/zos-basic-skills?topic=now-history-ims-beginnings-nasa)
+</div>
 
 
 ![Pasted image 20260623121400]({{ '/assets/media/Pasted%20image%2020260623121400.png' | relative_url }})
@@ -74,12 +77,6 @@ Mặc dù đối đầu với sự cạnh tranh của mô hình cơ sở dữ li
 - Hầu hết các giao dịch rút tiền tại máy ATM đều tương tác với hệ thống này.
 
 > Xem thêm: [Information Management Systems \| IBM](https://www.ibm.com/history/information-management-system)
-
-<div class="obs-callout obs-callout-note" markdown="1">
-<div class="obs-callout-title">Note</div>
-
-Nhiều hệ NoSQL hiện đại (document database, JSON store…) cũng mang lại một phần triết lý này: dữ liệu được lưu theo cấu trúc phân cấp để tối ưu việc truy cập theo đường dẫn, dù chúng linh hoạt hơn IMS rất nhiều nhờ phần cứng hiện đại và hệ thống index mạnh hơn.
-</div>
 
 # 2. Mang lý thuyết tập hợp vào ổ đĩa
 
@@ -235,7 +232,7 @@ Và lúc đó thì miếng bánh đã bị kẻ khác cuỗm mất từ lâu.
   <p class="yt-embed-caption"><a href="https://www.youtube.com/watch?v=nG5hYn93GQ8" target="_blank" rel="noopener">The Database Wars: How Oracle Ruthlessly crushed iBM & took over MySQL</a></p>
 </div>
 
-Năm 1945, Florence Spellman - một mẹ đơn thân 19 tuổi - ngậm ngùi gửi đứa con trai 9 tháng vừa qua cơn bạo bệnh cho người dì tại Chicago của mình nhận nuôi. Đứa bé đó chính là Larry Ellison. Lớn lên, Larry rất gắn bó với người mẹ nuôi nhưng lại xa cách với người bố - người luôn cay nghiệt nói rằng ông sẽ chẳng bao giờ nên trò trống gì. Những tác lực đặc biệt thời thơ ấu này đã nhào nặn nên một Larry Ellison gai góc, ngạo nghễ và có phần tàn nhẫn trên thương trường sau này.
+Năm 1945, Florence Spellman - một mẹ đơn thân 19 tuổi - ngậm ngùi gửi đứa con trai 9 tháng vừa qua cơn bạo bệnh cho người dì tại Chicago của mình nhận nuôi. Đứa bé đó chính là Larry Ellison. Lớn lên, Larry rất gắn bó với người mẹ nuôi nhưng lại xa cách với người bố - người luôn cay nghiệt nói rằng ông sẽ chẳng bao giờ làm nên trò trống gì. Những tác lực đặc biệt thời thơ ấu này đã nhào nặn nên một Larry Ellison gai góc, ngạo nghễ và có phần tàn nhẫn trên thương trường sau này.
 
 Larry bỏ đại học tới hai lần, rồi tự học lập trình rồi mưu sinh bằng nghề viết code. Sau vài năm lăn lộn tại nhiều công ty khác nhau, Larry đọc được bài báo của Codd, ông cùng các đồng sự thành lập Software Development Laboratories năm 1977 (sau đổi tên thành Oracle). Năm 1979, Oracle tung ra bản thương mại Relational Database đầu tiên. Một fact thú vị: Bản phát hành đầu tiên mang tên **Oracle V2** (bỏ qua bản V1 vì Larry nắm thóp tâm lý khách hàng: _"Chẳng ai lại bỏ tiền đi mua phiên bản số 1 để làm chuột bạch cả"_).
 
