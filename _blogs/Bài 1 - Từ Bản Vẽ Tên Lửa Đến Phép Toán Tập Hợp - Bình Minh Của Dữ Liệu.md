@@ -1,14 +1,14 @@
 ---
 layout: page
 title: "Bài 1 - Từ Bản Vẽ Tên Lửa Đến Phép Toán Tập Hợp - Bình Minh Của Dữ Liệu"
-date: 2026-06-24
-excerpt: "Hành trình tiến hóa của hệ thống OLTP. Từ bài toán quản lý 2 triệu linh kiện của tên lửa Saturn V bằng mô hình phân cấp (IMS), bước ngoặt giải phóng tư duy của Edgar Codd với mô hình quan hệ, cho đến sự thống trị thương trường của Oracle và di sản cộng đồng mang tên PostgreSQL."
+date: 2026-06-25
+excerpt: "Ngày 25 tháng 5 năm 1961, JFK đưa ra thử thách, nước Mỹ phải đưa được người lên mặt trăng và trở lại Trái Đất an toàn."
 toc: true
 ---
 
 # 1. Làm sao lắp tàu mặt trăng?
 
-Ngày 25 tháng 5 năm 1961, JFK đưa ra thử thách cho toàn nước Mỹ đưa người lên mặt trăng và trở lại Trái Đất an toàn. Kỳ tích này phải hoàn thành trước khi thập kỷ kết thúc. Đây là một phần của Nhiệm vụ Apollo. 
+Ngày 25 tháng 5 năm 1961, JFK đưa ra thử thách, nước Mỹ phải đưa được người lên mặt trăng và trở lại Trái Đất an toàn. Kỳ tích này cần hoàn thành trước khi thập kỷ kết thúc. Đây là mục tiêu của Nhiệm vụ Apollo. 
 
 American Rockwell là thầu chính chịu trách nhiệm thiết kế và chế tạo tên lửa đẩy Saturn V có nhiệm vụ mang tàu thám hiểm Apollo bay vào không gian. Saturn V là một trong những kỳ quan công nghệ của toàn nhân loại. Tên lửa này được cấu tạo từ khoảng 2 triệu linh kiện khác nhau, và chỉ nội việc quản lý thông tin của các bộ phận này như: nguồn gốc, thông số kỹ thuật, thứ tự lắp ráp đã là một thử thách cực đại. 
 
@@ -62,10 +62,10 @@ Ví dụ:
 1. Cha -> con : Kiểm tra số dư của tài khoản ID 103 thuộc chi nhánh Kì Đồng của Vietcombank
 2. Con -> cha: Tìm xem số điện thoại 0987123456 là của chủ tài khoản nào? 
 
-Nếu muốn truy xuất dữ liệu không theo quy tắc leo các nhánh cây đã được định sẵn, ta sẽ gặp khó khăn. Đó là chưa kể đến các truy vấn tùy biến, đa điều kiện của các bài toán hiện đại như: 
-- Giám đốc ngân hàng: Hãy liệt kê tất cả các khách hàng mở tài khoản trong năm 2025, có số dư trên 1 tỷ đồng. 
+Nếu muốn truy xuất dữ liệu không theo quy tắc leo các nhánh cây đã được định sẵn, ta sẽ gặp khó khăn. Đó là chưa kể đến các truy vấn tùy biến, đa điều kiện của các bài toán hiện đại như:
+- Giám đốc ngân hàng: Hãy liệt kê tất cả các khách hàng mở tài khoản trong năm 2025, có số dư trên 1 tỷ đồng.
 
-Các truy vấn ad-hoc kiểu này sẽ cực kỳ hóc búa và khó nhằn với kỹ sư dữ liệu của hệ thống IMS. 
+Các truy vấn tùy biến kiểu này sẽ cực kỳ hóc búa và khó nhằn với kĩ sư dữ liệu của hệ thống IMS. 
 
 ## 1.2. Thành công của IMS
 
@@ -73,7 +73,7 @@ Mặc dù sở hữu những điểm yếu cố hữu ở tầng thiết kế nh
 
 Mặc dù đối đầu với sự cạnh tranh của mô hình cơ sở dữ liệu quan hệ (relational database) ra đời sau đó, nhưng IMS vẫn được duy trì và sử dụng rộng rãi cho đến ngày nay nhờ vào tốc độ và sự ổn định của nó. Đặc biệt các khách hàng đủ tiền mua IMS của IBM từ những năm 70s hầu hết đều thuộc hàng khủng long. 
 
-- Sách [An Introduction to IMS (IBM 2004)](https://public.dhe.ibm.com/software/data/ims/shelf/v9pdf/DFSINTG0.pdf) viết rằng: Hơn 95% công ty Fortune 1000 đang xài IMS ở các mức độ khác nhau.
+- Sách [An Introduction to IMS (IBM 2004)](https://public.dhe.ibm.com/software/data/ims/shelf/v9pdf/DFSINTG0.pdf) viết rằng: Hơn 95% công ty Fortune 1000 đang xài IMS.
 - Được vận hành bởi toàn bộ top 5 ngân hàng hàng đầu Hoa Kỳ, các công ty bảo hiểm, bệnh viện và cơ quan chính phủ.
 - Hầu hết các giao dịch rút tiền tại máy ATM đều tương tác với hệ thống này.
 
@@ -94,7 +94,7 @@ Nhà toán học Edgar F. Codd sinh ra trên hòn đảo nhỏ Portland thuộc 
 [Edgar F. Codd - A.M. Turing Award Laureate](https://amturing.acm.org/award_winners/codd_1000892.cfm)
 </div>
 
-Tháng 6/1970, Codd, khi đó đang làm việc cho IBM tại chi nhánh San Jose, công bố bài báo [A Relational Model of Data for Large Shared Data Banks](https://www.cis.upenn.edu/~zives/03f/cis550/codd.pdf). Lúc này mô hình dữ liệu hình cây của IMS mới chỉ gần 3 tuổi, và những điểm yếu cố hữu của nó làm Codd không hài lòng. 
+Tháng 6/1970, Codd, khi đó đang làm việc cho IBM tại chi nhánh San Jose, công bố bài báo [A Relational Model of Data for Large Shared Data Banks](https://www.cis.upenn.edu/~zives/03f/cis550/codd.pdf). Lúc này mô hình dữ liệu hình cây của IMS mới chỉ gần 3 tuổi, nhưng những điểm yếu cố hữu của nó làm Codd không hài lòng.
 
 Trước Codd, database được xem như một cấu trúc vật lý, mỗi nút được lưu ở một điểm trên ổ đĩa, nút cha được nối với nút con, truy vấn lần theo các đường nối này. Lập trình viên phải suy nghĩ như đang đi trong bộ nhớ máy tính. Các ý tưởng đột phá của Codd có thể được tóm tắt như sau: 
 1. Dữ liệu chỉ là các tập hợp toán học
@@ -240,9 +240,9 @@ Và lúc đó thì miếng bánh đã bị kẻ khác cuỗm mất từ lâu.
   <p class="yt-embed-caption"><a href="https://www.youtube.com/watch?v=nG5hYn93GQ8" target="_blank" rel="noopener">The Database Wars: How Oracle Ruthlessly crushed iBM & took over MySQL</a></p>
 </div>
 
-Năm 1945, Florence Spellman - một mẹ đơn thân 19 tuổi - ngậm ngùi gửi đứa con trai 9 tháng vừa qua cơn bạo bệnh cho người dì tại Chicago của mình nhận nuôi. Đứa bé tên là Larry Ellison. Lớn lên, Larry rất gắn bó với người mẹ nuôi nhưng lại xa cách với người bố - người luôn cay nghiệt nói rằng ông sẽ chẳng bao giờ làm nên trò trống gì. Những tác lực đặc biệt thời thơ ấu ấy đã nhào nặn nên một Larry Ellison gai góc, ngạo nghễ và có phần tàn nhẫn trên thương trường sau này.
+Năm 1945, Florence Spellman - một mẹ đơn thân 19 tuổi - ngậm ngùi gửi đứa con trai 9 tháng vừa qua cơn viêm phổi cho người dì tại Chicago của mình nhận nuôi. Đứa bé đó tên là Larry Ellison. Lớn lên, Larry rất gắn bó với người mẹ nuôi nhưng lại xa cách với người bố - người luôn cay nghiệt nói rằng ông sẽ chẳng bao giờ làm nên trò trống gì. Những tác lực đặc biệt thời thơ ấu ấy đã nhào nặn nên một Larry Ellison gai góc, ngạo nghễ và có phần tàn nhẫn trên thương trường sau này.
 
-Larry bỏ đại học tới hai lần, tự học lập trình rồi mưu sinh bằng nghề viết code. Sau vài năm lăn lộn tại nhiều công ty khác nhau, Larry đọc được bài báo của Codd, ông cùng các đồng sự thành lập Software Development Laboratories năm 1977 (sau đổi tên thành Oracle). Năm 1979, Oracle tung ra bản relational database thương mại đầu tiên. Một fact thú vị: Bản phát hành đầu tiên mang tên **Oracle V2** (bỏ qua bản V1 vì Larry nắm thóp tâm lý khách hàng: _"Chẳng ai lại bỏ tiền đi mua phiên bản số 1 để làm chuột bạch cả"_).
+Larry bỏ đại học tới hai lần, tự học lập trình rồi mưu sinh bằng nghề viết code. Sau vài năm lăn lộn tại nhiều công ty khác nhau, Larry đọc được bài báo của Codd, ông cùng các đồng sự thành lập Software Development Laboratories năm 1977, sau đổi tên thành Oracle. Năm 1979, Oracle tung ra bản relational database thương mại đầu tiên. Một fact thú vị: Bản phát hành đầu tiên mang tên **Oracle V2** (bỏ qua bản V1 vì Larry nắm thóp tâm lý khách hàng: _"Chẳng ai lại bỏ tiền đi mua phiên bản số 1 để làm chuột bạch cả"_).
 
 <div class="obs-callout obs-callout-info" markdown="1">
 <div class="obs-callout-title">Info</div>
@@ -250,7 +250,7 @@ Larry bỏ đại học tới hai lần, tự học lập trình rồi mưu sinh
 [Britannica - Larry Ellison](https://www.britannica.com/money/Larry-Ellison)
 </div>
 
-Larry Ellison không phải một nhà khoa học máy tính lỗi lạc, nhưng ông là một người bán hàng thiên tài. Nếu xét thuần túy về công nghệ thời điểm đó, Oracle V2 rất nhiều lỗi và thua xa dự án mã nguồn mở Ingres (do Michael Stonebraker tại UC Berkeley phát triển). Nhưng trên thương trường, có một sự thật phũ phàng: **Sản phẩm xịn nhất chưa chắc đã là sản phẩm chiến thắng.**
+Larry Ellison không phải một nhà khoa học máy tính lỗi lạc, nhưng ông là một người bán hàng thiên tài. Nếu xét thuần túy về công nghệ thời điểm đó, Oracle V2 rất nhiều lỗi và thua xa dự án mã nguồn mở Ingres (do Michael Stonebraker tại UC Berkeley phát triển). Nhưng trên thương trường có một sự thật phũ phàng: **Sản phẩm xịn nhất chưa chắc đã là sản phẩm chiến thắng.**
 
 Ellison đã đè bẹp các đối thủ bằng những chiến thuật cực kì khát máu như sau:
 
@@ -265,8 +265,6 @@ Các đối thủ ngây thơ cứ thế rụng dần. Ingres lụi tàn vì kĩ 
 Nhiều năm sau, khi Internet bùng nổ, MySQL nổi lên như một thách thức khổng lồ mang ngọn cờ "Mã nguồn mở".
 
 Bản năng sinh tồn tàn nhẫn của Oracle trỗi dậy. Khác với IBM rụt rè năm xưa, Larry Ellison hiểu rõ mối đe dọa. Năm 2010, Oracle gây sốc khi chi 7,4 tỷ USD mua đứt Sun Microsystems - công ty mẹ đang nắm giữ MySQL. Mua lại không phải để phát triển, mà mua lại để kiểm soát hệ sinh thái và triệt tiêu rủi ro.
-
-Sẽ có người đọc đến đây và cho rằng Larry Ellison là kẻ cơ hội, chơi bẩn, còn IBM thì quá bảo thủ. Technically thì đúng là vậy. Nhưng nhìn rộng ra lớp cơ chế hệ thống, câu chuyện này phơi bày một góc khuất nghiệt ngã của thế giới công nghệ: Dữ liệu, thuật toán hay một paper đột phá như của Codd thực chất mới chỉ là hạt giống. Chiến lược phân phối và định giá, khả năng chốt sale mới là mảnh đất để hạt giống đó bùng nổ thành một đế chế.
 
 ## 2.5. PostgreSQL - Di sản cộng đồng
 
