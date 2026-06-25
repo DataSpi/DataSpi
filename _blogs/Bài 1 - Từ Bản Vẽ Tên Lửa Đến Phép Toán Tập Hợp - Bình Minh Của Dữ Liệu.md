@@ -8,7 +8,7 @@ toc: true
 
 # 1. Làm sao lắp tàu mặt trăng?
 
-Ngày 25 tháng 5 năm 1961, JFK đưa ra thử thách, nước Mỹ phải đưa được người lên mặt trăng và trở lại Trái Đất an toàn. Kỳ tích này cần hoàn thành trước khi thập kỷ kết thúc. Đây là mục tiêu của Nhiệm vụ Apollo. 
+Ngày 25 tháng 5 năm 1961, JFK đưa ra thử thách, nước Mỹ phải đưa được người lên mặt trăng và trở lại Trái Đất an toàn. Kỳ tích này cần hoàn thành trước khi thập kỷ kết thúc. Đây là mục tiêu tối cao của Nhiệm vụ Apollo. 
 
 American Rockwell là thầu chính chịu trách nhiệm thiết kế và chế tạo tên lửa đẩy Saturn V có nhiệm vụ mang tàu thám hiểm Apollo bay vào không gian. Saturn V là một trong những kỳ quan công nghệ của toàn nhân loại. Tên lửa này được cấu tạo từ khoảng 2 triệu linh kiện khác nhau, và chỉ nội việc quản lý thông tin của các bộ phận này như: nguồn gốc, thông số kỹ thuật, thứ tự lắp ráp đã là một thử thách cực đại. 
 
