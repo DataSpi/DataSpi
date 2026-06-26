@@ -20,7 +20,7 @@ toc: true
 
 🏠 Ho Chi Minh City 
 
-🔗 [Facebook](https://www.facebook.com/phamthokiem/), [LinkedIn](https://linkedin.com/in/spyno-kiem), [Github](https://github.com/DataSpi)
+🔗 [Portfolio](https://dataspi.github.io/DataSpi/)
 
 ---
 <br />
@@ -38,7 +38,7 @@ toc: true
 **Key Projects & Impact:**
 
 - Data Platform & Migration: Designed and operated an `Odoo-to-ATS` data migration pipeline with reconciliation controls to maintain data integrity and prevent data loss at go-live.
-- ETL/ELT Automation: Built `Python` + `Boto3` automation for `AWS Glue` jobs, reducing manual operations and improving pipeline stability and run-time consistency.
+- ETL/ELT Automation: Developed `Python` + `Boto3` automation for `AWS Glue` jobs, reducing manual operations and improving pipeline stability and run-time consistency.
 - Managed `PostgreSQL`/`Hasura` workloads, including automated monthly partitioning, custom SQL functions, and scheduled maintenance (`pg_cron`) to keep query latency stable as data volume grew.
 - Data Modeling & Consumption: Integrated `Malloy` semantic modeling into the `IPay` environment to improve self-service analytics and natural language querying accuracy.
 - Monitoring & Documentation: Established technical documentation standards and implemented monitoring/alerting flows with operations teams to improve reliability and incident response.
@@ -47,11 +47,11 @@ toc: true
 
  *Nov 2024 - Nov 2025 (1yr)*
 
-- Developed comprehensive reporting solutions for the PPC department, covering headcount and workforce planning, turnover by category, D&I KPIs, L&D, overtime, absenteeism, and retention policy analysis to support strategic decision-making.
+- Designed and delivered 3 targeted reporting solutions for the PPC department, covering: headcount & workforce planning, turnover, D&I, L&D, overtime, absenteeism, retention policy analysis to support strategic decision-making.
 - Produced monthly executive summaries from `Power BI` dashboards for senior leadership.
 - Partnered with BI Manufacturing on Factory Huddle and Visual Factory reports used in daily operations and leadership meetings.
-- Delivered an end-to-end data flow for LEGO Vietnam's 3-month Active Summer program via `Google Forms API` + `Python` + `Power BI`.
-- Supported development of a `Power App` for gym consent and reservations, improving process efficiency and user experience.
+- Delivered an end-to-end data flow for LEGO Vietnam's 3-month Active Summer program using `Google Forms API` + `Python` + `Power BI`.
+- Supported development of a `Power App` solution for gym consent and reservations, enhancing process efficiency and user experience.
 
 
 ## ITL Corporation 
@@ -60,23 +60,22 @@ toc: true
 
 *Aug 2023 - Nov 2024 (1yr 3m)*
 
-- Analyzing & crafting reports from data of HRMS Database:
-    - Developed a full data pipeline from source database -> data warehouse -> reporting (using `MSSQL`, `PostgreSQL`).
-    - Built ETL transformations and data preparation workflows using `SQL` and `Python`.
-    - Published reporting datasets and dashboards on `Power BI` for HR and management teams.
-- Scraping jobs from job-listing-sites using `BeautifulSoup`, `Selenium`, `Pandas` to report about the recruiting market.
-- Conducting internal survey to measure HR metrics: stress level, employee satisfaction, employees attachments,...
-- Teaming up with IT to build an Internal AI Assistant using `OpenAI API` & `Langchain`
-
+- Conducted comprehensive analyses and generated detailed reports using data from the HRMS database.
+- Developed a comprehensive data pipeline spanning database, data warehouse, and reporting phases using `MSSQL` and `PostgreSQL`.
+- Streamlined data using `SQL` and `Python`.
+- Visualized and created reports using `Power BI`.
+- Collected and analyzed job listings from job-listing sites using `BeautifulSoup`, `Selenium`, and `Pandas` to generate comprehensive reports on the recruiting market.
+- Led comprehensive internal surveys to assess key HR metrics, including stress levels, employee satisfaction, and employee engagement.
+- Collaborated with IT to develop an internal AI assistant leveraging the `OpenAI API` and `Langchain`.
 
 ### Human Resources Management Trainee
 
 *Feb 2022 - Aug 2023 (1yr 7m)*
 
-- Doing monthly salary add-on calculation for the container fleet monthly.
-- Support answering question related to company policies
-- Processing paper-work for employees: Union, Resignation,...
-- Planning employee cost for 2024
+- Calculated monthly salary add-ons for the container fleet to ensure accurate and timely compensation adjustments.
+- Provide support by answering questions related to company policies.
+- Processed employee paperwork related to union matters and resignations.
+- Planned employee costs for 2024.
 
 ---
 

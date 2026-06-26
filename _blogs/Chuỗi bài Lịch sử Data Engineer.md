@@ -6,8 +6,6 @@ excerpt: "Lịch sử là thứ ánh sáng tốt nhất để soi rọi những 
 toc: true
 ---
 
-# Data Engineer - Lịch sử, giới hạn và tương lai của nghề dữ liệu
-
 > *Bài này viết cho độc giả chính là những người đã có chút kiến thức về công nghệ thông tin. Nhưng tôi đã đặt tiêu chuẩn cao cho bản thân là viết sao cho cả người bình thường cũng có thể hiểu được. Thế nên kể cả bạn không phải là dân tech thì cũng đừng ngại đọc bài nhé.*
 
 
