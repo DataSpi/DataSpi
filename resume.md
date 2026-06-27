@@ -20,12 +20,12 @@ toc: true
 
 🏠 Ho Chi Minh City 
 
-🔗 [Portfolio](https://dataspi.github.io/DataSpi/)
+🔗 [dataspi.github.io/DataSpi](https://dataspi.github.io/DataSpi/)
 
 ---
 <br />
 
-> Data Engineer with 3+ years of experience designing, building, and operating data platforms for analytics. Strong in `Python`, `SQL`, `PostgreSQL`, `BigQuery`, `Airflow`, `AWS Glue`, and `dbt`, with hands-on delivery of stable ETL/ELT pipelines (batch and near real-time), data modeling, and operational monitoring. Proven ability to collaborate with BI, analysts, and business stakeholders to deliver trusted, actionable data products.
+> Data Engineer with 3+ years of experience designing, building, and operating data platforms for analytics. Strong in `Python`, `SQL`, `PostgreSQL`, `BigQuery`, `Airflow`, `AWS Glue`, and `dbt`, with hands-on delivery of stable ETL/ELT pipelines, data modeling, and operational monitoring. Proven ability to collaborate with BI, analysts, and business stakeholders to deliver trusted, actionable data products.
 
 # 💻 Work experience
 
@@ -84,46 +84,29 @@ toc: true
 > 💡 **More information:**
 > [🏗️ Projects](#projects-section)
 
+## 🔭 Technical Skills
 
-### Learning Agility & AI-Accelerated Development
+### Analytics Engineering
 
-- Fast learner with strong fundamentals; quickly adopts new tools/languages and applies them in production.
-- Recently adopted `Malloy` and `DuckDB` using AI-assisted workflows (`Cursor`/`VS Code`) to accelerate delivery.
+* Dimensional Modeling (Star Schema), Data Warehouse & Data Marts
+* ETL/ELT Pipelines, Semantic Modeling (`Malloy`), Data Quality
 
-### Python
+### Data & Programming
 
-- Advanced `Python` for end-to-end analytics and data engineering: ingestion, transformation, and reporting automation.
-- Delivered production-grade `Python` pipelines with API integration, scheduling, data quality checks, and reusable components.
-- Proficient with `pandas`, `matplotlib`, `seaborn`, `plotly`, `Selenium`, `BeautifulSoup`, and orchestration-based workflows.
+* Advanced `SQL` (`PostgreSQL`, `BigQuery`, `MSSQL`)
+* `Python` (`pandas`, `BeautifulSoup`, `Selenium`, `matplotlib`, `plotly`)
 
-### SQL & Malloy
+### Data Platform
 
-- Advanced `SQL` for analytics and pipeline development: complex joins, aggregations, recursive logic, query optimization, and semantic modeling/querying with `Malloy` (`PostgreSQL`, `BigQuery`, `MSSQL`).
-- Built and maintained reporting-ready models/datasets for executive and operational decisions.
+* `PostgreSQL`, `BigQuery`, `dbt`, `AWS Glue`, `Airflow`, `pg_cron`, `Git`, `Hasura`
 
-### Data Engineering & Analytics Delivery
+### Business Analytics
 
-- Built and operated ETL/ELT pipelines for HR, business, and financial analytics use cases.
-- Hands-on with `Airflow`, `dbt`, `AWS Glue`, `BigQuery`, and `pg_cron` for orchestration, transformation, monitoring, and scheduled maintenance.
-- Applied data modeling practices for analytics datasets and reporting layers.
-- Delivered analytics products end-to-end: data collection, modeling, dashboards, and stakeholder-facing insights.
+* `Power BI`, `DAX`, KPI Development, Executive Reporting, Self-service Analytics
 
-### DataOps, Governance & Collaboration
+### Collaboration
 
-- Practical DataOps workflows with `Git`, deployment discipline, and operational runbooks/documentation.
-- Implemented reconciliation and validation checks to improve data quality and consistency across pipelines.
-- Experience collaborating cross-functionally with BI, analysts, operations, and business teams to translate data requirements into reliable data products.
-
-### BI & Business Applications
-
-- Advanced `Power BI`: data modeling, `DAX`, dashboard design, and executive storytelling.
-- Hands-on `Power Platform` (`Power Apps`) for internal process solutions.
-
-### MS Office
-
-- Full professional proficiency across MS Office.
-- Advanced `Excel` and `PowerPoint`.
-
+* Cross-functional stakeholder collaboration, technical documentation, AI-assisted development (`Cursor`, `VS Code`)
 
 
 ---
@@ -151,7 +134,16 @@ toc: true
 
 > More details on my project, visit [Projects](https://dataspi.github.io/DataSpi/projects/)
 
-### 1. Building an Internal AI Assistant
+### 1. Real Estate Analytics Platform
+
+*Sep 2025 – Present*
+
+Built an end-to-end data pipeline to collect, model, and analyze Vietnam's real estate market, with automated reporting and interactive dashboards.
+
+**Tech stack:** `Python`, `Supabase`, `Malloy`, `DuckDB`, `Selenium`, `BeautifulSoup`, `Google Looker Studio`
+[GitHub](https://github.com/DataSpi/scrape-batdongsan-data)
+
+### 2. Building an Internal AI Assistant
 
 *Sep 2023 - Present*
 
@@ -159,7 +151,7 @@ Built an internal assistant for policy and knowledge lookup to help employees re
 [GitHub](https://github.com/DataSpi/itl-inno-award-2023)  
 **Tech stack:** `OpenAI API`, `Langchain`, `Pinecone`, `PyDocX`, `Python`
 
-### 2. Labor Market Analysis from Job Listing Sites
+### 3. Labor Market Analysis from Job Listing Sites
 
 *Aug 2023 - Present*
 
@@ -167,7 +159,7 @@ Automated job posting collection and analysis to track hiring trends in Vietnam'
 [GitHub](https://github.com/DataSpi/scraping-jobs) | [Publication](https://spyno.substack.com/p/thi-truong-tuyen-dung-cac-jobs-ve)  
 **Tech stack:** `Python`, `Selenium`, `BeautifulSoup`, `Pandas`, `Matplotlib`
 
-### 3. Employee Mental Health & Stress Survey Analytics
+### 4. Employee Mental Health & Stress Survey Analytics
 
 *Aug 2023 - Sep 2023*
 
