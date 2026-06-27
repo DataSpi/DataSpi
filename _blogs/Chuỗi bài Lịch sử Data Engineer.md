@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Chuỗi bài: Data Engineer - Lịch sử, giới hạn và tương lai của nghề dữ liệu"
-date: 2026-06-24
+date: 2026-07-24
 excerpt: "Lịch sử là thứ ánh sáng tốt nhất để soi rọi những bất định trong thời đại AI. Vì thế mà chuỗi bài viết này ra đời."
 toc: true
 ---
