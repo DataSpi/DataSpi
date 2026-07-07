@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Bài 1 - Từ Bản Vẽ Tên Lửa Đến Phép Toán Tập Hợp - Bình Minh Của Dữ Liệu"
-date: 2026-07-25
+date: 2026-06-25
 excerpt: "Ngày 25 tháng 5 năm 1961, JFK đưa ra thử thách, nước Mỹ phải đưa được người lên mặt trăng và trở lại Trái Đất an toàn."
 toc: true
 ---
