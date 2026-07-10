@@ -9,10 +9,11 @@
   --ink: #e8edf3;
   --muted: #9aa7b5;
   --line: #2b3440;
-  --link: #4BB8FA;
-  --link-hover: #C4E2F5;
-  --accent-strong: #1591DC;
-  --accent-deep: #2C5EAD;
+  --link: #FFB33F;
+  --link-hover: #FF4400;
+  --accent-strong: #C00707;
+  --accent-strong-ink: var(--title);
+  --accent-deep: #134E8E;
   --title: #f3f6fb;
   --code-bg: #1d2631;
   --code-ink: #d6f0ff;
@@ -150,7 +151,7 @@ body {
 .page-download-btn:focus-visible {
   background: var(--accent-strong);
   border-color: var(--accent-strong);
-  color: var(--paper-bg);
+  color: var(--accent-strong-ink);
   text-decoration: none;
 }
 
@@ -211,14 +212,14 @@ body {
 
 a {
   color: var(--link);
-  text-decoration-color: rgba(75, 184, 250, 0.45);
+  text-decoration-color: rgba(255, 179, 63, 0.45);
   overflow-wrap: anywhere;
   word-break: break-word;
 }
 
 a:visited {
   color: var(--link);
-  text-decoration-color: rgba(75, 184, 250, 0.45);
+  text-decoration-color: rgba(255, 179, 63, 0.45);
 }
 
 a:hover,
@@ -229,7 +230,7 @@ a:focus-visible {
 }
 
 :focus-visible {
-  outline: 2px solid var(--accent-strong);
+  outline: 2px solid var(--link-hover);
   outline-offset: 2px;
   border-radius: 2px;
 }
@@ -420,7 +421,7 @@ pre code {
 
 .obs-callout-note {
   border-left-color: var(--link);
-  background: rgba(75, 184, 250, 0.08);
+  background: rgba(255, 179, 63, 0.08);
 }
 
 .obs-callout-quote {
@@ -507,9 +508,9 @@ hr {
 
 .footer-social a:hover .footer-icon,
 .footer-social a:focus-visible .footer-icon {
-  /* approximates --accent-deep (#2C5EAD); recompute if that token changes */
-  filter: brightness(0) saturate(100%) invert(27%) sepia(42%) saturate(563%)
-    hue-rotate(177deg) brightness(135%) contrast(142%);
+  /* approximates --accent-deep (#134E8E); recompute if that token changes */
+  filter: brightness(0) saturate(100%) invert(28%) sepia(40%) saturate(342%)
+    hue-rotate(171deg) brightness(129%) contrast(221%);
 }
 
 @media (max-width: 640px) {
@@ -537,7 +538,8 @@ hr {
 
 .toc-panel {
   position: fixed;
-  top: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   /* Align with page canvas right edge (wrapper max-width 780px), not viewport edge */
   right: max(1rem, calc((100vw - 780px) / 2 - 200px - 4rem));
   width: 200px;
@@ -698,7 +700,7 @@ hr {
   height: 48px;
   border-radius: 50%;
   background: var(--accent-strong);
-  color: var(--paper-bg);
+  color: var(--accent-strong-ink);
   border: none;
   cursor: pointer;
   z-index: 200;
@@ -707,7 +709,7 @@ hr {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
   transition: background 0.15s ease;
 
-  &:hover { background: var(--link); }
+  &:hover { background: var(--link-hover); }
 }
 
 /* Overlay */
@@ -725,6 +727,7 @@ hr {
 @media screen and (max-width: 1100px) {
   .toc-panel {
     top: 0;
+    transform: none;
     right: -280px;
     width: 260px;
     max-height: 100vh;
