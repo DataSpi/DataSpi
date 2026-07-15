@@ -25,15 +25,44 @@ toc: true
 ---
 <br />
 
-> Data Engineer with 3+ years of experience designing, building, and operating data platforms for analytics. Strong in `Python`, `SQL`, `PostgreSQL`, `BigQuery`, `Airflow`, `AWS Glue`, and `dbt`, with hands-on delivery of stable ETL/ELT pipelines, data modeling, and operational monitoring. Proven ability to collaborate with BI, analysts, and business stakeholders to deliver trusted, actionable data products.
+> Data/Analytics Engineer with 3+ years of experience turning raw operational data into trusted, well-modeled datasets for analytics. Strong in `Python`, `SQL`, `PostgreSQL`, `BigQuery`, `dbt`, and `AWS Glue`, with hands-on delivery of dimensional data models, tested ELT pipelines, and a self-service semantic layer (`Malloy`). Proven ability to bridge engineering and business stakeholders — having worked as both a BI/HR analyst and a data engineer — to deliver data products people actually trust and use.
+
+<a id="projects-section"></a>
+
+# 🏗️ Highlighted Projects
+
+> More details on my project, visit [Projects](https://dataspi.github.io/DataSpi/projects/)
+
+### 1. Real Estate Analytics Platform
+
+*Sep 2025 – Present*
+
+Built and now operate an end-to-end analytics engineering pipeline for Vietnam's real estate market (~100K+ listings across HCMC & Hanoi), following a medallion architecture on `BigQuery`: async scrapers land raw listings, `dbt` staging models deduplicate and clean into a silver layer, and `dbt` mart models build a gold layer surfaced through a `Malloy` semantic layer for self-service metrics. Data quality is enforced with `dbt` schema tests plus custom singular tests (e.g. negative price/area, price-per-m² outliers). The pipeline runs on a scheduled, fail-fast orchestrator with logging, and results are published via an interactive `Looker Studio` dashboard and detailed analysis reports.
+
+**Tech stack:** `Python`, `BigQuery`, `dbt`, `Malloy`, `curl_cffi`, `BeautifulSoup`, `Google Looker Studio`
+[GitHub](https://github.com/DataSpi/scrape-batdongsan-data), [Publication](https://spyno.substack.com/p/i-xem-chung-cu-cung-tho-so-p2)
+
+### 2. Building an Internal AI Assistant *(Sep 2023 - Present)*
+
+Internal assistant for policy and knowledge lookup, letting employees retrieve company information in natural language. `OpenAI API`, `Langchain`, `Pinecone` — [GitHub](https://github.com/DataSpi/itl-inno-award-2023)
+
+### 3. Labor Market Analysis from Job Listing Sites *(Aug 2023 - Present)*
+
+Automated job posting collection and analysis to track hiring trends in Vietnam's data job market. `Python`, `Selenium`, `BeautifulSoup` — [GitHub](https://github.com/DataSpi/scraping-jobs) | [Publication](https://spyno.substack.com/p/thi-truong-tuyen-dung-cac-jobs-ve)
+
+### 4. Employee Mental Health & Stress Survey Analytics *(Aug 2023 - Sep 2023)*
+
+Analyzed employee and manager survey data to compare stress and mental health perceptions across cohorts. `Pandas`, `Google Forms` — [Project Link](https://www.notion.so/Survey-about-Mental-Health-Stress-status-of-ITL-Employees-Aug2023-a4e3286b13f34e5a933361d19f796e76?pvs=21)
+
+---
 
 # 💻 Work experience
 
 ## VNG Corporation - Data Engineer
 
-*Nov 2025- Now (6m)*
+*Aug 2025- Now (1yr)*
 
-**Technical Core:** `Python`, `PostgreSQL`, `AWS Glue`, `Airflow`, `Hasura`.
+**Technical Core:** `Python`, `PostgreSQL`, `AWS Glue`, `Hasura`.
 
 **Key Projects & Impact:**
 
@@ -45,7 +74,7 @@ toc: true
 
 ## LEGO Manufacturing Vietnam - Data Analyst
 
- *Nov 2024 - Nov 2025 (1yr)*
+ *Sep 2024 - Aug 2025 (1yr)*
 
 - Designed and delivered 3 targeted reporting solutions for the PPC department, covering: headcount & workforce planning, turnover, D&I, L&D, overtime, absenteeism, retention policy analysis to support strategic decision-making.
 - Produced monthly executive summaries from `Power BI` dashboards for senior leadership.
@@ -58,7 +87,7 @@ toc: true
 
 ### HR Data Analyst
 
-*Aug 2023 - Nov 2024 (1yr 3m)*
+*Aug 2023 - Sep 2024 (1yr 1m)*
 
 - Conducted comprehensive analyses and generated detailed reports using data from the HRMS database.
 - Developed a comprehensive data pipeline spanning database, data warehouse, and reporting phases using `MSSQL` and `PostgreSQL`.
@@ -81,15 +110,12 @@ toc: true
 
 # 🛠 Skills
 
-> 💡 **More information:**
-> [🏗️ Projects](#projects-section)
-
 ## 🔭 Technical Skills
 
 ### Analytics Engineering
 
-* Dimensional Modeling (Star Schema), Data Warehouse & Data Marts
-* ETL/ELT Pipelines, Semantic Modeling (`Malloy`), Data Quality
+* Dimensional Modeling (Star Schema), Medallion Architecture (Bronze/Silver/Gold), Data Warehouse & Data Marts
+* ETL/ELT Pipelines, `dbt` (models, schema & custom data quality tests), Semantic Modeling (`Malloy`)
 
 ### Data & Programming
 
@@ -120,51 +146,10 @@ toc: true
 
 ---
 
-## 🎓 Education
+## 🎓 Education
 
 ### Bachelor Degree
 
 - Human Resources Management - University of Economics HCMC - *(Sep 2018 - Dec 2021)*
-
----
-
-<a id="projects-section"></a>
-
-# 🏗️ Highlighted Projects
-
-> More details on my project, visit [Projects](https://dataspi.github.io/DataSpi/projects/)
-
-### 1. Real Estate Analytics Platform
-
-*Sep 2025 – Present*
-
-Built an end-to-end data pipeline to collect, model, and analyze Vietnam's real estate market, with automated reporting and interactive dashboards.
-
-**Tech stack:** `Python`, `Supabase`, `Malloy`, `DuckDB`, `Selenium`, `BeautifulSoup`, `Google Looker Studio`
-[GitHub](https://github.com/DataSpi/scrape-batdongsan-data)
-
-### 2. Building an Internal AI Assistant
-
-*Sep 2023 - Present*
-
-Built an internal assistant for policy and knowledge lookup to help employees retrieve company information in natural language.
-[GitHub](https://github.com/DataSpi/itl-inno-award-2023)  
-**Tech stack:** `OpenAI API`, `Langchain`, `Pinecone`, `PyDocX`, `Python`
-
-### 3. Labor Market Analysis from Job Listing Sites
-
-*Aug 2023 - Present*
-
-Automated job posting collection and analysis to track hiring trends in Vietnam's data job market.
-[GitHub](https://github.com/DataSpi/scraping-jobs) | [Publication](https://spyno.substack.com/p/thi-truong-tuyen-dung-cac-jobs-ve)  
-**Tech stack:** `Python`, `Selenium`, `BeautifulSoup`, `Pandas`, `Matplotlib`
-
-### 4. Employee Mental Health & Stress Survey Analytics
-
-*Aug 2023 - Sep 2023*
-
-Analyzed employee and manager survey data to compare stress and mental health perceptions across cohorts.
-[Project Link](https://www.notion.so/Survey-about-Mental-Health-Stress-status-of-ITL-Employees-Aug2023-a4e3286b13f34e5a933361d19f796e76?pvs=21)  
-**Tech stack:** `Pandas`, `Matplotlib`, `Google Forms`, `Python`
 
 ---
