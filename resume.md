@@ -44,11 +44,11 @@ Built and now operate an end-to-end analytics engineering pipeline for Vietnam's
 
 ### 2. Building an Internal AI Assistant *(Sep 2023 - Present)*
 
-Internal assistant for policy and knowledge lookup, letting employees retrieve company information in natural language. `OpenAI API`, `Langchain`, `Pinecone` — [GitHub](https://github.com/DataSpi/itl-inno-award-2023)
+Internal assistant for policy and knowledge lookup, letting employees retrieve company information in natural language. `OpenAI API`, `Langchain`, `Pinecone` - [GitHub](https://github.com/DataSpi/itl-inno-award-2023)
 
 ### 3. Labor Market Analysis from Job Listing Sites *(Aug 2023 - Present)*
 
-Automated job posting collection and analysis to track hiring trends in Vietnam's data job market. `Python`, `Selenium`, `BeautifulSoup` — [GitHub](https://github.com/DataSpi/scraping-jobs) | [Publication](https://spyno.substack.com/p/thi-truong-tuyen-dung-cac-jobs-ve)
+Automated job posting collection and analysis to track hiring trends in Vietnam's data job market. `Python`, `Selenium`, `BeautifulSoup` - [GitHub](https://github.com/DataSpi/scraping-jobs),  [Publication](https://spyno.substack.com/p/thi-truong-tuyen-dung-cac-jobs-ve)
 
 ### 4. Employee Mental Health & Stress Survey Analytics *(Aug 2023 - Sep 2023)*
 
