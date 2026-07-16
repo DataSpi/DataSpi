@@ -13,7 +13,7 @@ toc: true
 
 [GitHub: Real Estate Data](https://github.com/DataSpi/scrape-batdongsan-data)
 
-End-to-end analytics engineering pipeline for the Vietnamese real estate market (~100K+ listings across HCMC & Hanoi), built on a medallion architecture in `BigQuery`: async scrapers land raw listings into a bronze layer, `dbt` staging models deduplicate and clean into silver, and `dbt` mart models build a gold layer surfaced through a `Malloy` semantic layer for self-service metrics. Data quality is enforced with `dbt` schema tests plus custom singular tests (negative price/area, price-per-m² outliers). The pipeline runs on a scheduled, fail-fast orchestrator with logging, publishing to an interactive `Looker Studio` dashboard and static HTML reports.
+End-to-end analytics engineering pipeline for the Vietnamese real estate market (~200K+ for-sale & rental listings across HCMC & Hanoi), built on a medallion architecture in `BigQuery`: async scrapers land raw listings into a bronze layer, `dbt` staging models deduplicate and clean into silver, and `dbt` mart models build a gold layer surfaced through a `Malloy` semantic layer for self-service metrics. Data quality is enforced with `dbt` schema tests plus custom singular tests (negative price/area, price-per-m² outliers). The pipeline runs on a scheduled, fail-fast orchestrator with logging, publishing to an interactive `Looker Studio` dashboard and static HTML reports.
 
 - **Tech stack:** `Python`, `BigQuery`, `dbt`, `Malloy`, `curl_cffi`, `BeautifulSoup`, `Google Looker Studio`
 - **Reports** *(Updated: 2026-05-20):*
