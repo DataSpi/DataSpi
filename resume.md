@@ -25,7 +25,7 @@ toc: true
 ---
 <br />
 
-> Data/Analytics Engineer with 3+ years of experience turning raw operational data into trusted, well-modeled datasets for analytics. Strong in `Python`, `SQL`, `PostgreSQL`, `BigQuery`, `dbt`, and `AWS Glue`, with hands-on delivery of dimensional data models, tested ELT pipelines, and a self-service semantic layer (`Malloy`). Proven ability to bridge engineering and business stakeholders — having worked as both a BI/HR analyst and a data engineer — to deliver data products people actually trust and use.
+> Data/Analytics Engineer with 3+ years of experience turning raw operational data into trusted, well-modeled datasets for analytics. Strong in `Python`, `SQL`, `PostgreSQL`, `BigQuery`, `dbt`, and `AWS Glue`, with hands-on delivery of dimensional data models, tested ELT pipelines, and a self-service semantic layer (`Malloy`). Proven ability to bridge engineering and business stakeholders — having worked as both a BI/HR analyst and a data engineer — to deliver data products people actually trust and use, and to mentor non-technical teammates into full ownership of the systems I build.
 
 <a id="projects-section"></a>
 
@@ -42,15 +42,24 @@ Built and now operate an end-to-end analytics engineering pipeline for Vietnam's
 **Tech stack:** `Python`, `BigQuery`, `dbt`, `Malloy`, `curl_cffi`, `BeautifulSoup`, `Google Looker Studio`
 [GitHub](https://github.com/DataSpi/scrape-batdongsan-data), [Publication](https://spyno.substack.com/p/i-xem-chung-cu-cung-tho-so-p2)
 
-### 2. Building an Internal AI Assistant *(Sep 2023 - Present)*
+### 2. CI/CD-Orchestrated Logistics Reporting Pipeline
+
+*Nov 2025 – Present*
+
+Built an event-driven ELT pipeline on `GitHub Actions` for two freight-forwarding clients (retail & food logistics), replacing manual daily reporting. Scheduled workflows scrape order/booking data into `BigQuery` bronze tables, then automatically trigger a chained workflow (`workflow_run`) that runs `dbt build` for silver/mart models, followed by a report workflow that pushes milestone and TEU reports to stakeholders — a full scrape-to-report pipeline with zero manual intervention. Engineered a reusable composite action for secrets/env provisioning across pipelines, plus failure-artifact capture (`upload-artifact`) and manual `workflow_dispatch` triggers for on-demand reruns and debugging.
+
+**Tech stack:** `Python`, `GitHub Actions` (CI/CD, cron & event-driven orchestration), `dbt`, `BigQuery`, `Google Sheets API`
+[GitHub](https://github.com/DataSpi/silky_project)
+
+### 3. Building an Internal AI Assistant *(Sep 2023 - Present)*
 
 Internal assistant for policy and knowledge lookup, letting employees retrieve company information in natural language. `OpenAI API`, `Langchain`, `Pinecone` - [GitHub](https://github.com/DataSpi/itl-inno-award-2023)
 
-### 3. Labor Market Analysis from Job Listing Sites *(Aug 2023 - Present)*
+### 4. Labor Market Analysis from Job Listing Sites *(Aug 2023 - Present)*
 
 Automated job posting collection and analysis to track hiring trends in Vietnam's data job market. `Python`, `Selenium`, `BeautifulSoup` - [GitHub](https://github.com/DataSpi/scraping-jobs),  [Publication](https://spyno.substack.com/p/thi-truong-tuyen-dung-cac-jobs-ve)
 
-### 4. Employee Mental Health & Stress Survey Analytics *(Aug 2023 - Sep 2023)*
+### 5. Employee Mental Health & Stress Survey Analytics *(Aug 2023 - Sep 2023)*
 
 Analyzed employee and manager survey data to compare stress and mental health perceptions across cohorts. `Pandas`, `Google Forms` — [Project Link](https://www.notion.so/Survey-about-Mental-Health-Stress-status-of-ITL-Employees-Aug2023-a4e3286b13f34e5a933361d19f796e76?pvs=21)
 
@@ -76,6 +85,8 @@ Analyzed employee and manager survey data to compare stress and mental health pe
 
  *Sep 2024 - Aug 2025 (1yr)*
 
+- Reverse-engineered `UKG` timesheet data to resolve a high-stakes overtime calculation conflict (legal 300h/year cap vs. LEGO's actual pay policy vs. shift-based break rules); presented the logic to C&B leadership and cross-functional DA teams (Packing, Moulding), and it was adopted as the standard OT calculation used factory-wide — ahead of a global system fix that remained pending over a year later.
+- Mentored a non-technical successor to full ownership of the PPC HR `Power BI` reporting system through a 3-week hands-on training program and detailed documentation; the system ran uninterrupted for 6+ months post-handover, and I remained the trusted technical advisor for two successive report owners after leaving LEGO.
 - Designed and delivered 3 targeted reporting solutions for the PPC department, covering: headcount & workforce planning, turnover, D&I, L&D, overtime, absenteeism, retention policy analysis to support strategic decision-making.
 - Produced monthly executive summaries from `Power BI` dashboards for senior leadership.
 - Partnered with BI Manufacturing on Factory Huddle and Visual Factory reports used in daily operations and leadership meetings.
@@ -122,9 +133,10 @@ Analyzed employee and manager survey data to compare stress and mental health pe
 * Advanced `SQL` (`PostgreSQL`, `BigQuery`, `MSSQL`)
 * `Python` (`pandas`, `BeautifulSoup`, `Selenium`, `matplotlib`, `plotly`)
 
-### Data Platform
+### Data Platform & CI/CD
 
 * `PostgreSQL`, `BigQuery`, `dbt`, `AWS Glue`, `Airflow`, `pg_cron`, `Git`, `Hasura`
+* `GitHub Actions` (scheduled & event-driven workflow orchestration, dbt-in-CI, secrets management, reusable composite actions)
 
 ### Business Analytics
 
@@ -132,7 +144,8 @@ Analyzed employee and manager survey data to compare stress and mental health pe
 
 ### Collaboration
 
-* Cross-functional stakeholder collaboration, technical documentation, AI-assisted development (`Cursor`, `VS Code`)
+* Cross-functional stakeholder collaboration, technical documentation, mentoring & knowledge transfer, AI-assisted development (`Cursor`, `VS Code`)
+* Public writing on data careers & self-taught learning — [Threads](https://www.threads.com/@spyno_kiem/post/C8CqeQmS3kM) post reached 4K+ views, 347 likes, 54 reposts; longer-form companion piece on [Substack](https://spyno.substack.com/p/kinh-nghiem-tu-hoc-python-cho-phan)
 
 
 ---
