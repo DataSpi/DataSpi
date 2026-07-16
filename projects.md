@@ -7,15 +7,15 @@ toc: true
 
 ## Data Projects
 
-### 1. Real Estate Data Scraping & Analysis
+### 1. Real Estate Analytics Platform
 
 *Sep 2025 - Present*
 
 [GitHub: Real Estate Data](https://github.com/DataSpi/scrape-batdongsan-data)
 
-End-to-end data pipeline for collecting, normalizing, and analyzing the Vietnamese real estate market using data from [batdongsan.com.vn](https://batdongsan.com.vn). Data is stored in `Supabase`, modeled with `Malloy`, and visualized via `Google Looker Studio` and static `HTML` reports.
+End-to-end analytics engineering pipeline for the Vietnamese real estate market (~100K+ listings across HCMC & Hanoi), built on a medallion architecture in `BigQuery`: async scrapers land raw listings into a bronze layer, `dbt` staging models deduplicate and clean into silver, and `dbt` mart models build a gold layer surfaced through a `Malloy` semantic layer for self-service metrics. Data quality is enforced with `dbt` schema tests plus custom singular tests (negative price/area, price-per-m² outliers). The pipeline runs on a scheduled, fail-fast orchestrator with logging, publishing to an interactive `Looker Studio` dashboard and static HTML reports.
 
-- **Tech stack:** `Python`, `Selenium`, `BeautifulSoup`, `Supabase`, `Malloy`, `DuckDB`, `APScheduler`, `Google Looker Studio`
+- **Tech stack:** `Python`, `BigQuery`, `dbt`, `Malloy`, `curl_cffi`, `BeautifulSoup`, `Google Looker Studio`
 - **Reports** *(Updated: 2026-05-20):*
   - [Báo cáo giá BĐS theo quận tại HN & TPHCM](https://dataspi.github.io/scrape-batdongsan-data/reports/output/HCM-HN_districts.html)
   - [Báo cáo giá BĐS theo dự án tại HN & TPHCM](https://dataspi.github.io/scrape-batdongsan-data/reports/output/HCM-HN_prj.html)
@@ -23,7 +23,17 @@ End-to-end data pipeline for collecting, normalizing, and analyzing the Vietname
 - **Publications:**
   - [Đi xem nhà cùng Data Analyst - P1 (Substack)](https://spyno.substack.com/p/i-xem-nha-cung-data-analyst-p1)
 
-### 2. Building an internal AI Assistant
+### 2. CI/CD-Orchestrated Logistics Reporting Pipeline
+
+*Nov 2025 - Present*
+
+[GitHub: silky_project](https://github.com/DataSpi/silky_project)
+
+Event-driven ELT pipeline built entirely on `GitHub Actions` for two freight-forwarding clients (retail & food logistics), replacing manual daily reporting with a scrape-to-report pipeline that requires zero manual intervention. Scheduled workflows scrape order/booking data into `BigQuery` bronze tables, then automatically trigger a chained workflow (`workflow_run`) that runs `dbt build` for silver/mart models, followed by a report workflow that pushes milestone and TEU reports to stakeholders. Includes a reusable composite action for secrets/env provisioning shared across both pipelines, failure-artifact capture for debugging, and manual `workflow_dispatch` triggers for on-demand reruns.
+
+- **Tech stack:** `Python`, `GitHub Actions` (CI/CD, cron & event-driven orchestration), `dbt`, `BigQuery`, `Google Sheets API`
+
+### 3. Building an internal AI Assistant
 
 *Sep 2023 - Present*
 
@@ -33,7 +43,7 @@ Prompt tuning `LLMs` to become an internal AI Assistant for ITL Corporation. The
 
 - **Tech stack:** `OpenAI API`, `LangChain`, `Pinecone`, `PyDocX`, `Python`
 
-### 3. Labor Market Analysis (Data Collected from Job-Listing-Sites)
+### 4. Labor Market Analysis (Data Collected from Job-Listing-Sites)
 
 *Aug 2023 - Present*
 
@@ -47,7 +57,7 @@ Automating data collection from job-listing sites to analyze the job market in V
     2. [Chia sẻ lại trên cộng đồng DS/ML Vietnam - Facebook](https://www.facebook.com/groups/dsmlvietnam/posts/331092943004167/)
     3. [Chia sẻ lại trên Vietnam Data Analyst Forum - Facebook](https://www.facebook.com/groups/vietnamdataanalyst/posts/3463328530601474/)
 
-### 4. Survey about Mental Health & Stress status of ITL Employees
+### 5. Survey about Mental Health & Stress status of ITL Employees
 
 *Aug 2023 - Sep 2023*
 

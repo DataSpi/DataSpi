@@ -4,11 +4,11 @@ title: About
 permalink: /about/
 ---
 
-A Data Engineer with a background in Business Administration. After completing my degree and working a year in the field, I chose a different trajectory and transitioned into data.
- 
-My journey began with a rigorous self-taught curriculum in Python, SQL, and BI tools. Today, that pivot is backed by solid experience at leading corporations, including The LEGO Group and VNG Corporation.
+I'm an Analytics Engineer who turns messy operational data into datasets people actually trust — dimensional models, tested ELT pipelines, and semantic layers that let non-technical teams self-serve their own metrics. That craft is backed by hands-on delivery at The LEGO Group and VNG Corporation, on data platforms spanning `PostgreSQL`, `BigQuery`, `dbt`, and `AWS Glue`.
 
-As someone who bridged the gap from business to deep tech, I know my true value isn't just in writing scripts or tuning databases—it's using system-level thinking to unlock complex business data challenges.
+I came into data through Business Administration and HR, not a CS degree — three years inside HR and operations teams before I taught myself Python, SQL, and BI tools from scratch. That background turned out to be an asset: I know how business questions actually get formed, which makes it easier to translate them into analytical logic stakeholders trust, and to challenge a broken calculation until it's adopted as the standard.
+
+I care as much about the people using the data as the pipeline itself. I write publicly about the craft of data work — for people making the same career jump I did — and I've handed off systems I built to non-technical teammates and watched them run unsupervised for months after I moved on.
 
 Links:
 
