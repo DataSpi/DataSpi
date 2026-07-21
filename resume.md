@@ -69,7 +69,7 @@ Analyzed employee and manager survey data to compare stress and mental health pe
 
 ## VNG Corporation - Data Engineer
 
-*Aug 2025- Now (1yr)*
+*Sep 2025- Now (1yr)*
 
 **Technical Core:** `Python`, `PostgreSQL`, `AWS Glue`, `Hasura`.
 
