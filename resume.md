@@ -71,10 +71,12 @@ Analyzed employee and manager survey data to compare stress and mental health pe
 
 *Sep 2025- Now (1yr)*
 
-**Technical Core:** `Python`, `PostgreSQL`, `AWS Glue`, `Hasura`.
+**Technical Core:** `Python`, `PostgreSQL`, `dbt`, `MetricFlow`, `AWS Glue`, `Hasura`, `Lightdash`.
 
 **Key Projects & Impact:**
 
+- Engineering Productivity Data Platform (TPMF): Designed a Kimball star-schema warehouse (a shared KPI-snapshot fact plus atomic-grain detail facts for drill-down) covering 45 engineering KPIs across three orgs (software delivery, QA/testing, People/HR), implemented as a `dbt` project on `PostgreSQL` with staging → intermediate → gold (mart) layers and KPI logic centralized in a `dbt` Semantic Layer (`MetricFlow`, incl. ratio/derived metrics). Built `Python` ETL for both file-based sources (Excel/CSV loaders into a raw landing schema) and live API sources (`GitLab`, `GitHub`, `SonarCloud`, an internal OAuth2 Service Desk API), with `dbt` schema and custom singular data-quality tests, running as cron pipelines on dedicated internal servers.
+- Surfaced the modeled metrics through a read-only `MCP` server for natural-language querying in Claude, a `Lightdash` BI layer reading the marts directly, and an automated monthly executive report (self-contained offline HTML + `PPTX`).
 - Data Platform & Migration: Designed and operated an `Odoo-to-ATS` data migration pipeline with reconciliation controls to maintain data integrity and prevent data loss at go-live.
 - ETL/ELT Automation: Developed `Python` + `Boto3` automation for `AWS Glue` jobs, reducing manual operations and improving pipeline stability and run-time consistency.
 - Managed `PostgreSQL`/`Hasura` workloads, including automated monthly partitioning, custom SQL functions, and scheduled maintenance (`pg_cron`) to keep query latency stable as data volume grew.
@@ -96,7 +98,7 @@ Analyzed employee and manager survey data to compare stress and mental health pe
 
 ## ITL Corporation 
 
-### HR Data Analyst
+### Data Analyst
 
 *Aug 2023 - Sep 2024 (1yr 1m)*
 
